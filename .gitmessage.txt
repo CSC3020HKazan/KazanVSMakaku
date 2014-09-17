@@ -1,4 +1,8 @@
-[BUGFIX|TASK]
+[TASK]  Coallating files together
 
-Resolves:
+Resolves: 
 Releases:
+
+TODO:
+
+WARNING:

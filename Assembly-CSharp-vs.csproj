@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{128B043A-4888-5213-5FEA-C0AC082A0BBA}</ProjectGuid>
+	<ProjectGuid>{4271064E-2A63-169E-91C1-0EDDAB2048E6}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,16 +46,26 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\CameraControl.cs" />
-     <Compile Include="Assets\Scripts\CameraControls\ThirdPersonCamera.cs" />
+     <Compile Include="Assets\Scripts\CameraControls\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\CameraControls\CameraControlPlayer1.cs" />
+     <Compile Include="Assets\Scripts\CameraControls\CameraControlPlayer2.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\AnimatorSetup.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\EnemyAnimation.cs" />
+     <Compile Include="Assets\Scripts\EnemyAI\EnemyDispatcher.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\EnemyShooting.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\EnemySight.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\LastPlayerSighting.cs" />
-     <Compile Include="Assets\Scripts\GameControls\FireBallMovement.cs" />
-     <Compile Include="Assets\Scripts\GameControls\GameMaster.cs" />
+     <Compile Include="Assets\Scripts\EnemyAI\SimpleEnemyAI.cs" />
+     <Compile Include="Assets\Scripts\EnemyAI\SimpleTotemPole.cs" />
+     <Compile Include="Assets\Scripts\Environment Assets\Lava3.cs" />
+     <Compile Include="Assets\Scripts\Environment Assets\Lava3Editor.cs" />
+     <Compile Include="Assets\Scripts\Environment Assets\Lava3Float.cs" />
+     <Compile Include="Assets\Scripts\Environment Assets\Lava3UnderwaterEffect.cs" />
+     <Compile Include="Assets\Scripts\Environment Assets\LavaManager.cs" />
+     <Compile Include="Assets\Scripts\GameControls\CheckPointManager.cs" />
+     <Compile Include="Assets\Scripts\GameControls\ElementBallMovement.cs" />
+     <Compile Include="Assets\Scripts\GameControls\EnemyWayPointManager.cs" />
      <Compile Include="Assets\Scripts\GameControls\SceneFadeInOut.cs" />
      <Compile Include="Assets\Scripts\GameControls\SpawnManager.cs" />
      <Compile Include="Assets\Scripts\HelperScripts\HashIDs.cs" />
@@ -63,11 +73,12 @@
      <Compile Include="Assets\Scripts\HelperScripts\Utils.cs" />
      <Compile Include="Assets\Scripts\InGameUI\WayPointGizmo.cs" />
      <Compile Include="Assets\Scripts\MenuUI\LoadNew.cs" />
+     <Compile Include="Assets\Scripts\PlayerControls\Player1Movement.cs" />
+     <Compile Include="Assets\Scripts\PlayerControls\Player2Movement.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\PlayerControls\ThirdPersonController.cs" />
      <None Include="Assets\Scripts\Shaders\ReflectiveDiffuseSpecTransp.shader" />
-     <None Include="Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\Scripts\Environment Assets\Lava.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

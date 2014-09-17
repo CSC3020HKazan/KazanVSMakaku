@@ -46,6 +46,21 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ForeignAssets J\Scripts\HealthScript.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\Helper Scripts\HUDScript.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\Helper Scripts\MasterScript.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\Helper Scripts\MaterialHelper.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\Helper Scripts\ParticleHelper.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\Helper Scripts\SoundScript.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\Helper Scripts\TextHelper.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\ManaScript.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\MoveScript.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\PickupScript.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\Player Scripts\PlayerScript.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\Player Scripts\ThirdPersonCam.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\Shooting Script\BulletScripts.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\Shooting Script\GunScript.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\Shooting Script\WeaponScript.cs" />
      <Compile Include="Assets\Scripts\CameraControls\CameraControl.cs" />
      <Compile Include="Assets\Scripts\CameraControls\CameraControlPlayer1.cs" />
      <Compile Include="Assets\Scripts\CameraControls\CameraControlPlayer2.cs" />
@@ -58,11 +73,12 @@
      <Compile Include="Assets\Scripts\EnemyAI\LastPlayerSighting.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\SimpleEnemyAI.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\SimpleTotemPole.cs" />
-     <Compile Include="Assets\Scripts\Environment Assets\Lava3.cs" />
-     <Compile Include="Assets\Scripts\Environment Assets\Lava3Editor.cs" />
-     <Compile Include="Assets\Scripts\Environment Assets\Lava3Float.cs" />
-     <Compile Include="Assets\Scripts\Environment Assets\Lava3UnderwaterEffect.cs" />
-     <Compile Include="Assets\Scripts\Environment Assets\LavaManager.cs" />
+     <Compile Include="Assets\Scripts\Environment\Lava3.cs" />
+     <Compile Include="Assets\Scripts\Environment\Lava3Float.cs" />
+     <Compile Include="Assets\Scripts\Environment\Lava3UnderwaterEffect.cs" />
+     <Compile Include="Assets\Scripts\Environment\LavaManager.cs" />
+     <Compile Include="Assets\Scripts\Environment\MovingPlatform.cs" />
+     <Compile Include="Assets\Scripts\Environment\StationaryPlatform.cs" />
      <Compile Include="Assets\Scripts\GameControls\CheckPointManager.cs" />
      <Compile Include="Assets\Scripts\GameControls\ElementBallMovement.cs" />
      <Compile Include="Assets\Scripts\GameControls\EnemyWayPointManager.cs" />
@@ -73,12 +89,15 @@
      <Compile Include="Assets\Scripts\HelperScripts\Utils.cs" />
      <Compile Include="Assets\Scripts\InGameUI\WayPointGizmo.cs" />
      <Compile Include="Assets\Scripts\MenuUI\LoadNew.cs" />
+     <Compile Include="Assets\Scripts\NPC Behaviour\bossSkin.cs" />
+     <Compile Include="Assets\Scripts\NPC Behaviour\floatScript.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\Player1Movement.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\Player2Movement.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\PlayerMovement.cs" />
-     <None Include="Assets\Scripts\Shaders\ReflectiveDiffuseSpecTransp.shader" />
-     <None Include="Assets\Scripts\Environment Assets\Lava.shader" />
+     <None Include="Assets\Shaders\Lava.shader" />
+     <None Include="Assets\Shaders\ReflectiveDiffuseSpecTransp.shader" />
+     <None Include="Assets\Shaders\FX-Water3.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 6f375db6e27ec5b4986a24be13b4b82f
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - capsuleObj: {fileID: 400000, guid: 05e7350744a21864ea7b1da4ebc10ad6, type: 2}
+  - cubeObj: {fileID: 400000, guid: 0737b493fbb717244830b7e477b0caa2, type: 2}
+  - cylinderObj: {fileID: 400000, guid: f3ee7bc77041913458aec6b41afd2a04, type: 2}
+  - sphereObj: {fileID: 400000, guid: ce048272b6ab42c4785095d77b711458, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 

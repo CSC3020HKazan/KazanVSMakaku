@@ -16,6 +16,9 @@ public class Tags
 	public const string playerTwo = "PlayerTwo";
 	public const string elementBall = "ElementBall";
 	public const string fireballSpawnPoint = "FireBallSpawnPoint"; 
+	public const string platform = "Platform";
+	public const string stationaryPlatform = "StationaryPlatform";
+	public const string movingPlatform = "MovingPlatform";
 
 	public class UserInputs {
 		// Default 

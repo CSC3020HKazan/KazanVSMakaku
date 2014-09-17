@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -22,32 +23,33 @@ public class PlayerMovement : MonoBehaviour
 	private Animator _anim;              // Reference to the animator component.
 	private HashIDs _hash;               // Reference to the HashIDs.
 	
-	private Vector3 _currentForwardDirection = Vector3.forward;
-	private Vector3 _currentRightDirection = Vector3.right;
-	private Vector3 _desiredDirection = Vector3.zero;
-	private Quaternion _desiredRotation = Quaternion.identity;
-
-	private CharacterController _controller;
-	private CheckPointManager _checkpointManager = new CheckPointManager();
 	private bool _canMove = true;
 	private bool _hasFired = false;
 	private bool _hasDoubleJumped = false;
 	private bool _isAiming = false;
+	private bool _notifiedPlatform = false;
+	private Vector3 _currentForwardDirection = Vector3.forward;
+	private Vector3 _currentRightDirection = Vector3.right;
+	private Vector3 _desiredDirection = Vector3.zero;
 	private Transform _fireballTransform;
+	private List<GameObject> _platformsTraversed = new List<GameObject> ();
+	private Quaternion _desiredRotation = Quaternion.identity;
+	private CharacterController _controller;
+	private CheckPointManager _checkpointManager = new CheckPointManager();
 	//private bool _isJumping = false;
 	
+	protected virtual void InitialiseTag () {
+		gameObject.tag = Tags.player;
+		gameObject.name = Tags.player;
+	}
+
 	void Awake ()
 	{
+		InitialiseTag();
 		_controller = GetComponent<CharacterController> ();
 		_checkpointManager.AddCheckPoint (transform.position);
-		_fireballTransform = GameObject.Find("Sphere/FireBallSpawnPoint").transform;
+		_fireballTransform = GameObject.Find(""+gameObject.name +"/FireBallSpawnPoint").transform;
 	}
-
-	void Start () {
-		gameObject.tag = Tags.player;
-	}
-
-	
 	
 	void FixedUpdate ()
 	{
@@ -65,8 +67,10 @@ public class PlayerMovement : MonoBehaviour
 				return;
 			}
 			CheckFire (Input.GetButtonDown(GetAttackInputTag()), _fireballTransform);
-			if (Input.GetButtonUp(GetAttackInputTag())) 
+			if (Input.GetButtonUp(GetAttackInputTag())) {
 				FireProjectile(_fireballTransform);
+			}
+
 		}
 	}
 	
@@ -121,6 +125,38 @@ public class PlayerMovement : MonoBehaviour
 					// apply damage, instantiate particles etc.	
 				}
 			}
+		}
+	}
+
+
+	void OnControllerColliderHit (ControllerColliderHit hit) {
+		Rigidbody body = hit.collider.attachedRigidbody;
+		if (!body)
+			return;
+
+		if (hit.gameObject.tag.Equals(Tags.movingPlatform)) {
+
+			if (_platformsTraversed.Count > 0) {
+				if (_platformsTraversed[_platformsTraversed.Count - 1].Equals (hit.gameObject))
+					return;
+				else {
+					_platformsTraversed[_platformsTraversed.Count - 1].GetComponent<MovingPlatform>().SetPlayerPresence(false);
+					_notifiedPlatform = false;
+					_platformsTraversed.Add(hit.gameObject);
+				}
+			} else {
+				_platformsTraversed.Add (hit.gameObject);
+			}
+			if (!_notifiedPlatform) {
+				MovingPlatform movingPlatform = _platformsTraversed[_platformsTraversed.Count - 1].GetComponent<MovingPlatform> ();
+				movingPlatform.SetPlayerPresence(true);
+				_notifiedPlatform = true;
+			}
+
+		} else{
+			if (_platformsTraversed.Count > 0) 
+				_platformsTraversed[_platformsTraversed.Count - 1].GetComponent<MovingPlatform>().SetPlayerPresence (false);
+			_notifiedPlatform = false;
 		}
 	}
 

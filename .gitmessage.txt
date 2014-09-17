@@ -1,8 +1,8 @@
-[TASK]  Coallating files together
+[TASK]  Completed integration of the files 
 
-Resolves: 
-Releases:
+Resolves: Check the LevelDesign scene, suggested elevation
+Releases: Multiplayer splitscreen
 
-TODO:
+TODO: Work on HUD, AI and complete integration to the main level
 
-WARNING:
+WARNING: 

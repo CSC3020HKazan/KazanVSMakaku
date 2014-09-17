@@ -336,8 +336,12 @@ public class Lava3 : MonoBehaviour
 	// the following 2 functions are for supporting floating objects
 	// on the water surface. they just replicate the wave/sine animation
 	// that is also being calculated in the water mesh´ vertex shader
+
+	public Vector3 GetNormalAt(Vector3 pos) {
+		return GetNormalAt (pos, 1.0f);
+	}
 	
-	public Vector3 GetNormalAt(Vector3 pos, float scale = 1.0F) 
+	public Vector3 GetNormalAt(Vector3 pos, float scale) 
 	{
 		Vector3 pointA = GetHeightOffsetAt(pos+new Vector3(-scale,0.0f,0.0f));
 		Vector3 pointB = GetHeightOffsetAt(pos+new Vector3(-scale,0.0f,scale));

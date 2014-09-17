@@ -13,7 +13,7 @@ TagManager:
   - Alarm
   - PlayerTwo
   - MenuItem
-  - 
+  - MovingPlatform
   - Message
   - ScoreBoard
   - FireBallSpawnPoint
@@ -21,6 +21,8 @@ TagManager:
   - TorchLight
   - ElementBall
   - Environment
+  - Platform
+  - StationaryPlatform
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

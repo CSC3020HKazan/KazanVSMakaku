@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Player2Movement : PlayerMovement {
 
-	void Start () {
-		gameObject.tag = Tags.playerOne;
+	protected override void InitialiseTag () {
+		gameObject.tag = Tags.playerTwo;
+		gameObject.name = Tags.playerTwo;
 	}
 
 	public override float GetHorizontalAxisRaw () {

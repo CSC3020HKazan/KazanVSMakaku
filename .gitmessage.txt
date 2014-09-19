@@ -1,7 +1,7 @@
-[TASK]  Completed integration of the files 
+[BUGFIX]  Camera Control Bug fixed
 
-Resolves: Check the LevelDesign scene, suggested elevation
-Releases: Multiplayer splitscreen
+Resolves: 
+Releases:
 
 TODO: Work on HUD, AI and complete integration to the main level
 

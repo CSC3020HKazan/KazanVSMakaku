@@ -20,7 +20,5 @@ public class Player2Movement : PlayerMovement {
 	public override bool GetJumpInput () {
 		return  Input.GetButton (Tags.UserInputs.jumpPlayer2);
 	}
-	public override string GetAttackInputTag  () {
-		return Tags.UserInputs.attackPlayer2;
-	}
+
 }

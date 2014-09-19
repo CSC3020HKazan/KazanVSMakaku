@@ -12,6 +12,11 @@ public class CheckPointManager : SpawnManager {
 	}
 
 	public Vector3 GetLastCheckPoint () {
-		return _spawnPoints [_spawnPoints.Count - 1];
+		if (_spawnPoints.Count > 0)
+			return _spawnPoints [_spawnPoints.Count - 1];
+		else {
+			Debug.Log ("Invalid Call to GetLastCheckPoint");
+			return Vector3.zero;
+		}
 	}
 }

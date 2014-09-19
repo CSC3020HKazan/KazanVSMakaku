@@ -8,30 +8,28 @@ public class CameraControl : MonoBehaviour {
 	public float radius = 5;
 	public float elevation = 60;
 	public float theta = 0;
-
 	public float thetaThreshold = 30;
 	public float elevationThreshold = 20;
-
 	public float smoothSnapSpeed = 0.02f;
 	public float criticalDampingConst = 0.02F;
 	public float snapCriticalDampingConst = 0.5f;
 	public float aimingRadiusFactor = 0.3f;
 
-	private bool _lockCameraPosition = false;
-	private bool _lockTargetRotation = false;
-	private float _thetaOffset = - 90;
 	private bool _snap = false;
+	private float _thetaOffset = -90;
+	private float _theta, _elevation, _radius;
 	private float _deltaTheta = 0;
 	private CharacterController _targetController;
 	private PlayerMovement _targetMovement;
-	private float _theta, _elevation, _radius;
 	private Vector3 _desiredCameraPosition = Vector3.zero; //in cartesian coordinates
-	private Vector3 _desiredDeltaCameraPosition; // in Polar Coordinates
-	private Vector3 _targetPositionSnapshot;
-	private SphereCollider _sphereCollider;
+	private Vector3 _previousTargetPosition = Vector3.zero, _currentTargetPosition = Vector3.zero;
 
-	void Awake () {
-		InitializeTarget ();
+	protected virtual void InitialiseTarget  () {
+		target_ = GameObject.FindGameObjectWithTag (Tags.player);
+	}
+	// Use this for initialization
+	void Start () {
+		InitialiseTarget ();
 		if (!target_)
 			Debug.Log ( "No Game Object to follow");
 
@@ -46,48 +44,29 @@ public class CameraControl : MonoBehaviour {
 		_theta = theta + _thetaOffset;
 		_elevation = elevation;
 
-		_desiredDeltaCameraPosition =  new Vector3 (radius, _theta * Mathf.Deg2Rad, _elevation * Mathf.Deg2Rad);
-		_desiredCameraPosition = target_.transform.position + Utils.PolarToCartesian (_desiredDeltaCameraPosition);
-		_sphereCollider = gameObject.GetComponent<SphereCollider> ();
-		if (!_sphereCollider) {
-			Debug.Log ("Camera has no Sphere Collider");
-			return;
-		}
-		_sphereCollider.radius = radius * 0.5f;
-	}
-
-	// Use this for initialization
-	void Start () {
-		
+		_desiredCameraPosition = target_.transform.position +
+						 Utils.PolarToCartesian (new Vector3 (radius, _theta * Mathf.Deg2Rad, _elevation * Mathf.Deg2Rad));
 	}
 
 	// Update is called once per frame
 	void LateUpdate () {
-		// Vector from the target to camera
-		// Checking if the Camera was was far from the target
-		if (_lockTargetRotation)
-			_lockTargetRotation = _targetController.velocity.magnitude != 0;
+		RecordTargetPosition ();
 
-		_lockCameraPosition = IsCloseToTarget () && target_.transform.position.y < transform.position.y ;
-		Vector3 deltaPosition = (!_lockCameraPosition) ? ((_snap ? snapCriticalDampingConst : criticalDampingConst) * (_desiredCameraPosition - transform.position) ): Vector3.zero;
-		transform.position += deltaPosition;
+		Vector3 deltaPosition = (_snap ? snapCriticalDampingConst : criticalDampingConst) * (_desiredCameraPosition - transform.position) ;
+		transform.position +=  deltaPosition;
 		transform.LookAt (target_.transform.position);
 
 		SetDesiredCameraPosition ();
-		SetTargetRotation ();
-		
+		if (!_snap)
+			SetTargetRotation ();
 	}
 
 	void SetDesiredCameraPosition () {
 		float thetaOffsetFactor =GetCameraHorizontalAxisRaw();
 		float elevationOffsetFactor = GetCameraVerticalAxisRaw();
 
-		// _lockTargetRotation = (thetaOffsetFactor != 0 || elevationOffsetFactor != 0);
 		_snap = GetCameraSnapInput();
 		// Debug.Log (""+ thetaOffsetFactor + " : " +elevationOffsetFactor); 
-		if (_targetController != null) {
-			// Debug.DrawLine (target_.transform.position, target_.transform.position + _targetController.velocity, Color.yellow);
-		}
 		CalculateDeltaTheta ();
 		bool isAiming = AimControls (); // remove the true statement to allow for Aiming
 		if (_targetMovement)
@@ -95,9 +74,10 @@ public class CameraControl : MonoBehaviour {
 		 // Evaluate theta
 		_theta = theta + _deltaTheta +  _thetaOffset + (thetaThreshold) * ((isAiming) ? 1 : thetaOffsetFactor);
 		_elevation = elevation + (elevationThreshold) * ((isAiming) ? 1 : elevationOffsetFactor);
+		_radius = ((isAiming) ? aimingRadiusFactor : 1) * radius;
+		_radius = ((IsMovingTowardsCamera()) ? 3 : 1) * _radius;
 
-		_desiredDeltaCameraPosition =  new Vector3 (_radius, _theta * Mathf.Deg2Rad, _elevation * Mathf.Deg2Rad);
-		_desiredCameraPosition = target_.transform.position + Utils.PolarToCartesian (_desiredDeltaCameraPosition);
+		_desiredCameraPosition = target_.transform.position + Utils.PolarToCartesian (new Vector3 (_radius, _theta * Mathf.Deg2Rad, _elevation * Mathf.Deg2Rad));
 		Debug.DrawLine(target_.transform.position, _desiredCameraPosition);
 		//Debug.Log (transform.position.ToString () + " : " + Utils.PolarToCartesian(Utils.CartesianToPolar(transform.position) )); 
 	}
@@ -109,7 +89,9 @@ public class CameraControl : MonoBehaviour {
 			float movingTheta = Utils.CartesianToPolar (_targetController.velocity).y * Mathf.Rad2Deg;
 			if (movingTheta < 0) 
 				movingTheta = 360 + movingTheta;
-			_deltaTheta = Mathf.Repeat (movingTheta + 180, 360);
+			if (!IsMovingTowardsCamera())
+				movingTheta += 180;
+			_deltaTheta = Mathf.Repeat (movingTheta, 360);
 			_deltaTheta += 90;
 			if (_deltaTheta > 180) 
 				_deltaTheta = _deltaTheta - 360;
@@ -117,41 +99,35 @@ public class CameraControl : MonoBehaviour {
 	}
 
 	bool AimControls () {
-		if (_targetController == null)
-			return false;
-		if (_targetMovement == null)
+		if (_targetController == null || _targetMovement == null)
 			return false;
 		if (GetLeftTriggerAxisRaw() == -1) {
-			_radius = radius * aimingRadiusFactor;
 			return true;
 		} else {
-			_radius = radius;
 			return false;
 		}
 
 	}
 
 	void SetTargetRotation () {
-		if (   _targetMovement == null || _targetController == null) 
+		if ( _targetMovement == null || _targetController == null) 
 			return;
-		//if (_targetController.velocity.magnitude > 0.2f)
-			//return;
 		Vector3 cameraToTarget = transform.position - target_.transform.position;
 		Vector3 moveDirection = new Vector3 (- cameraToTarget.x, 0, - cameraToTarget.z);
 		_targetMovement.SetDirection (moveDirection);
 	}
 
-	bool IsCloseToTarget () {
-		Vector3 cameraToTarget = transform.position - target_.transform.position;
-		return (Vector3.Magnitude (cameraToTarget) <= radius  * 0.7 );
+	bool IsMovingTowardsCamera () {
+		return Vector3.Magnitude(_previousTargetPosition - transform.position) >  
+				Vector3.Magnitude(_currentTargetPosition - transform.position);
 	}
 
-	void OnTriggerStay (Collider coll) {
-		if (coll.tag == Tags.player) {
-			_lockTargetRotation = true;
-		}
-
-	}
+	private void RecordTargetPosition () {
+		if (!target_)
+			return;
+		_previousTargetPosition = _currentTargetPosition;
+		_currentTargetPosition = target_.transform.position;
+	}	
 
 	protected virtual float GetCameraHorizontalAxisRaw () {
 		return Input.GetAxisRaw (Tags.CameraInputs.cameraHorizontal);
@@ -168,7 +144,5 @@ public class CameraControl : MonoBehaviour {
 	protected virtual float GetLeftTriggerAxisRaw () {
 		return Input.GetAxisRaw (Tags.CameraInputs.leftTrigger);
 	}
-	protected virtual void InitializeTarget  () {
-		target_ = GameObject.FindGameObjectWithTag (Tags.player);
-	}
+	
 }

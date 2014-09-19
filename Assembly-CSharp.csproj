@@ -39,10 +39,10 @@
 	<Reference Include="System.Core" />
 	<Reference Include="System.Xml.Linq" />
 	<Reference Include="UnityEngine">
-	  <HintPath>C:/Installed Applications/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
 	</Reference>
 	<Reference Include="UnityEditor">
-	  <HintPath>C:/Installed Applications/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
 	</Reference>
   </ItemGroup>
   <ItemGroup>
@@ -73,6 +73,7 @@
      <Compile Include="Assets\Scripts\EnemyAI\LastPlayerSighting.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\SimpleEnemyAI.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\SimpleTotemPole.cs" />
+     <Compile Include="Assets\Scripts\Environment\BasePlatform.cs" />
      <Compile Include="Assets\Scripts\Environment\Lava3.cs" />
      <Compile Include="Assets\Scripts\Environment\Lava3Float.cs" />
      <Compile Include="Assets\Scripts\Environment\Lava3UnderwaterEffect.cs" />
@@ -80,8 +81,10 @@
      <Compile Include="Assets\Scripts\Environment\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts\Environment\StationaryPlatform.cs" />
      <Compile Include="Assets\Scripts\GameControls\CheckPointManager.cs" />
+     <Compile Include="Assets\Scripts\GameControls\ElementBallBehaviour.cs" />
      <Compile Include="Assets\Scripts\GameControls\ElementBallMovement.cs" />
      <Compile Include="Assets\Scripts\GameControls\EnemyWayPointManager.cs" />
+     <Compile Include="Assets\Scripts\GameControls\GameMaster.cs" />
      <Compile Include="Assets\Scripts\GameControls\SceneFadeInOut.cs" />
      <Compile Include="Assets\Scripts\GameControls\SpawnManager.cs" />
      <Compile Include="Assets\Scripts\HelperScripts\HashIDs.cs" />
@@ -91,8 +94,11 @@
      <Compile Include="Assets\Scripts\MenuUI\LoadNew.cs" />
      <Compile Include="Assets\Scripts\NPC Behaviour\bossSkin.cs" />
      <Compile Include="Assets\Scripts\NPC Behaviour\floatScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerControls\Player1Behaviour.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\Player1Movement.cs" />
+     <Compile Include="Assets\Scripts\PlayerControls\Player2Behaviour.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\Player2Movement.cs" />
+     <Compile Include="Assets\Scripts\PlayerControls\PlayerBehaviour.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\PlayerMovement.cs" />
      <None Include="Assets\Shaders\Lava.shader" />

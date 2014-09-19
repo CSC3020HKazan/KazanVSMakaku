@@ -1,25 +1,25 @@
 using UnityEngine;
 using System.Collections;
 
-public class MovingPlatform : MonoBehaviour {
+public class MovingPlatform : BasePlatform {
 
 	public float plummetingTimeout = 3f;
 	public float fallingForce = 3000f;
 
-	private bool _playerIsPresent = false;
+	private Vector3 _platformPositionSnapshot;
 
-	void Start () {
+	protected override void InitialiseTag () {
 		gameObject.tag = Tags.movingPlatform;
+		gameObject.name = Tags.movingPlatform;
+		_platformPositionSnapshot = transform.position;
 	}
 
 	void FixedUpdate () {
-		if (_playerIsPresent) {
+		if (IsPlayerPresent()) {
 			Invoke ("MovePlatformDown", plummetingTimeout);
-		} 
-	}
-
-	public void SetPlayerPresence (bool isPresent) {
-		_playerIsPresent = isPresent;
+		} else {
+			transform.position = _platformPositionSnapshot;
+		}
 	}
 
 	void MovePlatformDown () {
@@ -27,8 +27,8 @@ public class MovingPlatform : MonoBehaviour {
 	}
 
 	void MovePlatform (Vector3 direction, float force) {
-		Debug.Log ("MovePlatform");
-		if (!_playerIsPresent) 
+		//Debug.Log ("MovePlatform");
+		if (!IsPlayerPresent()) 
 			return;
 		rigidbody.isKinematic = false;
 		rigidbody.useGravity = true;

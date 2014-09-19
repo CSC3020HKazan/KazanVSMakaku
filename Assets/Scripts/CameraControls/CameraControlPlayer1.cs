@@ -3,6 +3,9 @@ using System.Collections;
 
 public class CameraControlPlayer1 : CameraControl {
 
+	protected override void InitialiseTarget  () {
+		target_ = GameObject.FindGameObjectWithTag (Tags.playerOne);
+	}
 	protected override float GetCameraHorizontalAxisRaw () {
 		return Input.GetAxisRaw (Tags.CameraInputs.cameraHorizontalPlayer1);
 	}
@@ -17,8 +20,5 @@ public class CameraControlPlayer1 : CameraControl {
 
 	protected override float GetLeftTriggerAxisRaw () {
 		return Input.GetAxisRaw (Tags.CameraInputs.leftTriggerPlayer1);
-	}
-	protected override void InitializeTarget  () {
-		target_ = GameObject.FindGameObjectWithTag (Tags.playerOne);
 	}
 }

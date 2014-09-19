@@ -31,6 +31,4 @@ public class ElementBallMovement : MonoBehaviour {
 	void OnCollisionEnter (Collision coll) {
 		Destroy (gameObject);
 	}
-
-
 }

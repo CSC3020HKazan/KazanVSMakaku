@@ -6,7 +6,6 @@ public class Player1Movement : PlayerMovement {
 	protected override void InitialiseTag () {
 		gameObject.tag = Tags.playerOne;
 		gameObject.name = Tags.playerOne;
-
 	}
 
 	public override float GetHorizontalAxisRaw () {
@@ -20,8 +19,5 @@ public class Player1Movement : PlayerMovement {
 	}	
 	public override bool GetJumpInput () {
 		return  Input.GetButton (Tags.UserInputs.jumpPlayer1);
-	}
-	public override string GetAttackInputTag  () {
-		return Tags.UserInputs.attackPlayer1;
 	}
 }

@@ -2,6 +2,9 @@ using UnityEngine;
 using System.Collections;
 
 public class CameraControlPlayer2 : CameraControl {
+	protected override void InitialiseTarget  () {
+		target_ = GameObject.FindGameObjectWithTag (Tags.playerTwo);
+	}
 	protected override float GetCameraHorizontalAxisRaw () {
 		return Input.GetAxisRaw (Tags.CameraInputs.cameraHorizontalPlayer2);
 	}
@@ -16,8 +19,5 @@ public class CameraControlPlayer2 : CameraControl {
 
 	protected override float GetLeftTriggerAxisRaw () {
 		return Input.GetAxisRaw (Tags.CameraInputs.leftTriggerPlayer2);
-	}
-	protected override void InitializeTarget  () {
-		target_ = GameObject.FindGameObjectWithTag (Tags.playerTwo);
 	}
 }

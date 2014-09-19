@@ -9,16 +9,24 @@ public class Tags
 	public const string fader = "SceneFader";
 	public const string finish = "Finish";
 	public const string gameController = "GameController";
-	public const string mainCamera = "MainCamera";	
 	public const string menuItem = "MenuItem";
 	public const string player = "Player";
 	public const string playerOne = "PlayerOne";
 	public const string playerTwo = "PlayerTwo";
 	public const string elementBall = "ElementBall";
+	public const string fireBall = "FireBall";
+	public const string iceBall = "IceBall";
 	public const string fireballSpawnPoint = "FireBallSpawnPoint"; 
 	public const string platform = "Platform";
 	public const string stationaryPlatform = "StationaryPlatform";
 	public const string movingPlatform = "MovingPlatform";
+
+
+	public const string mainCamera = "MainCamera";
+	public const string mainCameraPlayer1 = "MainCamera_Player1";
+	public const string mainCameraPlayer2 = "MainCamera_Player2";
+
+
 
 	public class UserInputs {
 		// Default 

@@ -18,7 +18,7 @@ public class ElementBallBehaviour : MonoBehaviour {
 
 	}
 
-	float GetPotency () {
+	public float GetPotency () {
 		return potency;
 	}
 } 

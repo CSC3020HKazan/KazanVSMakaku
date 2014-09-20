@@ -20,8 +20,6 @@ public class Tags
 	public const string platform = "Platform";
 	public const string stationaryPlatform = "StationaryPlatform";
 	public const string movingPlatform = "MovingPlatform";
-
-
 	public const string mainCamera = "MainCamera";
 	public const string mainCameraPlayer1 = "MainCamera_Player1";
 	public const string mainCameraPlayer2 = "MainCamera_Player2";

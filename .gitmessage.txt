@@ -1,8 +1,14 @@
 [BUGFIX]  Camera Control Bug fixed
 
-Resolves: 
-Releases:
+Resolves: Removed the jittering effect the camera had on the player,
+Worked on rotation and positioning the player on aim and Non-aim stances
+in: PlayerMovement and CameraControl
 
-TODO: Work on HUD, AI and complete integration to the main level
+Releases: Environment Navigation - Added the level design sent to us by the artists.
+Added the colliders to the Platforms and the textures
+in: EnvironmentNavigation_test.unity scene
+
+TODO: Work on HUD, AI and complete integration to the main level,
+NEED to clean up all the folders
 
 WARNING: 

@@ -1,31 +1,9 @@
-Base path: C:/Installed Applications/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-1-5388
+Base path: C:/Program Files (x86)/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-1-6624
 Cmd: getPlatforms
 Cmd: preprocess
-  insize=5140 outsize=2085 ok=1
-Cmd: preprocess
-  insize=12913 outsize=2602 ok=1
-Cmd: preprocess
   insize=22217 outsize=4216 ok=1
 Cmd: preprocess
-  insize=12080 outsize=2481 ok=1
-Cmd: preprocess
   insize=532 outsize=532 ok=1
 Cmd: preprocess
-  insize=532 outsize=532 ok=1
-Cmd: preprocess
-  insize=5140 outsize=2085 ok=1
-Cmd: preprocess
-  insize=12913 outsize=2602 ok=1
-Cmd: preprocess
-  insize=22217 outsize=4216 ok=1
-Cmd: preprocess
-  insize=12080 outsize=2481 ok=1
-Cmd: preprocess
-  insize=532 outsize=532 ok=1
-Cmd: preprocess
-  insize=532 outsize=532 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=17343 outsize=4134 kw=WATER_DISPLACEMENT_ON EDGEBLEND_ON RT_REFLECTION_ON REFRACTION_MASK_OFF ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=17343 outsize=5125 kw=WATER_DISPLACEMENT_ON EDGEBLEND_ON RT_REFLECTION_ON REFRACTION_MASK_OFF ok=1
+  insize=1144 outsize=1269 ok=1

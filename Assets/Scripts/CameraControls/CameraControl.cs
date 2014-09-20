@@ -27,9 +27,15 @@ public class CameraControl : MonoBehaviour {
 	protected virtual void InitialiseTarget  () {
 		target_ = GameObject.FindGameObjectWithTag (Tags.player);
 	}
+	protected virtual void InitialiseTag () {
+		gameObject.tag = Tags.mainCamera; 
+		gameObject.name = Tags.mainCamera; 
+
+	}
 	// Use this for initialization
 	void Start () {
 		InitialiseTarget ();
+		InitialiseTag ();
 		if (!target_)
 			Debug.Log ( "No Game Object to follow");
 
@@ -50,52 +56,58 @@ public class CameraControl : MonoBehaviour {
 
 	// Update is called once per frame
 	void LateUpdate () {
-		RecordTargetPosition ();
+		if (!target_)
+			return;
+
+		bool isBelowTarget = transform.position.y < target_.transform.position.y;
+		if (_targetController.velocity.magnitude > 0 || isBelowTarget )
+			SetDesiredCameraPosition (target_.transform.position, _targetMovement.IsMovingBack ());
+		else if (_targetController.velocity.magnitude == 0 && (GetCameraVerticalAxisRaw() > 0.5f || GetCameraHorizontalAxisRaw () > 0.5f ) || _snap )
+			SetDesiredCameraPosition (target_.transform.position, _targetMovement.IsMovingBack ());
 
 		Vector3 deltaPosition = (_snap ? snapCriticalDampingConst : criticalDampingConst) * (_desiredCameraPosition - transform.position) ;
 		transform.position +=  deltaPosition;
 		transform.LookAt (target_.transform.position);
-
-		SetDesiredCameraPosition ();
-		if (!_snap)
-			SetTargetRotation ();
 	}
 
-	void SetDesiredCameraPosition () {
+	public void SetDesiredCameraPosition (Vector3 targetPosition, bool isMovingBack) {
 		float thetaOffsetFactor =GetCameraHorizontalAxisRaw();
 		float elevationOffsetFactor = GetCameraVerticalAxisRaw();
 
 		_snap = GetCameraSnapInput();
 		// Debug.Log (""+ thetaOffsetFactor + " : " +elevationOffsetFactor); 
-		CalculateDeltaTheta ();
-		bool isAiming = AimControls (); // remove the true statement to allow for Aiming
+		CalculateDeltaTheta (isMovingBack);
+		bool isAiming = AimControls ();
 		if (_targetMovement)
 			_targetMovement.SetAiming(isAiming);
 		 // Evaluate theta
-		_theta = theta + _deltaTheta +  _thetaOffset + (thetaThreshold) * ((isAiming) ? 1 : thetaOffsetFactor);
-		_elevation = elevation + (elevationThreshold) * ((isAiming) ? 1 : elevationOffsetFactor);
-		_radius = ((isAiming) ? aimingRadiusFactor : 1) * radius;
-		_radius = ((IsMovingTowardsCamera()) ? 3 : 1) * _radius;
+		float vel = 20;
+		float targetTheta = theta + _deltaTheta +  _thetaOffset + (thetaThreshold) * ((isAiming) ? 1 : thetaOffsetFactor);
+		_theta = Mathf.SmoothDampAngle (_theta, targetTheta, ref vel, 0.01f) ;
+		float targetElevation = elevation + (elevationThreshold) * ((isAiming && !isMovingBack) ? 1 : elevationOffsetFactor);
+		// Mathf.Clamp (targetElevation, 0, 90);
+		_elevation = Mathf.SmoothDampAngle (_elevation, targetElevation, ref vel, 0.01f) ;
+		float targetRadius = ((isAiming && !isMovingBack) ? ( aimingRadiusFactor) : 1) * radius;
+		targetRadius = (isMovingBack ? 2.5F : 1) * targetRadius;
+		_radius = Mathf.SmoothDamp (_radius, targetRadius, ref vel, 0.01f) ;
 
-		_desiredCameraPosition = target_.transform.position + Utils.PolarToCartesian (new Vector3 (_radius, _theta * Mathf.Deg2Rad, _elevation * Mathf.Deg2Rad));
-		Debug.DrawLine(target_.transform.position, _desiredCameraPosition);
+		_desiredCameraPosition = targetPosition + Utils.PolarToCartesian (new Vector3 (_radius, _theta * Mathf.Deg2Rad, _elevation * Mathf.Deg2Rad));
+		Debug.DrawLine(targetPosition, _desiredCameraPosition);
 		//Debug.Log (transform.position.ToString () + " : " + Utils.PolarToCartesian(Utils.CartesianToPolar(transform.position) )); 
 	}
 
-	private void CalculateDeltaTheta () {
-		if (_targetController != null) {
-			if (_targetController.velocity.magnitude < 0.2 )
-				return;
-			float movingTheta = Utils.CartesianToPolar (_targetController.velocity).y * Mathf.Rad2Deg;
-			if (movingTheta < 0) 
-				movingTheta = 360 + movingTheta;
-			if (!IsMovingTowardsCamera())
-				movingTheta += 180;
-			_deltaTheta = Mathf.Repeat (movingTheta, 360);
-			_deltaTheta += 90;
-			if (_deltaTheta > 180) 
-				_deltaTheta = _deltaTheta - 360;
-		} 
+	private void CalculateDeltaTheta (bool isMovingBack) {
+		if (!_targetController)
+			return;
+		float movingTheta = Utils.CartesianToPolar (_targetController.velocity).y * Mathf.Rad2Deg;
+		if (movingTheta < 0) 
+			movingTheta = 360 + movingTheta;
+		if (!isMovingBack)
+			movingTheta += 180;
+		_deltaTheta = Mathf.Repeat (movingTheta, 360);
+		_deltaTheta += 90;
+		if (_deltaTheta > 180) 
+			_deltaTheta = _deltaTheta - 360;
 	}
 
 	bool AimControls () {

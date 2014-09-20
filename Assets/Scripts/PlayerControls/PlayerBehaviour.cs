@@ -12,14 +12,24 @@ public class PlayerBehaviour : MonoBehaviour {
 	private List<GameObject>_platformTraversed;
 	private Transform _fireballTransform;
 	private bool _hasFired = false;
+	private PlayerHealth _playerHealth;
+	private PlayerMana _playerMana;
 	
 	protected virtual void InitialiseTag () {
 		gameObject.tag = Tags.player;
 		gameObject.name = Tags.player;
 	}
 
-	void Start () {	
+	void Start () {
 		InitialiseTag();
+		_playerHealth = gameObject.GetComponent<PlayerHealth> ();
+		if (!_playerHealth) 
+			Debug.Log ("No Player Health script attached"); 
+
+		_playerMana = gameObject.GetComponent<PlayerMana> ();
+		if (!_playerMana)
+			Debug.Log ("No Player Mana script attached");
+
 		_fireballTransform = GameObject.Find(""+gameObject.name +"/FireBallSpawnPoint").transform;
 		_platformTraversed = new List<GameObject> ();
 	}
@@ -42,12 +52,20 @@ public class PlayerBehaviour : MonoBehaviour {
 		Rigidbody body = hit.collider.attachedRigidbody;
 		if (!body)
 			return;
-		NotifyPlatform (hit.gameObject);
-		// GetShot ();
+
+		CheckPlatformCollision (hit.gameObject);
+		
+		if (!_playerHealth)
+			return;
+		CheckProjectileCollision (hit.gameObject);
+		
+		if (!_playerMana)
+			return;
+		CheckPickupCollision (hit.gameObject);
 
 	}
 
-	void CheckFire (bool attack, Transform _fireballTransform) {
+	private void CheckFire (bool attack, Transform _fireballTransform) {
 		if (!_fireballTransform) {
 			Debug.Log ("No FireBallSpawnPoint GameObject");
 			return;
@@ -71,7 +89,7 @@ public class PlayerBehaviour : MonoBehaviour {
 		}
 	}
 
-	void FireProjectile (Transform _fireballTransform) {
+	private void FireProjectile (Transform _fireballTransform) {
 		if (!_fireballTransform) {
 			Debug.Log ("No FireBallSpawnPoint GameObject");
 			return;
@@ -85,7 +103,7 @@ public class PlayerBehaviour : MonoBehaviour {
 		}
 	}
 
-	private void NotifyPlatform (GameObject hitObject) {
+	private void CheckPlatformCollision (GameObject hitObject) {
 		BasePlatform basePlatform = hitObject.GetComponent<BasePlatform> ();
 		if(!basePlatform)
 			return;
@@ -99,6 +117,27 @@ public class PlayerBehaviour : MonoBehaviour {
 			_platformTraversed.Add(hitObject);    
 		}
 		basePlatform.SetPlayerPresence(true, _playerIndex);
+	} 
+
+	private void CheckProjectileCollision (GameObject hitObject) {
+		ElementBallBehaviour projectileBehaviour = hitObject.GetComponent<ElementBallBehaviour> ();
+		if (!projectileBehaviour)
+			return;
+		if (!_playerHealth) {
+			Debug.Log ("No Player Health script attached");
+			return;
+		}
+		if (_playerHealth.IsAlive()) {
+			_playerHealth.TakeDamage (projectileBehaviour.GetPotency()); 
+		} 
+	}
+
+	private void CheckPickupCollision (GameObject hitObject) {
+		PickupBehaviour pickupBehaviour = hitObject.GetComponent<PickupBehaviour> ();
+		if (!pickupBehaviour)
+			return;
+		_playerMana.ReplenishMana (pickupBehaviour.GetManaReward());
+		_playerHealth.HealPlayer (pickupBehaviour.GetHealthReward());
 	} 
 
 	public virtual string GetAttackInputTag  () {

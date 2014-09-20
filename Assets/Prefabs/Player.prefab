@@ -47,7 +47,6 @@ GameObject:
   - 143: {fileID: 14300000}
   - 114: {fileID: 11400000}
   - 114: {fileID: 11400002}
-  - 96: {fileID: 9600000}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -105,7 +104,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 743cc3b51b8cc4346bb098737f1af8c8, type: 2}
+  - {fileID: 2100000, guid: fb1555ce48f4d5f4b8144c542451c742, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -159,47 +158,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!96 &9600000
-TrailRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100004}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: 63a4195f6b94d4d51bd6d43e685afc82, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Time: .5
-  m_StartWidth: 1
-  m_EndWidth: 1.5
-  m_Colors:
-    m_Color[0]:
-      serializedVersion: 2
-      rgba: 4294901769
-    m_Color[1]:
-      serializedVersion: 2
-      rgba: 4294918238
-    m_Color[2]:
-      serializedVersion: 2
-      rgba: 4294932102
-    m_Color[3]:
-      serializedVersion: 2
-      rgba: 4294967295
-    m_Color[4]:
-      serializedVersion: 2
-      rgba: 7763711
-  m_MinVertexDistance: .100000001
-  m_Autodestruct: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -211,7 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd68fa13a3c58ec4fa88e4140c24acad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turningSpeed: .100000001
+  turningSpeed: .00999999978
   speedDampTime: .0199999996
   jumpAngle: 45
   jumpSpeed: 8

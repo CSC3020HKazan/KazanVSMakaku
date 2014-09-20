@@ -1,0 +1,2132 @@
+fileFormatVersion: 2
+guid: 38603bda8497e294c8599688a87d422c
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Basemodel:Basemodel:bend1Handle
+    100002: Basemodel:Basemodel:bossplatformsidesteps
+    100004: Basemodel:Basemodel:Boulders
+    100006: Basemodel:Basemodel:chain_grp
+    100008: Basemodel:Basemodel:distanceDimension1
+    100010: Basemodel:Basemodel:Dome
+    100012: Basemodel:Basemodel:FirstPlatform
+    100014: Basemodel:Basemodel:FirstSmallPlatform
+    100016: Basemodel:Basemodel:FirstSmallPlatform1
+    100018: Basemodel:Basemodel:FirstSmallPlatform2
+    100020: Basemodel:Basemodel:FirstSteps
+    100022: Basemodel:Basemodel:INsideCaveStones
+    100024: Basemodel:Basemodel:InsideCaveStones
+    100026: Basemodel:Basemodel:InsideCaveStones1
+    100028: Basemodel:Basemodel:InsideCaveStones10
+    100030: Basemodel:Basemodel:InsideCaveStones11
+    100032: Basemodel:Basemodel:InsideCaveStones12
+    100034: Basemodel:Basemodel:InsideCaveStones2
+    100036: Basemodel:Basemodel:InsideCaveStones3
+    100038: Basemodel:Basemodel:InsideCaveStones4
+    100040: Basemodel:Basemodel:InsideCaveStones5
+    100042: Basemodel:Basemodel:InsideCaveStones6
+    100044: Basemodel:Basemodel:InsideCaveStones7
+    100046: Basemodel:Basemodel:InsideCaveStones8
+    100048: Basemodel:Basemodel:InsideCaveStones9
+    100050: Basemodel:Basemodel:LastMainPlatform
+    100052: Basemodel:Basemodel:LastPlatform
+    100054: Basemodel:Basemodel:LavaFallStones
+    100056: Basemodel:Basemodel:LavafloorPlane
+    100058: Basemodel:Basemodel:lavawaterfall
+    100060: Basemodel:Basemodel:locator
+    100062: Basemodel:Basemodel:locator1
+    100064: Basemodel:Basemodel:locator2
+    100066: Basemodel:Basemodel:MainPlatforms
+    100068: Basemodel:Basemodel:pCube100
+    100070: Basemodel:Basemodel:pCube101
+    100072: Basemodel:Basemodel:pCube102
+    100074: Basemodel:Basemodel:pCube103
+    100076: Basemodel:Basemodel:pCube104
+    100078: Basemodel:Basemodel:pCube105
+    100080: Basemodel:Basemodel:pCube106
+    100082: Basemodel:Basemodel:pCube107
+    100084: Basemodel:Basemodel:pCube108
+    100086: Basemodel:Basemodel:pCube108 1
+    100088: Basemodel:Basemodel:pCube108 2
+    100090: Basemodel:Basemodel:pCube108 3
+    100092: Basemodel:Basemodel:pCube109
+    100094: Basemodel:Basemodel:pCube109 1
+    100096: Basemodel:Basemodel:pCube109 2
+    100098: Basemodel:Basemodel:pCube109 3
+    100100: Basemodel:Basemodel:pCube111
+    100102: Basemodel:Basemodel:pCube112
+    100104: Basemodel:Basemodel:pCube113
+    100106: Basemodel:Basemodel:pCube114
+    100108: Basemodel:Basemodel:pCube115
+    100110: Basemodel:Basemodel:pCube116
+    100112: Basemodel:Basemodel:pCube117
+    100114: Basemodel:Basemodel:pCube118
+    100116: Basemodel:Basemodel:pCube119
+    100118: Basemodel:Basemodel:pCube120
+    100120: Basemodel:Basemodel:pCube121
+    100122: Basemodel:Basemodel:pCube122
+    100124: Basemodel:Basemodel:pCube123
+    100126: Basemodel:Basemodel:pCube124
+    100128: Basemodel:Basemodel:pCube125
+    100130: Basemodel:Basemodel:pCube126
+    100132: Basemodel:Basemodel:pCube127
+    100134: Basemodel:Basemodel:pCube128
+    100136: Basemodel:Basemodel:pCube54
+    100138: Basemodel:Basemodel:pCube54 1
+    100140: Basemodel:Basemodel:pCube54 2
+    100142: Basemodel:Basemodel:pCube54 3
+    100144: Basemodel:Basemodel:pCube55
+    100146: Basemodel:Basemodel:pCube55 1
+    100148: Basemodel:Basemodel:pCube55 2
+    100150: Basemodel:Basemodel:pCube55 3
+    100152: Basemodel:Basemodel:pCube64
+    100154: Basemodel:Basemodel:pCube7
+    100156: Basemodel:Basemodel:pCube71
+    100158: Basemodel:Basemodel:pCube80
+    100160: Basemodel:Basemodel:pCube81
+    100162: Basemodel:Basemodel:pCube82
+    100164: Basemodel:Basemodel:pCube83
+    100166: Basemodel:Basemodel:pCube84
+    100168: Basemodel:Basemodel:pCube85
+    100170: Basemodel:Basemodel:pCube86
+    100172: Basemodel:Basemodel:pCube87
+    100174: Basemodel:Basemodel:pCube88
+    100176: Basemodel:Basemodel:pCube89
+    100178: Basemodel:Basemodel:pCube90
+    100180: Basemodel:Basemodel:pCube91
+    100182: Basemodel:Basemodel:pCube92
+    100184: Basemodel:Basemodel:pCube93
+    100186: Basemodel:Basemodel:pCube94
+    100188: Basemodel:Basemodel:pCube95
+    100190: Basemodel:Basemodel:pCube96
+    100192: Basemodel:Basemodel:pCube97
+    100194: Basemodel:Basemodel:pCube98
+    100196: Basemodel:Basemodel:pCube99
+    100198: Basemodel:Basemodel:polySurface1
+    100200: Basemodel:Basemodel:polySurface2
+    100202: Basemodel:Basemodel:polySurface3
+    100204: Basemodel:Basemodel:polySurface4
+    100206: Basemodel:Basemodel:polySurface5
+    100208: Basemodel:Basemodel:polySurface6
+    100210: Basemodel:Basemodel:polySurface7
+    100212: Basemodel:Basemodel:polySurface8
+    100214: Basemodel:Basemodel:polySurface9
+    100216: Basemodel:Basemodel:pSphere1
+    100218: Basemodel:Basemodel:pSphere2
+    100220: Basemodel:Basemodel:pSphere3
+    100222: Basemodel:Basemodel:pSphere4
+    100224: Basemodel:Basemodel:pTorus1
+    100226: Basemodel:Basemodel:pTorus10
+    100228: Basemodel:Basemodel:pTorus11
+    100230: Basemodel:Basemodel:pTorus12
+    100232: Basemodel:Basemodel:pTorus13
+    100234: Basemodel:Basemodel:pTorus14
+    100236: Basemodel:Basemodel:pTorus15
+    100238: Basemodel:Basemodel:pTorus16
+    100240: Basemodel:Basemodel:pTorus17
+    100242: Basemodel:Basemodel:pTorus18
+    100244: Basemodel:Basemodel:pTorus19
+    100246: Basemodel:Basemodel:pTorus2
+    100248: Basemodel:Basemodel:pTorus20
+    100250: Basemodel:Basemodel:pTorus21
+    100252: Basemodel:Basemodel:pTorus22
+    100254: Basemodel:Basemodel:pTorus23
+    100256: Basemodel:Basemodel:pTorus24
+    100258: Basemodel:Basemodel:pTorus25
+    100260: Basemodel:Basemodel:pTorus26
+    100262: Basemodel:Basemodel:pTorus27
+    100264: Basemodel:Basemodel:pTorus28
+    100266: Basemodel:Basemodel:pTorus29
+    100268: Basemodel:Basemodel:pTorus3
+    100270: Basemodel:Basemodel:pTorus30
+    100272: Basemodel:Basemodel:pTorus31
+    100274: Basemodel:Basemodel:pTorus32
+    100276: Basemodel:Basemodel:pTorus4
+    100278: Basemodel:Basemodel:pTorus5
+    100280: Basemodel:Basemodel:pTorus6
+    100282: Basemodel:Basemodel:pTorus7
+    100284: Basemodel:Basemodel:pTorus8
+    100286: Basemodel:Basemodel:pTorus9
+    100288: Basemodel:Basemodel:SecondPlatform
+    100290: Basemodel:Basemodel:SecondSteps
+    100292: Basemodel:Basemodel:Steps_with_nail
+    100294: Basemodel:Basemodel:Steps_with_nail4
+    100296: Basemodel:Basemodel:Steps_with_nail5
+    100298: Basemodel:Basemodel:Steps_with_nail6
+    100300: Basemodel:Basemodel:ThirdPlatform
+    100302: Basemodel:Basemodel:transform1
+    100304: Basemodel:Basemodel:transform2
+    100306: Basemodel:Basemodel:transform3
+    100308: Basemodel:Basemodel:transform4
+    100310: Basemodel:Basemodel:transform5
+    100312: Basemodel:Basemodel:transform6
+    100314: Basemodel:Basemodel:transform7
+    100316: Basemodel:bend1Handle
+    100318: Basemodel:bend1Handle 1
+    100320: Basemodel:bend1Handle 2
+    100322: Basemodel:bend1Handle 3
+    100324: Basemodel:bend1Handle 4
+    100326: Basemodel:bend1Handle 5
+    100328: Basemodel:bend1Handle 6
+    100330: Basemodel:bend1Handle 7
+    100332: Basemodel:chain_grp
+    100334: Basemodel:chain_grp 1
+    100336: Basemodel:chain_grp1
+    100338: Basemodel:chain_grp1 1
+    100340: Basemodel:chain_grp2
+    100342: Basemodel:chain_grp2 1
+    100344: Basemodel:chain_grp3
+    100346: Basemodel:chain_grp3 1
+    100348: Basemodel:pCube101
+    100350: Basemodel:pTorus1
+    100352: Basemodel:pTorus1 1
+    100354: Basemodel:pTorus1 2
+    100356: Basemodel:pTorus1 3
+    100358: Basemodel:pTorus1 4
+    100360: Basemodel:pTorus1 5
+    100362: Basemodel:pTorus1 6
+    100364: Basemodel:pTorus1 7
+    100366: Basemodel:pTorus10
+    100368: Basemodel:pTorus10 1
+    100370: Basemodel:pTorus10 2
+    100372: Basemodel:pTorus10 3
+    100374: Basemodel:pTorus10 4
+    100376: Basemodel:pTorus10 5
+    100378: Basemodel:pTorus10 6
+    100380: Basemodel:pTorus10 7
+    100382: Basemodel:pTorus11
+    100384: Basemodel:pTorus11 1
+    100386: Basemodel:pTorus11 2
+    100388: Basemodel:pTorus11 3
+    100390: Basemodel:pTorus11 4
+    100392: Basemodel:pTorus11 5
+    100394: Basemodel:pTorus11 6
+    100396: Basemodel:pTorus11 7
+    100398: Basemodel:pTorus12
+    100400: Basemodel:pTorus12 1
+    100402: Basemodel:pTorus12 2
+    100404: Basemodel:pTorus12 3
+    100406: Basemodel:pTorus12 4
+    100408: Basemodel:pTorus12 5
+    100410: Basemodel:pTorus12 6
+    100412: Basemodel:pTorus12 7
+    100414: Basemodel:pTorus13
+    100416: Basemodel:pTorus13 1
+    100418: Basemodel:pTorus13 2
+    100420: Basemodel:pTorus13 3
+    100422: Basemodel:pTorus13 4
+    100424: Basemodel:pTorus13 5
+    100426: Basemodel:pTorus13 6
+    100428: Basemodel:pTorus13 7
+    100430: Basemodel:pTorus14
+    100432: Basemodel:pTorus14 1
+    100434: Basemodel:pTorus14 2
+    100436: Basemodel:pTorus14 3
+    100438: Basemodel:pTorus14 4
+    100440: Basemodel:pTorus14 5
+    100442: Basemodel:pTorus14 6
+    100444: Basemodel:pTorus14 7
+    100446: Basemodel:pTorus15
+    100448: Basemodel:pTorus15 1
+    100450: Basemodel:pTorus15 2
+    100452: Basemodel:pTorus15 3
+    100454: Basemodel:pTorus15 4
+    100456: Basemodel:pTorus15 5
+    100458: Basemodel:pTorus15 6
+    100460: Basemodel:pTorus15 7
+    100462: Basemodel:pTorus16
+    100464: Basemodel:pTorus16 1
+    100466: Basemodel:pTorus16 2
+    100468: Basemodel:pTorus16 3
+    100470: Basemodel:pTorus16 4
+    100472: Basemodel:pTorus16 5
+    100474: Basemodel:pTorus16 6
+    100476: Basemodel:pTorus16 7
+    100478: Basemodel:pTorus17
+    100480: Basemodel:pTorus17 1
+    100482: Basemodel:pTorus17 2
+    100484: Basemodel:pTorus17 3
+    100486: Basemodel:pTorus17 4
+    100488: Basemodel:pTorus17 5
+    100490: Basemodel:pTorus17 6
+    100492: Basemodel:pTorus17 7
+    100494: Basemodel:pTorus18
+    100496: Basemodel:pTorus18 1
+    100498: Basemodel:pTorus18 2
+    100500: Basemodel:pTorus18 3
+    100502: Basemodel:pTorus18 4
+    100504: Basemodel:pTorus18 5
+    100506: Basemodel:pTorus18 6
+    100508: Basemodel:pTorus18 7
+    100510: Basemodel:pTorus19
+    100512: Basemodel:pTorus19 1
+    100514: Basemodel:pTorus19 2
+    100516: Basemodel:pTorus19 3
+    100518: Basemodel:pTorus19 4
+    100520: Basemodel:pTorus19 5
+    100522: Basemodel:pTorus19 6
+    100524: Basemodel:pTorus19 7
+    100526: Basemodel:pTorus2
+    100528: Basemodel:pTorus2 1
+    100530: Basemodel:pTorus2 2
+    100532: Basemodel:pTorus2 3
+    100534: Basemodel:pTorus2 4
+    100536: Basemodel:pTorus2 5
+    100538: Basemodel:pTorus2 6
+    100540: Basemodel:pTorus2 7
+    100542: Basemodel:pTorus20
+    100544: Basemodel:pTorus20 1
+    100546: Basemodel:pTorus20 2
+    100548: Basemodel:pTorus20 3
+    100550: Basemodel:pTorus20 4
+    100552: Basemodel:pTorus20 5
+    100554: Basemodel:pTorus20 6
+    100556: Basemodel:pTorus20 7
+    100558: Basemodel:pTorus21
+    100560: Basemodel:pTorus21 1
+    100562: Basemodel:pTorus21 2
+    100564: Basemodel:pTorus21 3
+    100566: Basemodel:pTorus21 4
+    100568: Basemodel:pTorus21 5
+    100570: Basemodel:pTorus21 6
+    100572: Basemodel:pTorus21 7
+    100574: Basemodel:pTorus22
+    100576: Basemodel:pTorus22 1
+    100578: Basemodel:pTorus22 2
+    100580: Basemodel:pTorus22 3
+    100582: Basemodel:pTorus22 4
+    100584: Basemodel:pTorus22 5
+    100586: Basemodel:pTorus22 6
+    100588: Basemodel:pTorus22 7
+    100590: Basemodel:pTorus23
+    100592: Basemodel:pTorus23 1
+    100594: Basemodel:pTorus23 2
+    100596: Basemodel:pTorus23 3
+    100598: Basemodel:pTorus23 4
+    100600: Basemodel:pTorus23 5
+    100602: Basemodel:pTorus23 6
+    100604: Basemodel:pTorus23 7
+    100606: Basemodel:pTorus24
+    100608: Basemodel:pTorus24 1
+    100610: Basemodel:pTorus24 2
+    100612: Basemodel:pTorus24 3
+    100614: Basemodel:pTorus24 4
+    100616: Basemodel:pTorus24 5
+    100618: Basemodel:pTorus24 6
+    100620: Basemodel:pTorus24 7
+    100622: Basemodel:pTorus25
+    100624: Basemodel:pTorus25 1
+    100626: Basemodel:pTorus25 2
+    100628: Basemodel:pTorus25 3
+    100630: Basemodel:pTorus25 4
+    100632: Basemodel:pTorus25 5
+    100634: Basemodel:pTorus25 6
+    100636: Basemodel:pTorus25 7
+    100638: Basemodel:pTorus26
+    100640: Basemodel:pTorus26 1
+    100642: Basemodel:pTorus26 2
+    100644: Basemodel:pTorus26 3
+    100646: Basemodel:pTorus26 4
+    100648: Basemodel:pTorus26 5
+    100650: Basemodel:pTorus26 6
+    100652: Basemodel:pTorus26 7
+    100654: Basemodel:pTorus27
+    100656: Basemodel:pTorus27 1
+    100658: Basemodel:pTorus27 2
+    100660: Basemodel:pTorus27 3
+    100662: Basemodel:pTorus27 4
+    100664: Basemodel:pTorus27 5
+    100666: Basemodel:pTorus27 6
+    100668: Basemodel:pTorus27 7
+    100670: Basemodel:pTorus28
+    100672: Basemodel:pTorus28 1
+    100674: Basemodel:pTorus28 2
+    100676: Basemodel:pTorus28 3
+    100678: Basemodel:pTorus28 4
+    100680: Basemodel:pTorus28 5
+    100682: Basemodel:pTorus28 6
+    100684: Basemodel:pTorus28 7
+    100686: Basemodel:pTorus29
+    100688: Basemodel:pTorus29 1
+    100690: Basemodel:pTorus29 2
+    100692: Basemodel:pTorus29 3
+    100694: Basemodel:pTorus29 4
+    100696: Basemodel:pTorus29 5
+    100698: Basemodel:pTorus29 6
+    100700: Basemodel:pTorus29 7
+    100702: Basemodel:pTorus3
+    100704: Basemodel:pTorus3 1
+    100706: Basemodel:pTorus3 2
+    100708: Basemodel:pTorus3 3
+    100710: Basemodel:pTorus3 4
+    100712: Basemodel:pTorus3 5
+    100714: Basemodel:pTorus3 6
+    100716: Basemodel:pTorus3 7
+    100718: Basemodel:pTorus30
+    100720: Basemodel:pTorus30 1
+    100722: Basemodel:pTorus30 2
+    100724: Basemodel:pTorus30 3
+    100726: Basemodel:pTorus30 4
+    100728: Basemodel:pTorus30 5
+    100730: Basemodel:pTorus30 6
+    100732: Basemodel:pTorus30 7
+    100734: Basemodel:pTorus31
+    100736: Basemodel:pTorus31 1
+    100738: Basemodel:pTorus31 2
+    100740: Basemodel:pTorus31 3
+    100742: Basemodel:pTorus31 4
+    100744: Basemodel:pTorus31 5
+    100746: Basemodel:pTorus31 6
+    100748: Basemodel:pTorus31 7
+    100750: Basemodel:pTorus32
+    100752: Basemodel:pTorus32 1
+    100754: Basemodel:pTorus32 2
+    100756: Basemodel:pTorus32 3
+    100758: Basemodel:pTorus32 4
+    100760: Basemodel:pTorus32 5
+    100762: Basemodel:pTorus32 6
+    100764: Basemodel:pTorus32 7
+    100766: Basemodel:pTorus4
+    100768: Basemodel:pTorus4 1
+    100770: Basemodel:pTorus4 2
+    100772: Basemodel:pTorus4 3
+    100774: Basemodel:pTorus4 4
+    100776: Basemodel:pTorus4 5
+    100778: Basemodel:pTorus4 6
+    100780: Basemodel:pTorus4 7
+    100782: Basemodel:pTorus5
+    100784: Basemodel:pTorus5 1
+    100786: Basemodel:pTorus5 2
+    100788: Basemodel:pTorus5 3
+    100790: Basemodel:pTorus5 4
+    100792: Basemodel:pTorus5 5
+    100794: Basemodel:pTorus5 6
+    100796: Basemodel:pTorus5 7
+    100798: Basemodel:pTorus6
+    100800: Basemodel:pTorus6 1
+    100802: Basemodel:pTorus6 2
+    100804: Basemodel:pTorus6 3
+    100806: Basemodel:pTorus6 4
+    100808: Basemodel:pTorus6 5
+    100810: Basemodel:pTorus6 6
+    100812: Basemodel:pTorus6 7
+    100814: Basemodel:pTorus7
+    100816: Basemodel:pTorus7 1
+    100818: Basemodel:pTorus7 2
+    100820: Basemodel:pTorus7 3
+    100822: Basemodel:pTorus7 4
+    100824: Basemodel:pTorus7 5
+    100826: Basemodel:pTorus7 6
+    100828: Basemodel:pTorus7 7
+    100830: Basemodel:pTorus8
+    100832: Basemodel:pTorus8 1
+    100834: Basemodel:pTorus8 2
+    100836: Basemodel:pTorus8 3
+    100838: Basemodel:pTorus8 4
+    100840: Basemodel:pTorus8 5
+    100842: Basemodel:pTorus8 6
+    100844: Basemodel:pTorus8 7
+    100846: Basemodel:pTorus9
+    100848: Basemodel:pTorus9 1
+    100850: Basemodel:pTorus9 2
+    100852: Basemodel:pTorus9 3
+    100854: Basemodel:pTorus9 4
+    100856: Basemodel:pTorus9 5
+    100858: Basemodel:pTorus9 6
+    100860: Basemodel:pTorus9 7
+    100862: Basemodel:Ribs
+    100864: Basemodel:spike
+    100866: Basemodel:spike1
+    100868: Basemodel:spike2
+    100870: Basemodel:spike3
+    100872: Basemodel:spike4
+    100874: Basemodel:spike5
+    100876: Basemodel:spike6
+    100878: Basemodel:spike7
+    100880: Basemodel:spike8
+    100882: Basemodel:spike9
+    100884: Basemodel:SpikeRibChainsL
+    100886: Basemodel:SpikeRibChainsR
+    100888: //RootNode
+    400000: Basemodel:Basemodel:bend1Handle
+    400002: Basemodel:Basemodel:bossplatformsidesteps
+    400004: Basemodel:Basemodel:Boulders
+    400006: Basemodel:Basemodel:chain_grp
+    400008: Basemodel:Basemodel:distanceDimension1
+    400010: Basemodel:Basemodel:Dome
+    400012: Basemodel:Basemodel:FirstPlatform
+    400014: Basemodel:Basemodel:FirstSmallPlatform
+    400016: Basemodel:Basemodel:FirstSmallPlatform1
+    400018: Basemodel:Basemodel:FirstSmallPlatform2
+    400020: Basemodel:Basemodel:FirstSteps
+    400022: Basemodel:Basemodel:INsideCaveStones
+    400024: Basemodel:Basemodel:InsideCaveStones
+    400026: Basemodel:Basemodel:InsideCaveStones1
+    400028: Basemodel:Basemodel:InsideCaveStones10
+    400030: Basemodel:Basemodel:InsideCaveStones11
+    400032: Basemodel:Basemodel:InsideCaveStones12
+    400034: Basemodel:Basemodel:InsideCaveStones2
+    400036: Basemodel:Basemodel:InsideCaveStones3
+    400038: Basemodel:Basemodel:InsideCaveStones4
+    400040: Basemodel:Basemodel:InsideCaveStones5
+    400042: Basemodel:Basemodel:InsideCaveStones6
+    400044: Basemodel:Basemodel:InsideCaveStones7
+    400046: Basemodel:Basemodel:InsideCaveStones8
+    400048: Basemodel:Basemodel:InsideCaveStones9
+    400050: Basemodel:Basemodel:LastMainPlatform
+    400052: Basemodel:Basemodel:LastPlatform
+    400054: Basemodel:Basemodel:LavaFallStones
+    400056: Basemodel:Basemodel:LavafloorPlane
+    400058: Basemodel:Basemodel:lavawaterfall
+    400060: Basemodel:Basemodel:locator
+    400062: Basemodel:Basemodel:locator1
+    400064: Basemodel:Basemodel:locator2
+    400066: Basemodel:Basemodel:MainPlatforms
+    400068: Basemodel:Basemodel:pCube100
+    400070: Basemodel:Basemodel:pCube101
+    400072: Basemodel:Basemodel:pCube102
+    400074: Basemodel:Basemodel:pCube103
+    400076: Basemodel:Basemodel:pCube104
+    400078: Basemodel:Basemodel:pCube105
+    400080: Basemodel:Basemodel:pCube106
+    400082: Basemodel:Basemodel:pCube107
+    400084: Basemodel:Basemodel:pCube108
+    400086: Basemodel:Basemodel:pCube108 1
+    400088: Basemodel:Basemodel:pCube108 2
+    400090: Basemodel:Basemodel:pCube108 3
+    400092: Basemodel:Basemodel:pCube109
+    400094: Basemodel:Basemodel:pCube109 1
+    400096: Basemodel:Basemodel:pCube109 2
+    400098: Basemodel:Basemodel:pCube109 3
+    400100: Basemodel:Basemodel:pCube111
+    400102: Basemodel:Basemodel:pCube112
+    400104: Basemodel:Basemodel:pCube113
+    400106: Basemodel:Basemodel:pCube114
+    400108: Basemodel:Basemodel:pCube115
+    400110: Basemodel:Basemodel:pCube116
+    400112: Basemodel:Basemodel:pCube117
+    400114: Basemodel:Basemodel:pCube118
+    400116: Basemodel:Basemodel:pCube119
+    400118: Basemodel:Basemodel:pCube120
+    400120: Basemodel:Basemodel:pCube121
+    400122: Basemodel:Basemodel:pCube122
+    400124: Basemodel:Basemodel:pCube123
+    400126: Basemodel:Basemodel:pCube124
+    400128: Basemodel:Basemodel:pCube125
+    400130: Basemodel:Basemodel:pCube126
+    400132: Basemodel:Basemodel:pCube127
+    400134: Basemodel:Basemodel:pCube128
+    400136: Basemodel:Basemodel:pCube54
+    400138: Basemodel:Basemodel:pCube54 1
+    400140: Basemodel:Basemodel:pCube54 2
+    400142: Basemodel:Basemodel:pCube54 3
+    400144: Basemodel:Basemodel:pCube55
+    400146: Basemodel:Basemodel:pCube55 1
+    400148: Basemodel:Basemodel:pCube55 2
+    400150: Basemodel:Basemodel:pCube55 3
+    400152: Basemodel:Basemodel:pCube64
+    400154: Basemodel:Basemodel:pCube7
+    400156: Basemodel:Basemodel:pCube71
+    400158: Basemodel:Basemodel:pCube80
+    400160: Basemodel:Basemodel:pCube81
+    400162: Basemodel:Basemodel:pCube82
+    400164: Basemodel:Basemodel:pCube83
+    400166: Basemodel:Basemodel:pCube84
+    400168: Basemodel:Basemodel:pCube85
+    400170: Basemodel:Basemodel:pCube86
+    400172: Basemodel:Basemodel:pCube87
+    400174: Basemodel:Basemodel:pCube88
+    400176: Basemodel:Basemodel:pCube89
+    400178: Basemodel:Basemodel:pCube90
+    400180: Basemodel:Basemodel:pCube91
+    400182: Basemodel:Basemodel:pCube92
+    400184: Basemodel:Basemodel:pCube93
+    400186: Basemodel:Basemodel:pCube94
+    400188: Basemodel:Basemodel:pCube95
+    400190: Basemodel:Basemodel:pCube96
+    400192: Basemodel:Basemodel:pCube97
+    400194: Basemodel:Basemodel:pCube98
+    400196: Basemodel:Basemodel:pCube99
+    400198: Basemodel:Basemodel:polySurface1
+    400200: Basemodel:Basemodel:polySurface2
+    400202: Basemodel:Basemodel:polySurface3
+    400204: Basemodel:Basemodel:polySurface4
+    400206: Basemodel:Basemodel:polySurface5
+    400208: Basemodel:Basemodel:polySurface6
+    400210: Basemodel:Basemodel:polySurface7
+    400212: Basemodel:Basemodel:polySurface8
+    400214: Basemodel:Basemodel:polySurface9
+    400216: Basemodel:Basemodel:pSphere1
+    400218: Basemodel:Basemodel:pSphere2
+    400220: Basemodel:Basemodel:pSphere3
+    400222: Basemodel:Basemodel:pSphere4
+    400224: Basemodel:Basemodel:pTorus1
+    400226: Basemodel:Basemodel:pTorus10
+    400228: Basemodel:Basemodel:pTorus11
+    400230: Basemodel:Basemodel:pTorus12
+    400232: Basemodel:Basemodel:pTorus13
+    400234: Basemodel:Basemodel:pTorus14
+    400236: Basemodel:Basemodel:pTorus15
+    400238: Basemodel:Basemodel:pTorus16
+    400240: Basemodel:Basemodel:pTorus17
+    400242: Basemodel:Basemodel:pTorus18
+    400244: Basemodel:Basemodel:pTorus19
+    400246: Basemodel:Basemodel:pTorus2
+    400248: Basemodel:Basemodel:pTorus20
+    400250: Basemodel:Basemodel:pTorus21
+    400252: Basemodel:Basemodel:pTorus22
+    400254: Basemodel:Basemodel:pTorus23
+    400256: Basemodel:Basemodel:pTorus24
+    400258: Basemodel:Basemodel:pTorus25
+    400260: Basemodel:Basemodel:pTorus26
+    400262: Basemodel:Basemodel:pTorus27
+    400264: Basemodel:Basemodel:pTorus28
+    400266: Basemodel:Basemodel:pTorus29
+    400268: Basemodel:Basemodel:pTorus3
+    400270: Basemodel:Basemodel:pTorus30
+    400272: Basemodel:Basemodel:pTorus31
+    400274: Basemodel:Basemodel:pTorus32
+    400276: Basemodel:Basemodel:pTorus4
+    400278: Basemodel:Basemodel:pTorus5
+    400280: Basemodel:Basemodel:pTorus6
+    400282: Basemodel:Basemodel:pTorus7
+    400284: Basemodel:Basemodel:pTorus8
+    400286: Basemodel:Basemodel:pTorus9
+    400288: Basemodel:Basemodel:SecondPlatform
+    400290: Basemodel:Basemodel:SecondSteps
+    400292: Basemodel:Basemodel:Steps_with_nail
+    400294: Basemodel:Basemodel:Steps_with_nail4
+    400296: Basemodel:Basemodel:Steps_with_nail5
+    400298: Basemodel:Basemodel:Steps_with_nail6
+    400300: Basemodel:Basemodel:ThirdPlatform
+    400302: Basemodel:Basemodel:transform1
+    400304: Basemodel:Basemodel:transform2
+    400306: Basemodel:Basemodel:transform3
+    400308: Basemodel:Basemodel:transform4
+    400310: Basemodel:Basemodel:transform5
+    400312: Basemodel:Basemodel:transform6
+    400314: Basemodel:Basemodel:transform7
+    400316: Basemodel:bend1Handle
+    400318: Basemodel:bend1Handle 1
+    400320: Basemodel:bend1Handle 2
+    400322: Basemodel:bend1Handle 3
+    400324: Basemodel:bend1Handle 4
+    400326: Basemodel:bend1Handle 5
+    400328: Basemodel:bend1Handle 6
+    400330: Basemodel:bend1Handle 7
+    400332: Basemodel:chain_grp
+    400334: Basemodel:chain_grp 1
+    400336: Basemodel:chain_grp1
+    400338: Basemodel:chain_grp1 1
+    400340: Basemodel:chain_grp2
+    400342: Basemodel:chain_grp2 1
+    400344: Basemodel:chain_grp3
+    400346: Basemodel:chain_grp3 1
+    400348: Basemodel:pCube101
+    400350: Basemodel:pTorus1
+    400352: Basemodel:pTorus1 1
+    400354: Basemodel:pTorus1 2
+    400356: Basemodel:pTorus1 3
+    400358: Basemodel:pTorus1 4
+    400360: Basemodel:pTorus1 5
+    400362: Basemodel:pTorus1 6
+    400364: Basemodel:pTorus1 7
+    400366: Basemodel:pTorus10
+    400368: Basemodel:pTorus10 1
+    400370: Basemodel:pTorus10 2
+    400372: Basemodel:pTorus10 3
+    400374: Basemodel:pTorus10 4
+    400376: Basemodel:pTorus10 5
+    400378: Basemodel:pTorus10 6
+    400380: Basemodel:pTorus10 7
+    400382: Basemodel:pTorus11
+    400384: Basemodel:pTorus11 1
+    400386: Basemodel:pTorus11 2
+    400388: Basemodel:pTorus11 3
+    400390: Basemodel:pTorus11 4
+    400392: Basemodel:pTorus11 5
+    400394: Basemodel:pTorus11 6
+    400396: Basemodel:pTorus11 7
+    400398: Basemodel:pTorus12
+    400400: Basemodel:pTorus12 1
+    400402: Basemodel:pTorus12 2
+    400404: Basemodel:pTorus12 3
+    400406: Basemodel:pTorus12 4
+    400408: Basemodel:pTorus12 5
+    400410: Basemodel:pTorus12 6
+    400412: Basemodel:pTorus12 7
+    400414: Basemodel:pTorus13
+    400416: Basemodel:pTorus13 1
+    400418: Basemodel:pTorus13 2
+    400420: Basemodel:pTorus13 3
+    400422: Basemodel:pTorus13 4
+    400424: Basemodel:pTorus13 5
+    400426: Basemodel:pTorus13 6
+    400428: Basemodel:pTorus13 7
+    400430: Basemodel:pTorus14
+    400432: Basemodel:pTorus14 1
+    400434: Basemodel:pTorus14 2
+    400436: Basemodel:pTorus14 3
+    400438: Basemodel:pTorus14 4
+    400440: Basemodel:pTorus14 5
+    400442: Basemodel:pTorus14 6
+    400444: Basemodel:pTorus14 7
+    400446: Basemodel:pTorus15
+    400448: Basemodel:pTorus15 1
+    400450: Basemodel:pTorus15 2
+    400452: Basemodel:pTorus15 3
+    400454: Basemodel:pTorus15 4
+    400456: Basemodel:pTorus15 5
+    400458: Basemodel:pTorus15 6
+    400460: Basemodel:pTorus15 7
+    400462: Basemodel:pTorus16
+    400464: Basemodel:pTorus16 1
+    400466: Basemodel:pTorus16 2
+    400468: Basemodel:pTorus16 3
+    400470: Basemodel:pTorus16 4
+    400472: Basemodel:pTorus16 5
+    400474: Basemodel:pTorus16 6
+    400476: Basemodel:pTorus16 7
+    400478: Basemodel:pTorus17
+    400480: Basemodel:pTorus17 1
+    400482: Basemodel:pTorus17 2
+    400484: Basemodel:pTorus17 3
+    400486: Basemodel:pTorus17 4
+    400488: Basemodel:pTorus17 5
+    400490: Basemodel:pTorus17 6
+    400492: Basemodel:pTorus17 7
+    400494: Basemodel:pTorus18
+    400496: Basemodel:pTorus18 1
+    400498: Basemodel:pTorus18 2
+    400500: Basemodel:pTorus18 3
+    400502: Basemodel:pTorus18 4
+    400504: Basemodel:pTorus18 5
+    400506: Basemodel:pTorus18 6
+    400508: Basemodel:pTorus18 7
+    400510: Basemodel:pTorus19
+    400512: Basemodel:pTorus19 1
+    400514: Basemodel:pTorus19 2
+    400516: Basemodel:pTorus19 3
+    400518: Basemodel:pTorus19 4
+    400520: Basemodel:pTorus19 5
+    400522: Basemodel:pTorus19 6
+    400524: Basemodel:pTorus19 7
+    400526: Basemodel:pTorus2
+    400528: Basemodel:pTorus2 1
+    400530: Basemodel:pTorus2 2
+    400532: Basemodel:pTorus2 3
+    400534: Basemodel:pTorus2 4
+    400536: Basemodel:pTorus2 5
+    400538: Basemodel:pTorus2 6
+    400540: Basemodel:pTorus2 7
+    400542: Basemodel:pTorus20
+    400544: Basemodel:pTorus20 1
+    400546: Basemodel:pTorus20 2
+    400548: Basemodel:pTorus20 3
+    400550: Basemodel:pTorus20 4
+    400552: Basemodel:pTorus20 5
+    400554: Basemodel:pTorus20 6
+    400556: Basemodel:pTorus20 7
+    400558: Basemodel:pTorus21
+    400560: Basemodel:pTorus21 1
+    400562: Basemodel:pTorus21 2
+    400564: Basemodel:pTorus21 3
+    400566: Basemodel:pTorus21 4
+    400568: Basemodel:pTorus21 5
+    400570: Basemodel:pTorus21 6
+    400572: Basemodel:pTorus21 7
+    400574: Basemodel:pTorus22
+    400576: Basemodel:pTorus22 1
+    400578: Basemodel:pTorus22 2
+    400580: Basemodel:pTorus22 3
+    400582: Basemodel:pTorus22 4
+    400584: Basemodel:pTorus22 5
+    400586: Basemodel:pTorus22 6
+    400588: Basemodel:pTorus22 7
+    400590: Basemodel:pTorus23
+    400592: Basemodel:pTorus23 1
+    400594: Basemodel:pTorus23 2
+    400596: Basemodel:pTorus23 3
+    400598: Basemodel:pTorus23 4
+    400600: Basemodel:pTorus23 5
+    400602: Basemodel:pTorus23 6
+    400604: Basemodel:pTorus23 7
+    400606: Basemodel:pTorus24
+    400608: Basemodel:pTorus24 1
+    400610: Basemodel:pTorus24 2
+    400612: Basemodel:pTorus24 3
+    400614: Basemodel:pTorus24 4
+    400616: Basemodel:pTorus24 5
+    400618: Basemodel:pTorus24 6
+    400620: Basemodel:pTorus24 7
+    400622: Basemodel:pTorus25
+    400624: Basemodel:pTorus25 1
+    400626: Basemodel:pTorus25 2
+    400628: Basemodel:pTorus25 3
+    400630: Basemodel:pTorus25 4
+    400632: Basemodel:pTorus25 5
+    400634: Basemodel:pTorus25 6
+    400636: Basemodel:pTorus25 7
+    400638: Basemodel:pTorus26
+    400640: Basemodel:pTorus26 1
+    400642: Basemodel:pTorus26 2
+    400644: Basemodel:pTorus26 3
+    400646: Basemodel:pTorus26 4
+    400648: Basemodel:pTorus26 5
+    400650: Basemodel:pTorus26 6
+    400652: Basemodel:pTorus26 7
+    400654: Basemodel:pTorus27
+    400656: Basemodel:pTorus27 1
+    400658: Basemodel:pTorus27 2
+    400660: Basemodel:pTorus27 3
+    400662: Basemodel:pTorus27 4
+    400664: Basemodel:pTorus27 5
+    400666: Basemodel:pTorus27 6
+    400668: Basemodel:pTorus27 7
+    400670: Basemodel:pTorus28
+    400672: Basemodel:pTorus28 1
+    400674: Basemodel:pTorus28 2
+    400676: Basemodel:pTorus28 3
+    400678: Basemodel:pTorus28 4
+    400680: Basemodel:pTorus28 5
+    400682: Basemodel:pTorus28 6
+    400684: Basemodel:pTorus28 7
+    400686: Basemodel:pTorus29
+    400688: Basemodel:pTorus29 1
+    400690: Basemodel:pTorus29 2
+    400692: Basemodel:pTorus29 3
+    400694: Basemodel:pTorus29 4
+    400696: Basemodel:pTorus29 5
+    400698: Basemodel:pTorus29 6
+    400700: Basemodel:pTorus29 7
+    400702: Basemodel:pTorus3
+    400704: Basemodel:pTorus3 1
+    400706: Basemodel:pTorus3 2
+    400708: Basemodel:pTorus3 3
+    400710: Basemodel:pTorus3 4
+    400712: Basemodel:pTorus3 5
+    400714: Basemodel:pTorus3 6
+    400716: Basemodel:pTorus3 7
+    400718: Basemodel:pTorus30
+    400720: Basemodel:pTorus30 1
+    400722: Basemodel:pTorus30 2
+    400724: Basemodel:pTorus30 3
+    400726: Basemodel:pTorus30 4
+    400728: Basemodel:pTorus30 5
+    400730: Basemodel:pTorus30 6
+    400732: Basemodel:pTorus30 7
+    400734: Basemodel:pTorus31
+    400736: Basemodel:pTorus31 1
+    400738: Basemodel:pTorus31 2
+    400740: Basemodel:pTorus31 3
+    400742: Basemodel:pTorus31 4
+    400744: Basemodel:pTorus31 5
+    400746: Basemodel:pTorus31 6
+    400748: Basemodel:pTorus31 7
+    400750: Basemodel:pTorus32
+    400752: Basemodel:pTorus32 1
+    400754: Basemodel:pTorus32 2
+    400756: Basemodel:pTorus32 3
+    400758: Basemodel:pTorus32 4
+    400760: Basemodel:pTorus32 5
+    400762: Basemodel:pTorus32 6
+    400764: Basemodel:pTorus32 7
+    400766: Basemodel:pTorus4
+    400768: Basemodel:pTorus4 1
+    400770: Basemodel:pTorus4 2
+    400772: Basemodel:pTorus4 3
+    400774: Basemodel:pTorus4 4
+    400776: Basemodel:pTorus4 5
+    400778: Basemodel:pTorus4 6
+    400780: Basemodel:pTorus4 7
+    400782: Basemodel:pTorus5
+    400784: Basemodel:pTorus5 1
+    400786: Basemodel:pTorus5 2
+    400788: Basemodel:pTorus5 3
+    400790: Basemodel:pTorus5 4
+    400792: Basemodel:pTorus5 5
+    400794: Basemodel:pTorus5 6
+    400796: Basemodel:pTorus5 7
+    400798: Basemodel:pTorus6
+    400800: Basemodel:pTorus6 1
+    400802: Basemodel:pTorus6 2
+    400804: Basemodel:pTorus6 3
+    400806: Basemodel:pTorus6 4
+    400808: Basemodel:pTorus6 5
+    400810: Basemodel:pTorus6 6
+    400812: Basemodel:pTorus6 7
+    400814: Basemodel:pTorus7
+    400816: Basemodel:pTorus7 1
+    400818: Basemodel:pTorus7 2
+    400820: Basemodel:pTorus7 3
+    400822: Basemodel:pTorus7 4
+    400824: Basemodel:pTorus7 5
+    400826: Basemodel:pTorus7 6
+    400828: Basemodel:pTorus7 7
+    400830: Basemodel:pTorus8
+    400832: Basemodel:pTorus8 1
+    400834: Basemodel:pTorus8 2
+    400836: Basemodel:pTorus8 3
+    400838: Basemodel:pTorus8 4
+    400840: Basemodel:pTorus8 5
+    400842: Basemodel:pTorus8 6
+    400844: Basemodel:pTorus8 7
+    400846: Basemodel:pTorus9
+    400848: Basemodel:pTorus9 1
+    400850: Basemodel:pTorus9 2
+    400852: Basemodel:pTorus9 3
+    400854: Basemodel:pTorus9 4
+    400856: Basemodel:pTorus9 5
+    400858: Basemodel:pTorus9 6
+    400860: Basemodel:pTorus9 7
+    400862: Basemodel:Ribs
+    400864: Basemodel:spike
+    400866: Basemodel:spike1
+    400868: Basemodel:spike2
+    400870: Basemodel:spike3
+    400872: Basemodel:spike4
+    400874: Basemodel:spike5
+    400876: Basemodel:spike6
+    400878: Basemodel:spike7
+    400880: Basemodel:spike8
+    400882: Basemodel:spike9
+    400884: Basemodel:SpikeRibChainsL
+    400886: Basemodel:SpikeRibChainsR
+    400888: //RootNode
+    2300000: Basemodel:Basemodel:Dome
+    2300002: Basemodel:Basemodel:FirstPlatform
+    2300004: Basemodel:Basemodel:FirstSmallPlatform
+    2300006: Basemodel:Basemodel:FirstSmallPlatform1
+    2300008: Basemodel:Basemodel:FirstSmallPlatform2
+    2300010: Basemodel:Basemodel:InsideCaveStones
+    2300012: Basemodel:Basemodel:InsideCaveStones1
+    2300014: Basemodel:Basemodel:InsideCaveStones10
+    2300016: Basemodel:Basemodel:InsideCaveStones11
+    2300018: Basemodel:Basemodel:InsideCaveStones12
+    2300020: Basemodel:Basemodel:InsideCaveStones2
+    2300022: Basemodel:Basemodel:InsideCaveStones3
+    2300024: Basemodel:Basemodel:InsideCaveStones4
+    2300026: Basemodel:Basemodel:InsideCaveStones5
+    2300028: Basemodel:Basemodel:InsideCaveStones6
+    2300030: Basemodel:Basemodel:InsideCaveStones7
+    2300032: Basemodel:Basemodel:InsideCaveStones8
+    2300034: Basemodel:Basemodel:InsideCaveStones9
+    2300036: Basemodel:Basemodel:LavafloorPlane
+    2300038: Basemodel:Basemodel:lavawaterfall
+    2300040: Basemodel:Basemodel:pCube100
+    2300042: Basemodel:Basemodel:pCube101
+    2300044: Basemodel:Basemodel:pCube102
+    2300046: Basemodel:Basemodel:pCube103
+    2300048: Basemodel:Basemodel:pCube104
+    2300050: Basemodel:Basemodel:pCube105
+    2300052: Basemodel:Basemodel:pCube106
+    2300054: Basemodel:Basemodel:pCube107
+    2300056: Basemodel:Basemodel:pCube108
+    2300058: Basemodel:Basemodel:pCube108 1
+    2300060: Basemodel:Basemodel:pCube108 2
+    2300062: Basemodel:Basemodel:pCube108 3
+    2300064: Basemodel:Basemodel:pCube109
+    2300066: Basemodel:Basemodel:pCube109 1
+    2300068: Basemodel:Basemodel:pCube109 2
+    2300070: Basemodel:Basemodel:pCube109 3
+    2300072: Basemodel:Basemodel:pCube111
+    2300074: Basemodel:Basemodel:pCube112
+    2300076: Basemodel:Basemodel:pCube113
+    2300078: Basemodel:Basemodel:pCube114
+    2300080: Basemodel:Basemodel:pCube115
+    2300082: Basemodel:Basemodel:pCube116
+    2300084: Basemodel:Basemodel:pCube117
+    2300086: Basemodel:Basemodel:pCube118
+    2300088: Basemodel:Basemodel:pCube119
+    2300090: Basemodel:Basemodel:pCube120
+    2300092: Basemodel:Basemodel:pCube121
+    2300094: Basemodel:Basemodel:pCube122
+    2300096: Basemodel:Basemodel:pCube123
+    2300098: Basemodel:Basemodel:pCube124
+    2300100: Basemodel:Basemodel:pCube125
+    2300102: Basemodel:Basemodel:pCube126
+    2300104: Basemodel:Basemodel:pCube127
+    2300106: Basemodel:Basemodel:pCube128
+    2300108: Basemodel:Basemodel:pCube54
+    2300110: Basemodel:Basemodel:pCube54 1
+    2300112: Basemodel:Basemodel:pCube54 2
+    2300114: Basemodel:Basemodel:pCube54 3
+    2300116: Basemodel:Basemodel:pCube55
+    2300118: Basemodel:Basemodel:pCube55 1
+    2300120: Basemodel:Basemodel:pCube55 2
+    2300122: Basemodel:Basemodel:pCube55 3
+    2300124: Basemodel:Basemodel:pCube64
+    2300126: Basemodel:Basemodel:pCube7
+    2300128: Basemodel:Basemodel:pCube71
+    2300130: Basemodel:Basemodel:pCube80
+    2300132: Basemodel:Basemodel:pCube81
+    2300134: Basemodel:Basemodel:pCube82
+    2300136: Basemodel:Basemodel:pCube83
+    2300138: Basemodel:Basemodel:pCube84
+    2300140: Basemodel:Basemodel:pCube85
+    2300142: Basemodel:Basemodel:pCube86
+    2300144: Basemodel:Basemodel:pCube87
+    2300146: Basemodel:Basemodel:pCube88
+    2300148: Basemodel:Basemodel:pCube89
+    2300150: Basemodel:Basemodel:pCube90
+    2300152: Basemodel:Basemodel:pCube91
+    2300154: Basemodel:Basemodel:pCube92
+    2300156: Basemodel:Basemodel:pCube93
+    2300158: Basemodel:Basemodel:pCube94
+    2300160: Basemodel:Basemodel:pCube95
+    2300162: Basemodel:Basemodel:pCube96
+    2300164: Basemodel:Basemodel:pCube97
+    2300166: Basemodel:Basemodel:pCube98
+    2300168: Basemodel:Basemodel:pCube99
+    2300170: Basemodel:Basemodel:polySurface1
+    2300172: Basemodel:Basemodel:polySurface2
+    2300174: Basemodel:Basemodel:polySurface6
+    2300176: Basemodel:Basemodel:polySurface8
+    2300178: Basemodel:Basemodel:polySurface9
+    2300180: Basemodel:Basemodel:pSphere1
+    2300182: Basemodel:Basemodel:pSphere2
+    2300184: Basemodel:Basemodel:pSphere3
+    2300186: Basemodel:Basemodel:pSphere4
+    2300188: Basemodel:Basemodel:pTorus1
+    2300190: Basemodel:Basemodel:pTorus10
+    2300192: Basemodel:Basemodel:pTorus11
+    2300194: Basemodel:Basemodel:pTorus12
+    2300196: Basemodel:Basemodel:pTorus13
+    2300198: Basemodel:Basemodel:pTorus14
+    2300200: Basemodel:Basemodel:pTorus15
+    2300202: Basemodel:Basemodel:pTorus16
+    2300204: Basemodel:Basemodel:pTorus17
+    2300206: Basemodel:Basemodel:pTorus18
+    2300208: Basemodel:Basemodel:pTorus19
+    2300210: Basemodel:Basemodel:pTorus2
+    2300212: Basemodel:Basemodel:pTorus20
+    2300214: Basemodel:Basemodel:pTorus21
+    2300216: Basemodel:Basemodel:pTorus22
+    2300218: Basemodel:Basemodel:pTorus23
+    2300220: Basemodel:Basemodel:pTorus24
+    2300222: Basemodel:Basemodel:pTorus25
+    2300224: Basemodel:Basemodel:pTorus26
+    2300226: Basemodel:Basemodel:pTorus27
+    2300228: Basemodel:Basemodel:pTorus28
+    2300230: Basemodel:Basemodel:pTorus29
+    2300232: Basemodel:Basemodel:pTorus3
+    2300234: Basemodel:Basemodel:pTorus30
+    2300236: Basemodel:Basemodel:pTorus31
+    2300238: Basemodel:Basemodel:pTorus32
+    2300240: Basemodel:Basemodel:pTorus4
+    2300242: Basemodel:Basemodel:pTorus5
+    2300244: Basemodel:Basemodel:pTorus6
+    2300246: Basemodel:Basemodel:pTorus7
+    2300248: Basemodel:Basemodel:pTorus8
+    2300250: Basemodel:Basemodel:pTorus9
+    2300252: Basemodel:Basemodel:ThirdPlatform
+    2300254: Basemodel:pCube101
+    2300256: Basemodel:pTorus1
+    2300258: Basemodel:pTorus1 1
+    2300260: Basemodel:pTorus1 2
+    2300262: Basemodel:pTorus1 3
+    2300264: Basemodel:pTorus1 4
+    2300266: Basemodel:pTorus1 5
+    2300268: Basemodel:pTorus1 6
+    2300270: Basemodel:pTorus1 7
+    2300272: Basemodel:pTorus10
+    2300274: Basemodel:pTorus10 1
+    2300276: Basemodel:pTorus10 2
+    2300278: Basemodel:pTorus10 3
+    2300280: Basemodel:pTorus10 4
+    2300282: Basemodel:pTorus10 5
+    2300284: Basemodel:pTorus10 6
+    2300286: Basemodel:pTorus10 7
+    2300288: Basemodel:pTorus11
+    2300290: Basemodel:pTorus11 1
+    2300292: Basemodel:pTorus11 2
+    2300294: Basemodel:pTorus11 3
+    2300296: Basemodel:pTorus11 4
+    2300298: Basemodel:pTorus11 5
+    2300300: Basemodel:pTorus11 6
+    2300302: Basemodel:pTorus11 7
+    2300304: Basemodel:pTorus12
+    2300306: Basemodel:pTorus12 1
+    2300308: Basemodel:pTorus12 2
+    2300310: Basemodel:pTorus12 3
+    2300312: Basemodel:pTorus12 4
+    2300314: Basemodel:pTorus12 5
+    2300316: Basemodel:pTorus12 6
+    2300318: Basemodel:pTorus12 7
+    2300320: Basemodel:pTorus13
+    2300322: Basemodel:pTorus13 1
+    2300324: Basemodel:pTorus13 2
+    2300326: Basemodel:pTorus13 3
+    2300328: Basemodel:pTorus13 4
+    2300330: Basemodel:pTorus13 5
+    2300332: Basemodel:pTorus13 6
+    2300334: Basemodel:pTorus13 7
+    2300336: Basemodel:pTorus14
+    2300338: Basemodel:pTorus14 1
+    2300340: Basemodel:pTorus14 2
+    2300342: Basemodel:pTorus14 3
+    2300344: Basemodel:pTorus14 4
+    2300346: Basemodel:pTorus14 5
+    2300348: Basemodel:pTorus14 6
+    2300350: Basemodel:pTorus14 7
+    2300352: Basemodel:pTorus15
+    2300354: Basemodel:pTorus15 1
+    2300356: Basemodel:pTorus15 2
+    2300358: Basemodel:pTorus15 3
+    2300360: Basemodel:pTorus15 4
+    2300362: Basemodel:pTorus15 5
+    2300364: Basemodel:pTorus15 6
+    2300366: Basemodel:pTorus15 7
+    2300368: Basemodel:pTorus16
+    2300370: Basemodel:pTorus16 1
+    2300372: Basemodel:pTorus16 2
+    2300374: Basemodel:pTorus16 3
+    2300376: Basemodel:pTorus16 4
+    2300378: Basemodel:pTorus16 5
+    2300380: Basemodel:pTorus16 6
+    2300382: Basemodel:pTorus16 7
+    2300384: Basemodel:pTorus17
+    2300386: Basemodel:pTorus17 1
+    2300388: Basemodel:pTorus17 2
+    2300390: Basemodel:pTorus17 3
+    2300392: Basemodel:pTorus17 4
+    2300394: Basemodel:pTorus17 5
+    2300396: Basemodel:pTorus17 6
+    2300398: Basemodel:pTorus17 7
+    2300400: Basemodel:pTorus18
+    2300402: Basemodel:pTorus18 1
+    2300404: Basemodel:pTorus18 2
+    2300406: Basemodel:pTorus18 3
+    2300408: Basemodel:pTorus18 4
+    2300410: Basemodel:pTorus18 5
+    2300412: Basemodel:pTorus18 6
+    2300414: Basemodel:pTorus18 7
+    2300416: Basemodel:pTorus19
+    2300418: Basemodel:pTorus19 1
+    2300420: Basemodel:pTorus19 2
+    2300422: Basemodel:pTorus19 3
+    2300424: Basemodel:pTorus19 4
+    2300426: Basemodel:pTorus19 5
+    2300428: Basemodel:pTorus19 6
+    2300430: Basemodel:pTorus19 7
+    2300432: Basemodel:pTorus2
+    2300434: Basemodel:pTorus2 1
+    2300436: Basemodel:pTorus2 2
+    2300438: Basemodel:pTorus2 3
+    2300440: Basemodel:pTorus2 4
+    2300442: Basemodel:pTorus2 5
+    2300444: Basemodel:pTorus2 6
+    2300446: Basemodel:pTorus2 7
+    2300448: Basemodel:pTorus20
+    2300450: Basemodel:pTorus20 1
+    2300452: Basemodel:pTorus20 2
+    2300454: Basemodel:pTorus20 3
+    2300456: Basemodel:pTorus20 4
+    2300458: Basemodel:pTorus20 5
+    2300460: Basemodel:pTorus20 6
+    2300462: Basemodel:pTorus20 7
+    2300464: Basemodel:pTorus21
+    2300466: Basemodel:pTorus21 1
+    2300468: Basemodel:pTorus21 2
+    2300470: Basemodel:pTorus21 3
+    2300472: Basemodel:pTorus21 4
+    2300474: Basemodel:pTorus21 5
+    2300476: Basemodel:pTorus21 6
+    2300478: Basemodel:pTorus21 7
+    2300480: Basemodel:pTorus22
+    2300482: Basemodel:pTorus22 1
+    2300484: Basemodel:pTorus22 2
+    2300486: Basemodel:pTorus22 3
+    2300488: Basemodel:pTorus22 4
+    2300490: Basemodel:pTorus22 5
+    2300492: Basemodel:pTorus22 6
+    2300494: Basemodel:pTorus22 7
+    2300496: Basemodel:pTorus23
+    2300498: Basemodel:pTorus23 1
+    2300500: Basemodel:pTorus23 2
+    2300502: Basemodel:pTorus23 3
+    2300504: Basemodel:pTorus23 4
+    2300506: Basemodel:pTorus23 5
+    2300508: Basemodel:pTorus23 6
+    2300510: Basemodel:pTorus23 7
+    2300512: Basemodel:pTorus24
+    2300514: Basemodel:pTorus24 1
+    2300516: Basemodel:pTorus24 2
+    2300518: Basemodel:pTorus24 3
+    2300520: Basemodel:pTorus24 4
+    2300522: Basemodel:pTorus24 5
+    2300524: Basemodel:pTorus24 6
+    2300526: Basemodel:pTorus24 7
+    2300528: Basemodel:pTorus25
+    2300530: Basemodel:pTorus25 1
+    2300532: Basemodel:pTorus25 2
+    2300534: Basemodel:pTorus25 3
+    2300536: Basemodel:pTorus25 4
+    2300538: Basemodel:pTorus25 5
+    2300540: Basemodel:pTorus25 6
+    2300542: Basemodel:pTorus25 7
+    2300544: Basemodel:pTorus26
+    2300546: Basemodel:pTorus26 1
+    2300548: Basemodel:pTorus26 2
+    2300550: Basemodel:pTorus26 3
+    2300552: Basemodel:pTorus26 4
+    2300554: Basemodel:pTorus26 5
+    2300556: Basemodel:pTorus26 6
+    2300558: Basemodel:pTorus26 7
+    2300560: Basemodel:pTorus27
+    2300562: Basemodel:pTorus27 1
+    2300564: Basemodel:pTorus27 2
+    2300566: Basemodel:pTorus27 3
+    2300568: Basemodel:pTorus27 4
+    2300570: Basemodel:pTorus27 5
+    2300572: Basemodel:pTorus27 6
+    2300574: Basemodel:pTorus27 7
+    2300576: Basemodel:pTorus28
+    2300578: Basemodel:pTorus28 1
+    2300580: Basemodel:pTorus28 2
+    2300582: Basemodel:pTorus28 3
+    2300584: Basemodel:pTorus28 4
+    2300586: Basemodel:pTorus28 5
+    2300588: Basemodel:pTorus28 6
+    2300590: Basemodel:pTorus28 7
+    2300592: Basemodel:pTorus29
+    2300594: Basemodel:pTorus29 1
+    2300596: Basemodel:pTorus29 2
+    2300598: Basemodel:pTorus29 3
+    2300600: Basemodel:pTorus29 4
+    2300602: Basemodel:pTorus29 5
+    2300604: Basemodel:pTorus29 6
+    2300606: Basemodel:pTorus29 7
+    2300608: Basemodel:pTorus3
+    2300610: Basemodel:pTorus3 1
+    2300612: Basemodel:pTorus3 2
+    2300614: Basemodel:pTorus3 3
+    2300616: Basemodel:pTorus3 4
+    2300618: Basemodel:pTorus3 5
+    2300620: Basemodel:pTorus3 6
+    2300622: Basemodel:pTorus3 7
+    2300624: Basemodel:pTorus30
+    2300626: Basemodel:pTorus30 1
+    2300628: Basemodel:pTorus30 2
+    2300630: Basemodel:pTorus30 3
+    2300632: Basemodel:pTorus30 4
+    2300634: Basemodel:pTorus30 5
+    2300636: Basemodel:pTorus30 6
+    2300638: Basemodel:pTorus30 7
+    2300640: Basemodel:pTorus31
+    2300642: Basemodel:pTorus31 1
+    2300644: Basemodel:pTorus31 2
+    2300646: Basemodel:pTorus31 3
+    2300648: Basemodel:pTorus31 4
+    2300650: Basemodel:pTorus31 5
+    2300652: Basemodel:pTorus31 6
+    2300654: Basemodel:pTorus31 7
+    2300656: Basemodel:pTorus32
+    2300658: Basemodel:pTorus32 1
+    2300660: Basemodel:pTorus32 2
+    2300662: Basemodel:pTorus32 3
+    2300664: Basemodel:pTorus32 4
+    2300666: Basemodel:pTorus32 5
+    2300668: Basemodel:pTorus32 6
+    2300670: Basemodel:pTorus32 7
+    2300672: Basemodel:pTorus4
+    2300674: Basemodel:pTorus4 1
+    2300676: Basemodel:pTorus4 2
+    2300678: Basemodel:pTorus4 3
+    2300680: Basemodel:pTorus4 4
+    2300682: Basemodel:pTorus4 5
+    2300684: Basemodel:pTorus4 6
+    2300686: Basemodel:pTorus4 7
+    2300688: Basemodel:pTorus5
+    2300690: Basemodel:pTorus5 1
+    2300692: Basemodel:pTorus5 2
+    2300694: Basemodel:pTorus5 3
+    2300696: Basemodel:pTorus5 4
+    2300698: Basemodel:pTorus5 5
+    2300700: Basemodel:pTorus5 6
+    2300702: Basemodel:pTorus5 7
+    2300704: Basemodel:pTorus6
+    2300706: Basemodel:pTorus6 1
+    2300708: Basemodel:pTorus6 2
+    2300710: Basemodel:pTorus6 3
+    2300712: Basemodel:pTorus6 4
+    2300714: Basemodel:pTorus6 5
+    2300716: Basemodel:pTorus6 6
+    2300718: Basemodel:pTorus6 7
+    2300720: Basemodel:pTorus7
+    2300722: Basemodel:pTorus7 1
+    2300724: Basemodel:pTorus7 2
+    2300726: Basemodel:pTorus7 3
+    2300728: Basemodel:pTorus7 4
+    2300730: Basemodel:pTorus7 5
+    2300732: Basemodel:pTorus7 6
+    2300734: Basemodel:pTorus7 7
+    2300736: Basemodel:pTorus8
+    2300738: Basemodel:pTorus8 1
+    2300740: Basemodel:pTorus8 2
+    2300742: Basemodel:pTorus8 3
+    2300744: Basemodel:pTorus8 4
+    2300746: Basemodel:pTorus8 5
+    2300748: Basemodel:pTorus8 6
+    2300750: Basemodel:pTorus8 7
+    2300752: Basemodel:pTorus9
+    2300754: Basemodel:pTorus9 1
+    2300756: Basemodel:pTorus9 2
+    2300758: Basemodel:pTorus9 3
+    2300760: Basemodel:pTorus9 4
+    2300762: Basemodel:pTorus9 5
+    2300764: Basemodel:pTorus9 6
+    2300766: Basemodel:pTorus9 7
+    2300768: Basemodel:spike
+    2300770: Basemodel:spike1
+    2300772: Basemodel:spike2
+    2300774: Basemodel:spike3
+    2300776: Basemodel:spike4
+    2300778: Basemodel:spike5
+    2300780: Basemodel:spike6
+    2300782: Basemodel:spike7
+    2300784: Basemodel:spike8
+    2300786: Basemodel:spike9
+    3300000: Basemodel:Basemodel:Dome
+    3300002: Basemodel:Basemodel:FirstPlatform
+    3300004: Basemodel:Basemodel:FirstSmallPlatform
+    3300006: Basemodel:Basemodel:FirstSmallPlatform1
+    3300008: Basemodel:Basemodel:FirstSmallPlatform2
+    3300010: Basemodel:Basemodel:InsideCaveStones
+    3300012: Basemodel:Basemodel:InsideCaveStones1
+    3300014: Basemodel:Basemodel:InsideCaveStones10
+    3300016: Basemodel:Basemodel:InsideCaveStones11
+    3300018: Basemodel:Basemodel:InsideCaveStones12
+    3300020: Basemodel:Basemodel:InsideCaveStones2
+    3300022: Basemodel:Basemodel:InsideCaveStones3
+    3300024: Basemodel:Basemodel:InsideCaveStones4
+    3300026: Basemodel:Basemodel:InsideCaveStones5
+    3300028: Basemodel:Basemodel:InsideCaveStones6
+    3300030: Basemodel:Basemodel:InsideCaveStones7
+    3300032: Basemodel:Basemodel:InsideCaveStones8
+    3300034: Basemodel:Basemodel:InsideCaveStones9
+    3300036: Basemodel:Basemodel:LavafloorPlane
+    3300038: Basemodel:Basemodel:lavawaterfall
+    3300040: Basemodel:Basemodel:pCube100
+    3300042: Basemodel:Basemodel:pCube101
+    3300044: Basemodel:Basemodel:pCube102
+    3300046: Basemodel:Basemodel:pCube103
+    3300048: Basemodel:Basemodel:pCube104
+    3300050: Basemodel:Basemodel:pCube105
+    3300052: Basemodel:Basemodel:pCube106
+    3300054: Basemodel:Basemodel:pCube107
+    3300056: Basemodel:Basemodel:pCube108
+    3300058: Basemodel:Basemodel:pCube108 1
+    3300060: Basemodel:Basemodel:pCube108 2
+    3300062: Basemodel:Basemodel:pCube108 3
+    3300064: Basemodel:Basemodel:pCube109
+    3300066: Basemodel:Basemodel:pCube109 1
+    3300068: Basemodel:Basemodel:pCube109 2
+    3300070: Basemodel:Basemodel:pCube109 3
+    3300072: Basemodel:Basemodel:pCube111
+    3300074: Basemodel:Basemodel:pCube112
+    3300076: Basemodel:Basemodel:pCube113
+    3300078: Basemodel:Basemodel:pCube114
+    3300080: Basemodel:Basemodel:pCube115
+    3300082: Basemodel:Basemodel:pCube116
+    3300084: Basemodel:Basemodel:pCube117
+    3300086: Basemodel:Basemodel:pCube118
+    3300088: Basemodel:Basemodel:pCube119
+    3300090: Basemodel:Basemodel:pCube120
+    3300092: Basemodel:Basemodel:pCube121
+    3300094: Basemodel:Basemodel:pCube122
+    3300096: Basemodel:Basemodel:pCube123
+    3300098: Basemodel:Basemodel:pCube124
+    3300100: Basemodel:Basemodel:pCube125
+    3300102: Basemodel:Basemodel:pCube126
+    3300104: Basemodel:Basemodel:pCube127
+    3300106: Basemodel:Basemodel:pCube128
+    3300108: Basemodel:Basemodel:pCube54
+    3300110: Basemodel:Basemodel:pCube54 1
+    3300112: Basemodel:Basemodel:pCube54 2
+    3300114: Basemodel:Basemodel:pCube54 3
+    3300116: Basemodel:Basemodel:pCube55
+    3300118: Basemodel:Basemodel:pCube55 1
+    3300120: Basemodel:Basemodel:pCube55 2
+    3300122: Basemodel:Basemodel:pCube55 3
+    3300124: Basemodel:Basemodel:pCube64
+    3300126: Basemodel:Basemodel:pCube7
+    3300128: Basemodel:Basemodel:pCube71
+    3300130: Basemodel:Basemodel:pCube80
+    3300132: Basemodel:Basemodel:pCube81
+    3300134: Basemodel:Basemodel:pCube82
+    3300136: Basemodel:Basemodel:pCube83
+    3300138: Basemodel:Basemodel:pCube84
+    3300140: Basemodel:Basemodel:pCube85
+    3300142: Basemodel:Basemodel:pCube86
+    3300144: Basemodel:Basemodel:pCube87
+    3300146: Basemodel:Basemodel:pCube88
+    3300148: Basemodel:Basemodel:pCube89
+    3300150: Basemodel:Basemodel:pCube90
+    3300152: Basemodel:Basemodel:pCube91
+    3300154: Basemodel:Basemodel:pCube92
+    3300156: Basemodel:Basemodel:pCube93
+    3300158: Basemodel:Basemodel:pCube94
+    3300160: Basemodel:Basemodel:pCube95
+    3300162: Basemodel:Basemodel:pCube96
+    3300164: Basemodel:Basemodel:pCube97
+    3300166: Basemodel:Basemodel:pCube98
+    3300168: Basemodel:Basemodel:pCube99
+    3300170: Basemodel:Basemodel:polySurface1
+    3300172: Basemodel:Basemodel:polySurface2
+    3300174: Basemodel:Basemodel:polySurface6
+    3300176: Basemodel:Basemodel:polySurface8
+    3300178: Basemodel:Basemodel:polySurface9
+    3300180: Basemodel:Basemodel:pSphere1
+    3300182: Basemodel:Basemodel:pSphere2
+    3300184: Basemodel:Basemodel:pSphere3
+    3300186: Basemodel:Basemodel:pSphere4
+    3300188: Basemodel:Basemodel:pTorus1
+    3300190: Basemodel:Basemodel:pTorus10
+    3300192: Basemodel:Basemodel:pTorus11
+    3300194: Basemodel:Basemodel:pTorus12
+    3300196: Basemodel:Basemodel:pTorus13
+    3300198: Basemodel:Basemodel:pTorus14
+    3300200: Basemodel:Basemodel:pTorus15
+    3300202: Basemodel:Basemodel:pTorus16
+    3300204: Basemodel:Basemodel:pTorus17
+    3300206: Basemodel:Basemodel:pTorus18
+    3300208: Basemodel:Basemodel:pTorus19
+    3300210: Basemodel:Basemodel:pTorus2
+    3300212: Basemodel:Basemodel:pTorus20
+    3300214: Basemodel:Basemodel:pTorus21
+    3300216: Basemodel:Basemodel:pTorus22
+    3300218: Basemodel:Basemodel:pTorus23
+    3300220: Basemodel:Basemodel:pTorus24
+    3300222: Basemodel:Basemodel:pTorus25
+    3300224: Basemodel:Basemodel:pTorus26
+    3300226: Basemodel:Basemodel:pTorus27
+    3300228: Basemodel:Basemodel:pTorus28
+    3300230: Basemodel:Basemodel:pTorus29
+    3300232: Basemodel:Basemodel:pTorus3
+    3300234: Basemodel:Basemodel:pTorus30
+    3300236: Basemodel:Basemodel:pTorus31
+    3300238: Basemodel:Basemodel:pTorus32
+    3300240: Basemodel:Basemodel:pTorus4
+    3300242: Basemodel:Basemodel:pTorus5
+    3300244: Basemodel:Basemodel:pTorus6
+    3300246: Basemodel:Basemodel:pTorus7
+    3300248: Basemodel:Basemodel:pTorus8
+    3300250: Basemodel:Basemodel:pTorus9
+    3300252: Basemodel:Basemodel:ThirdPlatform
+    3300254: Basemodel:pCube101
+    3300256: Basemodel:pTorus1
+    3300258: Basemodel:pTorus1 1
+    3300260: Basemodel:pTorus1 2
+    3300262: Basemodel:pTorus1 3
+    3300264: Basemodel:pTorus1 4
+    3300266: Basemodel:pTorus1 5
+    3300268: Basemodel:pTorus1 6
+    3300270: Basemodel:pTorus1 7
+    3300272: Basemodel:pTorus10
+    3300274: Basemodel:pTorus10 1
+    3300276: Basemodel:pTorus10 2
+    3300278: Basemodel:pTorus10 3
+    3300280: Basemodel:pTorus10 4
+    3300282: Basemodel:pTorus10 5
+    3300284: Basemodel:pTorus10 6
+    3300286: Basemodel:pTorus10 7
+    3300288: Basemodel:pTorus11
+    3300290: Basemodel:pTorus11 1
+    3300292: Basemodel:pTorus11 2
+    3300294: Basemodel:pTorus11 3
+    3300296: Basemodel:pTorus11 4
+    3300298: Basemodel:pTorus11 5
+    3300300: Basemodel:pTorus11 6
+    3300302: Basemodel:pTorus11 7
+    3300304: Basemodel:pTorus12
+    3300306: Basemodel:pTorus12 1
+    3300308: Basemodel:pTorus12 2
+    3300310: Basemodel:pTorus12 3
+    3300312: Basemodel:pTorus12 4
+    3300314: Basemodel:pTorus12 5
+    3300316: Basemodel:pTorus12 6
+    3300318: Basemodel:pTorus12 7
+    3300320: Basemodel:pTorus13
+    3300322: Basemodel:pTorus13 1
+    3300324: Basemodel:pTorus13 2
+    3300326: Basemodel:pTorus13 3
+    3300328: Basemodel:pTorus13 4
+    3300330: Basemodel:pTorus13 5
+    3300332: Basemodel:pTorus13 6
+    3300334: Basemodel:pTorus13 7
+    3300336: Basemodel:pTorus14
+    3300338: Basemodel:pTorus14 1
+    3300340: Basemodel:pTorus14 2
+    3300342: Basemodel:pTorus14 3
+    3300344: Basemodel:pTorus14 4
+    3300346: Basemodel:pTorus14 5
+    3300348: Basemodel:pTorus14 6
+    3300350: Basemodel:pTorus14 7
+    3300352: Basemodel:pTorus15
+    3300354: Basemodel:pTorus15 1
+    3300356: Basemodel:pTorus15 2
+    3300358: Basemodel:pTorus15 3
+    3300360: Basemodel:pTorus15 4
+    3300362: Basemodel:pTorus15 5
+    3300364: Basemodel:pTorus15 6
+    3300366: Basemodel:pTorus15 7
+    3300368: Basemodel:pTorus16
+    3300370: Basemodel:pTorus16 1
+    3300372: Basemodel:pTorus16 2
+    3300374: Basemodel:pTorus16 3
+    3300376: Basemodel:pTorus16 4
+    3300378: Basemodel:pTorus16 5
+    3300380: Basemodel:pTorus16 6
+    3300382: Basemodel:pTorus16 7
+    3300384: Basemodel:pTorus17
+    3300386: Basemodel:pTorus17 1
+    3300388: Basemodel:pTorus17 2
+    3300390: Basemodel:pTorus17 3
+    3300392: Basemodel:pTorus17 4
+    3300394: Basemodel:pTorus17 5
+    3300396: Basemodel:pTorus17 6
+    3300398: Basemodel:pTorus17 7
+    3300400: Basemodel:pTorus18
+    3300402: Basemodel:pTorus18 1
+    3300404: Basemodel:pTorus18 2
+    3300406: Basemodel:pTorus18 3
+    3300408: Basemodel:pTorus18 4
+    3300410: Basemodel:pTorus18 5
+    3300412: Basemodel:pTorus18 6
+    3300414: Basemodel:pTorus18 7
+    3300416: Basemodel:pTorus19
+    3300418: Basemodel:pTorus19 1
+    3300420: Basemodel:pTorus19 2
+    3300422: Basemodel:pTorus19 3
+    3300424: Basemodel:pTorus19 4
+    3300426: Basemodel:pTorus19 5
+    3300428: Basemodel:pTorus19 6
+    3300430: Basemodel:pTorus19 7
+    3300432: Basemodel:pTorus2
+    3300434: Basemodel:pTorus2 1
+    3300436: Basemodel:pTorus2 2
+    3300438: Basemodel:pTorus2 3
+    3300440: Basemodel:pTorus2 4
+    3300442: Basemodel:pTorus2 5
+    3300444: Basemodel:pTorus2 6
+    3300446: Basemodel:pTorus2 7
+    3300448: Basemodel:pTorus20
+    3300450: Basemodel:pTorus20 1
+    3300452: Basemodel:pTorus20 2
+    3300454: Basemodel:pTorus20 3
+    3300456: Basemodel:pTorus20 4
+    3300458: Basemodel:pTorus20 5
+    3300460: Basemodel:pTorus20 6
+    3300462: Basemodel:pTorus20 7
+    3300464: Basemodel:pTorus21
+    3300466: Basemodel:pTorus21 1
+    3300468: Basemodel:pTorus21 2
+    3300470: Basemodel:pTorus21 3
+    3300472: Basemodel:pTorus21 4
+    3300474: Basemodel:pTorus21 5
+    3300476: Basemodel:pTorus21 6
+    3300478: Basemodel:pTorus21 7
+    3300480: Basemodel:pTorus22
+    3300482: Basemodel:pTorus22 1
+    3300484: Basemodel:pTorus22 2
+    3300486: Basemodel:pTorus22 3
+    3300488: Basemodel:pTorus22 4
+    3300490: Basemodel:pTorus22 5
+    3300492: Basemodel:pTorus22 6
+    3300494: Basemodel:pTorus22 7
+    3300496: Basemodel:pTorus23
+    3300498: Basemodel:pTorus23 1
+    3300500: Basemodel:pTorus23 2
+    3300502: Basemodel:pTorus23 3
+    3300504: Basemodel:pTorus23 4
+    3300506: Basemodel:pTorus23 5
+    3300508: Basemodel:pTorus23 6
+    3300510: Basemodel:pTorus23 7
+    3300512: Basemodel:pTorus24
+    3300514: Basemodel:pTorus24 1
+    3300516: Basemodel:pTorus24 2
+    3300518: Basemodel:pTorus24 3
+    3300520: Basemodel:pTorus24 4
+    3300522: Basemodel:pTorus24 5
+    3300524: Basemodel:pTorus24 6
+    3300526: Basemodel:pTorus24 7
+    3300528: Basemodel:pTorus25
+    3300530: Basemodel:pTorus25 1
+    3300532: Basemodel:pTorus25 2
+    3300534: Basemodel:pTorus25 3
+    3300536: Basemodel:pTorus25 4
+    3300538: Basemodel:pTorus25 5
+    3300540: Basemodel:pTorus25 6
+    3300542: Basemodel:pTorus25 7
+    3300544: Basemodel:pTorus26
+    3300546: Basemodel:pTorus26 1
+    3300548: Basemodel:pTorus26 2
+    3300550: Basemodel:pTorus26 3
+    3300552: Basemodel:pTorus26 4
+    3300554: Basemodel:pTorus26 5
+    3300556: Basemodel:pTorus26 6
+    3300558: Basemodel:pTorus26 7
+    3300560: Basemodel:pTorus27
+    3300562: Basemodel:pTorus27 1
+    3300564: Basemodel:pTorus27 2
+    3300566: Basemodel:pTorus27 3
+    3300568: Basemodel:pTorus27 4
+    3300570: Basemodel:pTorus27 5
+    3300572: Basemodel:pTorus27 6
+    3300574: Basemodel:pTorus27 7
+    3300576: Basemodel:pTorus28
+    3300578: Basemodel:pTorus28 1
+    3300580: Basemodel:pTorus28 2
+    3300582: Basemodel:pTorus28 3
+    3300584: Basemodel:pTorus28 4
+    3300586: Basemodel:pTorus28 5
+    3300588: Basemodel:pTorus28 6
+    3300590: Basemodel:pTorus28 7
+    3300592: Basemodel:pTorus29
+    3300594: Basemodel:pTorus29 1
+    3300596: Basemodel:pTorus29 2
+    3300598: Basemodel:pTorus29 3
+    3300600: Basemodel:pTorus29 4
+    3300602: Basemodel:pTorus29 5
+    3300604: Basemodel:pTorus29 6
+    3300606: Basemodel:pTorus29 7
+    3300608: Basemodel:pTorus3
+    3300610: Basemodel:pTorus3 1
+    3300612: Basemodel:pTorus3 2
+    3300614: Basemodel:pTorus3 3
+    3300616: Basemodel:pTorus3 4
+    3300618: Basemodel:pTorus3 5
+    3300620: Basemodel:pTorus3 6
+    3300622: Basemodel:pTorus3 7
+    3300624: Basemodel:pTorus30
+    3300626: Basemodel:pTorus30 1
+    3300628: Basemodel:pTorus30 2
+    3300630: Basemodel:pTorus30 3
+    3300632: Basemodel:pTorus30 4
+    3300634: Basemodel:pTorus30 5
+    3300636: Basemodel:pTorus30 6
+    3300638: Basemodel:pTorus30 7
+    3300640: Basemodel:pTorus31
+    3300642: Basemodel:pTorus31 1
+    3300644: Basemodel:pTorus31 2
+    3300646: Basemodel:pTorus31 3
+    3300648: Basemodel:pTorus31 4
+    3300650: Basemodel:pTorus31 5
+    3300652: Basemodel:pTorus31 6
+    3300654: Basemodel:pTorus31 7
+    3300656: Basemodel:pTorus32
+    3300658: Basemodel:pTorus32 1
+    3300660: Basemodel:pTorus32 2
+    3300662: Basemodel:pTorus32 3
+    3300664: Basemodel:pTorus32 4
+    3300666: Basemodel:pTorus32 5
+    3300668: Basemodel:pTorus32 6
+    3300670: Basemodel:pTorus32 7
+    3300672: Basemodel:pTorus4
+    3300674: Basemodel:pTorus4 1
+    3300676: Basemodel:pTorus4 2
+    3300678: Basemodel:pTorus4 3
+    3300680: Basemodel:pTorus4 4
+    3300682: Basemodel:pTorus4 5
+    3300684: Basemodel:pTorus4 6
+    3300686: Basemodel:pTorus4 7
+    3300688: Basemodel:pTorus5
+    3300690: Basemodel:pTorus5 1
+    3300692: Basemodel:pTorus5 2
+    3300694: Basemodel:pTorus5 3
+    3300696: Basemodel:pTorus5 4
+    3300698: Basemodel:pTorus5 5
+    3300700: Basemodel:pTorus5 6
+    3300702: Basemodel:pTorus5 7
+    3300704: Basemodel:pTorus6
+    3300706: Basemodel:pTorus6 1
+    3300708: Basemodel:pTorus6 2
+    3300710: Basemodel:pTorus6 3
+    3300712: Basemodel:pTorus6 4
+    3300714: Basemodel:pTorus6 5
+    3300716: Basemodel:pTorus6 6
+    3300718: Basemodel:pTorus6 7
+    3300720: Basemodel:pTorus7
+    3300722: Basemodel:pTorus7 1
+    3300724: Basemodel:pTorus7 2
+    3300726: Basemodel:pTorus7 3
+    3300728: Basemodel:pTorus7 4
+    3300730: Basemodel:pTorus7 5
+    3300732: Basemodel:pTorus7 6
+    3300734: Basemodel:pTorus7 7
+    3300736: Basemodel:pTorus8
+    3300738: Basemodel:pTorus8 1
+    3300740: Basemodel:pTorus8 2
+    3300742: Basemodel:pTorus8 3
+    3300744: Basemodel:pTorus8 4
+    3300746: Basemodel:pTorus8 5
+    3300748: Basemodel:pTorus8 6
+    3300750: Basemodel:pTorus8 7
+    3300752: Basemodel:pTorus9
+    3300754: Basemodel:pTorus9 1
+    3300756: Basemodel:pTorus9 2
+    3300758: Basemodel:pTorus9 3
+    3300760: Basemodel:pTorus9 4
+    3300762: Basemodel:pTorus9 5
+    3300764: Basemodel:pTorus9 6
+    3300766: Basemodel:pTorus9 7
+    3300768: Basemodel:spike
+    3300770: Basemodel:spike1
+    3300772: Basemodel:spike2
+    3300774: Basemodel:spike3
+    3300776: Basemodel:spike4
+    3300778: Basemodel:spike5
+    3300780: Basemodel:spike6
+    3300782: Basemodel:spike7
+    3300784: Basemodel:spike8
+    3300786: Basemodel:spike9
+    4300000: Basemodel:Basemodel:FirstPlatform
+    4300002: Basemodel:Basemodel:polySurface1
+    4300004: Basemodel:Basemodel:polySurface2
+    4300006: Basemodel:Basemodel:ThirdPlatform
+    4300008: Basemodel:Basemodel:FirstSmallPlatform
+    4300010: Basemodel:Basemodel:polySurface6
+    4300012: Basemodel:Basemodel:polySurface8
+    4300014: Basemodel:Basemodel:polySurface9
+    4300016: Basemodel:Basemodel:lavawaterfall
+    4300018: Basemodel:Basemodel:FirstSmallPlatform1
+    4300020: Basemodel:Basemodel:FirstSmallPlatform2
+    4300022: Basemodel:Basemodel:pCube7
+    4300024: Basemodel:Basemodel:pCube80
+    4300026: Basemodel:Basemodel:pCube81
+    4300028: Basemodel:Basemodel:pCube82
+    4300030: Basemodel:Basemodel:pCube83
+    4300032: Basemodel:Basemodel:pCube84
+    4300034: Basemodel:Basemodel:pCube85
+    4300036: Basemodel:Basemodel:pCube86
+    4300038: Basemodel:Basemodel:pCube87
+    4300040: Basemodel:Basemodel:pCube88
+    4300042: Basemodel:Basemodel:pCube89
+    4300044: Basemodel:Basemodel:pCube90
+    4300046: Basemodel:Basemodel:pCube91
+    4300048: Basemodel:Basemodel:pCube92
+    4300050: Basemodel:Basemodel:pCube93
+    4300052: Basemodel:Basemodel:pCube94
+    4300054: Basemodel:Basemodel:pCube95
+    4300056: Basemodel:Basemodel:pCube96
+    4300058: Basemodel:Basemodel:pCube97
+    4300060: Basemodel:Basemodel:pCube98
+    4300062: Basemodel:Basemodel:pCube99
+    4300064: Basemodel:Basemodel:pCube100
+    4300066: Basemodel:Basemodel:pCube101
+    4300068: Basemodel:Basemodel:pCube102
+    4300070: Basemodel:Basemodel:pCube103
+    4300072: Basemodel:Basemodel:pCube104
+    4300074: Basemodel:Basemodel:pCube105
+    4300076: Basemodel:Basemodel:pCube106
+    4300078: Basemodel:Basemodel:pCube107
+    4300080: Basemodel:Basemodel:pCube126
+    4300082: Basemodel:Basemodel:pCube127
+    4300084: Basemodel:Basemodel:pCube128
+    4300086: Basemodel:pCube101
+    4300088: Basemodel:Basemodel:pCube54
+    4300090: Basemodel:Basemodel:pCube55
+    4300092: Basemodel:Basemodel:pCube108
+    4300094: Basemodel:Basemodel:pCube109
+    4300096: Basemodel:Basemodel:pCube54
+    4300098: Basemodel:Basemodel:pCube55
+    4300100: Basemodel:Basemodel:pCube108
+    4300102: Basemodel:Basemodel:pCube109
+    4300104: Basemodel:Basemodel:pCube64
+    4300106: Basemodel:Basemodel:pCube119
+    4300108: Basemodel:Basemodel:pCube120
+    4300110: Basemodel:Basemodel:pCube121
+    4300112: Basemodel:Basemodel:pCube122
+    4300114: Basemodel:Basemodel:pCube123
+    4300116: Basemodel:Basemodel:pCube124
+    4300118: Basemodel:Basemodel:pCube125
+    4300120: Basemodel:Basemodel:pCube71
+    4300122: Basemodel:Basemodel:pCube111
+    4300124: Basemodel:Basemodel:pCube112
+    4300126: Basemodel:Basemodel:pCube113
+    4300128: Basemodel:Basemodel:pCube114
+    4300130: Basemodel:Basemodel:pCube115
+    4300132: Basemodel:Basemodel:pCube116
+    4300134: Basemodel:Basemodel:pCube117
+    4300136: Basemodel:Basemodel:pCube118
+    4300138: Basemodel:Basemodel:InsideCaveStones
+    4300140: Basemodel:Basemodel:pCube54
+    4300142: Basemodel:Basemodel:pCube55
+    4300144: Basemodel:Basemodel:pCube108
+    4300146: Basemodel:Basemodel:pCube109
+    4300148: Basemodel:Basemodel:pCube54
+    4300150: Basemodel:Basemodel:pCube55
+    4300152: Basemodel:Basemodel:pCube108
+    4300154: Basemodel:Basemodel:pCube109
+    4300156: Basemodel:Basemodel:InsideCaveStones1
+    4300158: Basemodel:Basemodel:InsideCaveStones2
+    4300160: Basemodel:Basemodel:InsideCaveStones3
+    4300162: Basemodel:Basemodel:InsideCaveStones4
+    4300164: Basemodel:Basemodel:InsideCaveStones5
+    4300166: Basemodel:Basemodel:InsideCaveStones6
+    4300168: Basemodel:Basemodel:InsideCaveStones7
+    4300170: Basemodel:Basemodel:InsideCaveStones8
+    4300172: Basemodel:Basemodel:InsideCaveStones9
+    4300174: Basemodel:Basemodel:InsideCaveStones10
+    4300176: Basemodel:Basemodel:InsideCaveStones11
+    4300178: Basemodel:Basemodel:InsideCaveStones12
+    4300180: Basemodel:Basemodel:LavafloorPlane
+    4300182: Basemodel:Basemodel:pTorus1
+    4300184: Basemodel:Basemodel:pTorus2
+    4300186: Basemodel:Basemodel:pTorus3
+    4300188: Basemodel:Basemodel:pTorus4
+    4300190: Basemodel:Basemodel:pTorus5
+    4300192: Basemodel:Basemodel:pTorus6
+    4300194: Basemodel:Basemodel:pTorus7
+    4300196: Basemodel:Basemodel:pTorus8
+    4300198: Basemodel:Basemodel:pTorus9
+    4300200: Basemodel:Basemodel:pTorus10
+    4300202: Basemodel:Basemodel:pTorus11
+    4300204: Basemodel:Basemodel:pTorus12
+    4300206: Basemodel:Basemodel:pTorus13
+    4300208: Basemodel:Basemodel:pTorus14
+    4300210: Basemodel:Basemodel:pTorus15
+    4300212: Basemodel:Basemodel:pTorus16
+    4300214: Basemodel:Basemodel:pTorus17
+    4300216: Basemodel:Basemodel:pTorus18
+    4300218: Basemodel:Basemodel:pTorus19
+    4300220: Basemodel:Basemodel:pTorus20
+    4300222: Basemodel:Basemodel:pTorus21
+    4300224: Basemodel:Basemodel:pTorus22
+    4300226: Basemodel:Basemodel:pTorus23
+    4300228: Basemodel:Basemodel:pTorus24
+    4300230: Basemodel:Basemodel:pTorus25
+    4300232: Basemodel:Basemodel:pTorus26
+    4300234: Basemodel:Basemodel:pTorus27
+    4300236: Basemodel:Basemodel:pTorus28
+    4300238: Basemodel:Basemodel:pTorus29
+    4300240: Basemodel:Basemodel:pTorus30
+    4300242: Basemodel:Basemodel:pTorus31
+    4300244: Basemodel:Basemodel:pTorus32
+    4300246: Basemodel:Basemodel:Dome
+    4300248: Basemodel:Basemodel:pSphere1
+    4300250: Basemodel:Basemodel:pSphere2
+    4300252: Basemodel:Basemodel:pSphere3
+    4300254: Basemodel:Basemodel:pSphere4
+    4300256: Basemodel:spike
+    4300258: Basemodel:spike1
+    4300260: Basemodel:spike2
+    4300262: Basemodel:spike3
+    4300264: Basemodel:spike4
+    4300266: Basemodel:spike5
+    4300268: Basemodel:spike6
+    4300270: Basemodel:spike7
+    4300272: Basemodel:spike8
+    4300274: Basemodel:spike9
+    4300276: Basemodel:pTorus1
+    4300278: Basemodel:pTorus2
+    4300280: Basemodel:pTorus3
+    4300282: Basemodel:pTorus4
+    4300284: Basemodel:pTorus5
+    4300286: Basemodel:pTorus6
+    4300288: Basemodel:pTorus7
+    4300290: Basemodel:pTorus8
+    4300292: Basemodel:pTorus9
+    4300294: Basemodel:pTorus10
+    4300296: Basemodel:pTorus11
+    4300298: Basemodel:pTorus12
+    4300300: Basemodel:pTorus13
+    4300302: Basemodel:pTorus14
+    4300304: Basemodel:pTorus15
+    4300306: Basemodel:pTorus16
+    4300308: Basemodel:pTorus17
+    4300310: Basemodel:pTorus18
+    4300312: Basemodel:pTorus19
+    4300314: Basemodel:pTorus20
+    4300316: Basemodel:pTorus21
+    4300318: Basemodel:pTorus22
+    4300320: Basemodel:pTorus23
+    4300322: Basemodel:pTorus24
+    4300324: Basemodel:pTorus25
+    4300326: Basemodel:pTorus26
+    4300328: Basemodel:pTorus27
+    4300330: Basemodel:pTorus28
+    4300332: Basemodel:pTorus29
+    4300334: Basemodel:pTorus30
+    4300336: Basemodel:pTorus31
+    4300338: Basemodel:pTorus32
+    4300340: Basemodel:pTorus1
+    4300342: Basemodel:pTorus2
+    4300344: Basemodel:pTorus3
+    4300346: Basemodel:pTorus4
+    4300348: Basemodel:pTorus5
+    4300350: Basemodel:pTorus6
+    4300352: Basemodel:pTorus7
+    4300354: Basemodel:pTorus8
+    4300356: Basemodel:pTorus9
+    4300358: Basemodel:pTorus10
+    4300360: Basemodel:pTorus11
+    4300362: Basemodel:pTorus12
+    4300364: Basemodel:pTorus13
+    4300366: Basemodel:pTorus14
+    4300368: Basemodel:pTorus15
+    4300370: Basemodel:pTorus16
+    4300372: Basemodel:pTorus17
+    4300374: Basemodel:pTorus18
+    4300376: Basemodel:pTorus19
+    4300378: Basemodel:pTorus20
+    4300380: Basemodel:pTorus21
+    4300382: Basemodel:pTorus22
+    4300384: Basemodel:pTorus23
+    4300386: Basemodel:pTorus24
+    4300388: Basemodel:pTorus25
+    4300390: Basemodel:pTorus26
+    4300392: Basemodel:pTorus27
+    4300394: Basemodel:pTorus28
+    4300396: Basemodel:pTorus29
+    4300398: Basemodel:pTorus30
+    4300400: Basemodel:pTorus31
+    4300402: Basemodel:pTorus32
+    4300404: Basemodel:pTorus1
+    4300406: Basemodel:pTorus2
+    4300408: Basemodel:pTorus3
+    4300410: Basemodel:pTorus4
+    4300412: Basemodel:pTorus5
+    4300414: Basemodel:pTorus6
+    4300416: Basemodel:pTorus7
+    4300418: Basemodel:pTorus8
+    4300420: Basemodel:pTorus9
+    4300422: Basemodel:pTorus10
+    4300424: Basemodel:pTorus11
+    4300426: Basemodel:pTorus12
+    4300428: Basemodel:pTorus13
+    4300430: Basemodel:pTorus14
+    4300432: Basemodel:pTorus15
+    4300434: Basemodel:pTorus16
+    4300436: Basemodel:pTorus17
+    4300438: Basemodel:pTorus18
+    4300440: Basemodel:pTorus19
+    4300442: Basemodel:pTorus20
+    4300444: Basemodel:pTorus21
+    4300446: Basemodel:pTorus22
+    4300448: Basemodel:pTorus23
+    4300450: Basemodel:pTorus24
+    4300452: Basemodel:pTorus25
+    4300454: Basemodel:pTorus26
+    4300456: Basemodel:pTorus27
+    4300458: Basemodel:pTorus28
+    4300460: Basemodel:pTorus29
+    4300462: Basemodel:pTorus30
+    4300464: Basemodel:pTorus31
+    4300466: Basemodel:pTorus32
+    4300468: Basemodel:pTorus1
+    4300470: Basemodel:pTorus2
+    4300472: Basemodel:pTorus3
+    4300474: Basemodel:pTorus4
+    4300476: Basemodel:pTorus5
+    4300478: Basemodel:pTorus6
+    4300480: Basemodel:pTorus7
+    4300482: Basemodel:pTorus8
+    4300484: Basemodel:pTorus9
+    4300486: Basemodel:pTorus10
+    4300488: Basemodel:pTorus11
+    4300490: Basemodel:pTorus12
+    4300492: Basemodel:pTorus13
+    4300494: Basemodel:pTorus14
+    4300496: Basemodel:pTorus15
+    4300498: Basemodel:pTorus16
+    4300500: Basemodel:pTorus17
+    4300502: Basemodel:pTorus18
+    4300504: Basemodel:pTorus19
+    4300506: Basemodel:pTorus20
+    4300508: Basemodel:pTorus21
+    4300510: Basemodel:pTorus22
+    4300512: Basemodel:pTorus23
+    4300514: Basemodel:pTorus24
+    4300516: Basemodel:pTorus25
+    4300518: Basemodel:pTorus26
+    4300520: Basemodel:pTorus27
+    4300522: Basemodel:pTorus28
+    4300524: Basemodel:pTorus29
+    4300526: Basemodel:pTorus30
+    4300528: Basemodel:pTorus31
+    4300530: Basemodel:pTorus32
+    4300532: Basemodel:pTorus1
+    4300534: Basemodel:pTorus2
+    4300536: Basemodel:pTorus3
+    4300538: Basemodel:pTorus4
+    4300540: Basemodel:pTorus5
+    4300542: Basemodel:pTorus6
+    4300544: Basemodel:pTorus7
+    4300546: Basemodel:pTorus8
+    4300548: Basemodel:pTorus9
+    4300550: Basemodel:pTorus10
+    4300552: Basemodel:pTorus11
+    4300554: Basemodel:pTorus12
+    4300556: Basemodel:pTorus13
+    4300558: Basemodel:pTorus14
+    4300560: Basemodel:pTorus15
+    4300562: Basemodel:pTorus16
+    4300564: Basemodel:pTorus17
+    4300566: Basemodel:pTorus18
+    4300568: Basemodel:pTorus19
+    4300570: Basemodel:pTorus20
+    4300572: Basemodel:pTorus21
+    4300574: Basemodel:pTorus22
+    4300576: Basemodel:pTorus23
+    4300578: Basemodel:pTorus24
+    4300580: Basemodel:pTorus25
+    4300582: Basemodel:pTorus26
+    4300584: Basemodel:pTorus27
+    4300586: Basemodel:pTorus28
+    4300588: Basemodel:pTorus29
+    4300590: Basemodel:pTorus30
+    4300592: Basemodel:pTorus31
+    4300594: Basemodel:pTorus32
+    4300596: Basemodel:pTorus1
+    4300598: Basemodel:pTorus2
+    4300600: Basemodel:pTorus3
+    4300602: Basemodel:pTorus4
+    4300604: Basemodel:pTorus5
+    4300606: Basemodel:pTorus6
+    4300608: Basemodel:pTorus7
+    4300610: Basemodel:pTorus8
+    4300612: Basemodel:pTorus9
+    4300614: Basemodel:pTorus10
+    4300616: Basemodel:pTorus11
+    4300618: Basemodel:pTorus12
+    4300620: Basemodel:pTorus13
+    4300622: Basemodel:pTorus14
+    4300624: Basemodel:pTorus15
+    4300626: Basemodel:pTorus16
+    4300628: Basemodel:pTorus17
+    4300630: Basemodel:pTorus18
+    4300632: Basemodel:pTorus19
+    4300634: Basemodel:pTorus20
+    4300636: Basemodel:pTorus21
+    4300638: Basemodel:pTorus22
+    4300640: Basemodel:pTorus23
+    4300642: Basemodel:pTorus24
+    4300644: Basemodel:pTorus25
+    4300646: Basemodel:pTorus26
+    4300648: Basemodel:pTorus27
+    4300650: Basemodel:pTorus28
+    4300652: Basemodel:pTorus29
+    4300654: Basemodel:pTorus30
+    4300656: Basemodel:pTorus31
+    4300658: Basemodel:pTorus32
+    4300660: Basemodel:pTorus1
+    4300662: Basemodel:pTorus2
+    4300664: Basemodel:pTorus3
+    4300666: Basemodel:pTorus4
+    4300668: Basemodel:pTorus5
+    4300670: Basemodel:pTorus6
+    4300672: Basemodel:pTorus7
+    4300674: Basemodel:pTorus8
+    4300676: Basemodel:pTorus9
+    4300678: Basemodel:pTorus10
+    4300680: Basemodel:pTorus11
+    4300682: Basemodel:pTorus12
+    4300684: Basemodel:pTorus13
+    4300686: Basemodel:pTorus14
+    4300688: Basemodel:pTorus15
+    4300690: Basemodel:pTorus16
+    4300692: Basemodel:pTorus17
+    4300694: Basemodel:pTorus18
+    4300696: Basemodel:pTorus19
+    4300698: Basemodel:pTorus20
+    4300700: Basemodel:pTorus21
+    4300702: Basemodel:pTorus22
+    4300704: Basemodel:pTorus23
+    4300706: Basemodel:pTorus24
+    4300708: Basemodel:pTorus25
+    4300710: Basemodel:pTorus26
+    4300712: Basemodel:pTorus27
+    4300714: Basemodel:pTorus28
+    4300716: Basemodel:pTorus29
+    4300718: Basemodel:pTorus30
+    4300720: Basemodel:pTorus31
+    4300722: Basemodel:pTorus32
+    4300724: Basemodel:pTorus1
+    4300726: Basemodel:pTorus2
+    4300728: Basemodel:pTorus3
+    4300730: Basemodel:pTorus4
+    4300732: Basemodel:pTorus5
+    4300734: Basemodel:pTorus6
+    4300736: Basemodel:pTorus7
+    4300738: Basemodel:pTorus8
+    4300740: Basemodel:pTorus9
+    4300742: Basemodel:pTorus10
+    4300744: Basemodel:pTorus11
+    4300746: Basemodel:pTorus12
+    4300748: Basemodel:pTorus13
+    4300750: Basemodel:pTorus14
+    4300752: Basemodel:pTorus15
+    4300754: Basemodel:pTorus16
+    4300756: Basemodel:pTorus17
+    4300758: Basemodel:pTorus18
+    4300760: Basemodel:pTorus19
+    4300762: Basemodel:pTorus20
+    4300764: Basemodel:pTorus21
+    4300766: Basemodel:pTorus22
+    4300768: Basemodel:pTorus23
+    4300770: Basemodel:pTorus24
+    4300772: Basemodel:pTorus25
+    4300774: Basemodel:pTorus26
+    4300776: Basemodel:pTorus27
+    4300778: Basemodel:pTorus28
+    4300780: Basemodel:pTorus29
+    4300782: Basemodel:pTorus30
+    4300784: Basemodel:pTorus31
+    4300786: Basemodel:pTorus32
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

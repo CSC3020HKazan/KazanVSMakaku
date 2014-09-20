@@ -29,7 +29,8 @@ public class PlayerMovement : MonoBehaviour
 	private Quaternion _desiredRotation = Quaternion.identity;
 	private CharacterController _controller;
 	private CheckPointManager _checkpointManager = new CheckPointManager();
-	private GameObject _followingCamera;
+	private PlayerHealth _playerHealth;
+	private CameraControl _followingCamera;
 
 	//private bool _isJumping = false;
 	
@@ -38,17 +39,22 @@ public class PlayerMovement : MonoBehaviour
 		gameObject.name = Tags.player;
 	}
 
-	public virtual string GetAttachedCameraTag () {
+	protected  virtual string GetAttachedCameraTag () {
 		return Tags.mainCamera;
 	}
 
 	void Start () {
 		InitialiseTag();
+		_desiredDirection = transform.TransformDirection (Vector3.forward);
+		_desiredDirection = _desiredDirection.normalized;
 		_controller = GetComponent<CharacterController> ();
 		_checkpointManager.AddCheckPoint (transform.position);
-		_followingCamera = GameObject.FindWithTag (GetAttachedCameraTag() );
-		if (!_followingCamera)	
-			Debug.Log ("No Camera Attached to this Player");
+		_followingCamera = GameObject.FindWithTag (GetAttachedCameraTag()).GetComponent<CameraControl>();
+		if (!_followingCamera)	 
+			Debug.Log ("No Camera Control script attached to this attached Camera");
+		_playerHealth = gameObject.GetComponent<PlayerHealth> ();
+		if (!_playerHealth)
+			Debug.Log ("No Player Health script attached");
 	}
 	
 	void FixedUpdate () {
@@ -56,8 +62,12 @@ public class PlayerMovement : MonoBehaviour
 	}
 
 	void Update () {
-		if (transform.position.y < plummetingHeight) 
-			Respawn ();
+		if (transform.position.y < plummetingHeight) {
+			if (_playerHealth)
+				Invoke ("Respawn", _playerHealth.GetRespawnTimeout ());
+			else 
+				Respawn ();
+		}
 		MovementManagement ();
 		SetupCameraPosition ();
 	}			
@@ -70,12 +80,19 @@ public class PlayerMovement : MonoBehaviour
 		bool isJumping = GetJumpInput ();
 		bool isSprinting = GetSprintInput();
 
-		_currentRightDirection = Vector3.right;
-		_currentForwardDirection = Vector3.forward;
+		_currentForwardDirection = Camera.main.transform.TransformDirection(Vector3.forward);
+		_currentForwardDirection.y = 0;
+		_currentForwardDirection = _currentForwardDirection.normalized;
+		_currentRightDirection = new Vector3 (_currentForwardDirection.z, 0, -_currentForwardDirection.x) ;
 
 		if (_controller.isGrounded) {
-			_desiredDirection = horizontal * _currentRightDirection + vertical * _currentForwardDirection;
-			_desiredDirection = transform.TransformDirection(_desiredDirection);
+			Vector3 targetDirection = horizontal * _currentRightDirection + vertical * _currentForwardDirection;
+			targetDirection = targetDirection.normalized;
+
+			_desiredDirection = _desiredDirection.normalized;
+			_desiredDirection = Vector3.RotateTowards (_desiredDirection, targetDirection, 0.2f,  1000);
+			if (targetDirection.magnitude > 0) 
+				transform.rotation = Quaternion.LookRotation (_desiredDirection);
 			_desiredDirection *= ((isSprinting ? sprintSpeed : walkSpeed) * (_isAiming ? 0.6f : 1.0f));
 			if (isJumping && canJump )
 				_desiredDirection.y = (isSprinting) ? sprintJumpFactor * sprintSpeed : jumpSpeed;
@@ -83,16 +100,13 @@ public class PlayerMovement : MonoBehaviour
 			if (isJumping && canDoubleJump && !_hasDoubleJumped) {
 				_hasDoubleJumped = true;
 			}
-		}
-		
+		}	
 		_desiredDirection.y -= GameMaster.WorldSettings.GRAVITY * Time.deltaTime;
-
 
 		if (_canMove) 
 			_controller.Move(_desiredDirection * Time.deltaTime);
-
-		transform.rotation = Quaternion.Slerp (transform.rotation, _desiredRotation, Time.time * turningSpeed);
-	}
+		//_followingCamera.SetDesiredCameraPosition(transform.position, IsMovingBack());
+	} 
 
 	void SetupCameraPosition () {
 		if (!_followingCamera)
@@ -112,6 +126,10 @@ public class PlayerMovement : MonoBehaviour
 		transform.rotation = Quaternion.Slerp (transform.rotation, 
 				Quaternion.Euler (new Vector3 (transform.eulerAngles.x, angle - 90, transform.eulerAngles.z)), Time.deltaTime * turningSpeed);
 	}
+
+	public bool IsMovingBack () {
+		return GetVerticalAxisRaw () < 0;
+	} 
 
 	public void SetAiming (bool newAim) {
 		_isAiming = newAim;

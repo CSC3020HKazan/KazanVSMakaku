@@ -5,16 +5,16 @@ using System.Collections;
 public class HUDScript : MonoBehaviour {
 
 	//length of health and mana bar
-	float healthLength = 400;
-	float manaLength = 400;
+	public float healthLength = 400;
+	public float manaLength = 400;
 
 	//maximum length of health and mana bar
-	float hBarMax;
-	float mBarMax;
+	public float hBarMax = 12;
+	public float mBarMax = 12;
 
 	//health and mana scripts
-	HealthScript hScript;
-	ManaScript mScript;
+	private PlayerHealth hScript;
+	private PlayerMana mScript;
 
 	// player script
 	//PlayerScript pScript;
@@ -24,27 +24,27 @@ public class HUDScript : MonoBehaviour {
 	public GUIStyle manaStyle;
 
 	//modifier to change health and mana bar length
-	public int modifier;
+	public int modifier = 12;
 
 	// Use this for initialization
 	void Start () {
 
 		//finds the scripts
-		hScript = GameObject.Find("Player").GetComponent<HealthScript>();
-		mScript = GameObject.Find("Player").GetComponent<ManaScript>();
+		hScript = GameObject.FindWithTag(Tags.player).GetComponent<PlayerHealth>();
+		mScript = GameObject.FindWithTag(Tags.player).GetComponent<PlayerMana>();
 		//pScript = GameObject.Find("player1").GetComponent<PlayerScript>();
 
 		//sets the maximum values for the bars
-		hBarMax = hScript.maxHealth*modifier;
-		mBarMax = mScript.maxMana*modifier;
+		hBarMax = hScript.GetInitialHealth()*modifier;
+		mBarMax = mScript.GetInitialMana()*modifier;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
 		//health bar and mana bar length update
-		healthLength = hScript.getHealth() *modifier;
-		manaLength = mScript.getMana() *modifier;
+		healthLength = hScript.GetCurrentHealth() *modifier;
+		manaLength = mScript.GetCurrentMana() *modifier;
 
 	}
 	
@@ -55,11 +55,11 @@ public class HUDScript : MonoBehaviour {
 		GUI.Label(new Rect(1000,10,60,60),"<size=40>x"+5+"</size>");
 
 		//health bar 
-		GUI.Box(new Rect(150 ,10,healthLength,20), "  Health :" +hScript.getHealth() , healthStyle);
+		GUI.Box(new Rect(150 ,10,healthLength,20), "  Health :" +hScript.GetCurrentHealth() , healthStyle);
 		GUI.Box(new Rect(150 ,10,hBarMax,20),"");
 
 		//mana bar
-		GUI.Box(new Rect(150 ,40,manaLength,20), "  Mana :" +mScript.getMana() , manaStyle);
+		GUI.Box(new Rect(150 ,40,manaLength,20), "  Mana :" +mScript.GetCurrentMana() , manaStyle);
 		GUI.Box(new Rect(150 ,40,mBarMax,20),"");
 
 		//minimap

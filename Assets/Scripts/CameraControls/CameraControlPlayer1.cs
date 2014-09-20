@@ -6,6 +6,11 @@ public class CameraControlPlayer1 : CameraControl {
 	protected override void InitialiseTarget  () {
 		target_ = GameObject.FindGameObjectWithTag (Tags.playerOne);
 	}
+
+	protected override void InitialiseTag () {
+		gameObject.tag = Tags.mainCameraPlayer1;
+		gameObject.name = Tags.mainCameraPlayer1;
+	}
 	protected override float GetCameraHorizontalAxisRaw () {
 		return Input.GetAxisRaw (Tags.CameraInputs.cameraHorizontalPlayer1);
 	}

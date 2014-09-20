@@ -7,6 +7,10 @@ public class Player1Movement : PlayerMovement {
 		gameObject.tag = Tags.playerOne;
 		gameObject.name = Tags.playerOne;
 	}
+	
+	protected override string GetAttachedCameraTag () {
+		return Tags.mainCameraPlayer1;
+	}
 
 	public override float GetHorizontalAxisRaw () {
 		return  Input.GetAxisRaw (Tags.UserInputs.horizontalPlayer1);

@@ -23,6 +23,8 @@ TagManager:
   - Environment
   - Platform
   - StationaryPlatform
+  - MainCamera_Player1
+  - MainCamera_Player2
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

@@ -74,31 +74,34 @@ public class PlayerMovement : MonoBehaviour
 	
 	
 	void MovementManagement () {
-		float horizontal = GetHorizontalAxisRaw ();
-		float vertical = GetVerticalAxisRaw();
 
 		bool isJumping = GetJumpInput ();
 		bool isSprinting = GetSprintInput();
-
-		_currentForwardDirection = Camera.main.transform.TransformDirection(Vector3.forward);
-		_currentForwardDirection.y = 0;
-		_currentForwardDirection = _currentForwardDirection.normalized;
-		_currentRightDirection = new Vector3 (_currentForwardDirection.z, 0, -_currentForwardDirection.x) ;
-
+		Debug.Log (_controller.isGrounded);
 		if (_controller.isGrounded) {
+			float horizontal = GetHorizontalAxisRaw ();
+			float vertical = GetVerticalAxisRaw();
+
+
+			_currentForwardDirection = Camera.main.transform.TransformDirection(Vector3.forward);
+			_currentForwardDirection.y = 0;
+			_currentForwardDirection = _currentForwardDirection.normalized;
+			_currentRightDirection = new Vector3 (_currentForwardDirection.z, 0, -_currentForwardDirection.x) ;
 			Vector3 targetDirection = horizontal * _currentRightDirection + vertical * _currentForwardDirection;
 			targetDirection = targetDirection.normalized;
 
 			_desiredDirection = _desiredDirection.normalized;
 			_desiredDirection = Vector3.RotateTowards (_desiredDirection, targetDirection, 0.2f,  1000);
-			if (targetDirection.magnitude > 0) 
+			if (targetDirection.magnitude > 0) { 
 				transform.rotation = Quaternion.LookRotation (_desiredDirection);
+			}
 			_desiredDirection *= ((isSprinting ? sprintSpeed : walkSpeed) * (_isAiming ? 0.6f : 1.0f));
 			if (isJumping && canJump )
-				_desiredDirection.y = (isSprinting) ? sprintJumpFactor * sprintSpeed : jumpSpeed;
+				_desiredDirection.y = (isSprinting) ? (1 + sprintJumpFactor )* jumpSpeed : jumpSpeed;
 		} else {
 			if (isJumping && canDoubleJump && !_hasDoubleJumped) {
 				_hasDoubleJumped = true;
+				_desiredDirection.y = (isSprinting) ? (1 + sprintJumpFactor * 0.5f )* jumpSpeed : jumpSpeed;
 			}
 		}	
 		_desiredDirection.y -= GameMaster.WorldSettings.GRAVITY * Time.deltaTime;

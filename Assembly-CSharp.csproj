@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_0;UNITY_4_5;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_6_0;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -46,7 +46,24 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ForeignAssets J\Scripts\Helper Scripts\HUDScript.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\Sample Supporting Emitters\DetonatorSprayHelper.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\Detonator.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorBurstEmitter.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorCloudRing.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorComponent.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorFireball.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorForce.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorGlow.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorHeatwave.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorLight.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorShockwave.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSmoke.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSound.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSparks.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSpray.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\TestScene\DetonatorTest.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\TestScene\TouchToMouse.cs" />
+     <Compile Include="Assets\ForeignAssets J\Scripts\Helper Scripts\Gizmo.cs" />
      <Compile Include="Assets\ForeignAssets J\Scripts\Helper Scripts\MasterScript.cs" />
      <Compile Include="Assets\ForeignAssets J\Scripts\Helper Scripts\MaterialHelper.cs" />
      <Compile Include="Assets\ForeignAssets J\Scripts\Helper Scripts\ParticleHelper.cs" />
@@ -65,17 +82,20 @@
      <Compile Include="Assets\Scripts\EnemyAI\SimpleEnemyAI.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\SimpleTotemPole.cs" />
      <Compile Include="Assets\Scripts\Environment\BasePlatform.cs" />
+     <Compile Include="Assets\Scripts\Environment\Buoyancy.cs" />
      <Compile Include="Assets\Scripts\Environment\Lava3.cs" />
      <Compile Include="Assets\Scripts\Environment\Lava3Float.cs" />
      <Compile Include="Assets\Scripts\Environment\Lava3UnderwaterEffect.cs" />
      <Compile Include="Assets\Scripts\Environment\LavaManager.cs" />
      <Compile Include="Assets\Scripts\Environment\MovingPlatform.cs" />
+     <Compile Include="Assets\Scripts\Environment\Obstacle.cs" />
      <Compile Include="Assets\Scripts\Environment\StationaryPlatform.cs" />
      <Compile Include="Assets\Scripts\GameControls\CheckPointManager.cs" />
      <Compile Include="Assets\Scripts\GameControls\ElementBallBehaviour.cs" />
      <Compile Include="Assets\Scripts\GameControls\ElementBallMovement.cs" />
      <Compile Include="Assets\Scripts\GameControls\EnemyWayPointManager.cs" />
      <Compile Include="Assets\Scripts\GameControls\GameMaster.cs" />
+     <Compile Include="Assets\Scripts\GameControls\HeadsUpDisplay.cs" />
      <Compile Include="Assets\Scripts\GameControls\SceneFadeInOut.cs" />
      <Compile Include="Assets\Scripts\GameControls\SpawnManager.cs" />
      <Compile Include="Assets\Scripts\HelperScripts\HashIDs.cs" />
@@ -83,9 +103,9 @@
      <Compile Include="Assets\Scripts\HelperScripts\Utils.cs" />
      <Compile Include="Assets\Scripts\InGameUI\WayPointGizmo.cs" />
      <Compile Include="Assets\Scripts\MenuUI\LoadNew.cs" />
+     <Compile Include="Assets\Scripts\NPC Behaviour\Levitation.cs" />
      <Compile Include="Assets\Scripts\NPC Behaviour\PickupBehaviour.cs" />
      <Compile Include="Assets\Scripts\NPC Behaviour\bossSkin.cs" />
-     <Compile Include="Assets\Scripts\NPC Behaviour\floatScript.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\Player1Behaviour.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\Player1Movement.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\Player2Behaviour.cs" />
@@ -94,9 +114,16 @@
      <Compile Include="Assets\Scripts\PlayerControls\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\PlayerMana.cs" />
      <Compile Include="Assets\Scripts\PlayerControls\PlayerMovement.cs" />
+     <None Include="Assets\Huge Mocap Library\READTHIS.txt" />
      <None Include="Assets\Shaders\Lava.shader" />
      <None Include="Assets\Shaders\ReflectiveDiffuseSpecTransp.shader" />
      <None Include="Assets\Shaders\FX-Water3.shader" />
+     <None Include="Assets\Huge Mocap Library\mocap animations\cmu-mocap-index-text.txt" />
+     <None Include="Assets\Raw Mocap Data\Animations\_CompleteAnimationList.txt" />
+     <None Include="Assets\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
+ </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

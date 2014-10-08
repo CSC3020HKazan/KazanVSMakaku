@@ -23,6 +23,9 @@ public class Tags
 	public const string mainCamera = "MainCamera";
 	public const string mainCameraPlayer1 = "MainCamera_Player1";
 	public const string mainCameraPlayer2 = "MainCamera_Player2";
+	public const string obstacle = "Obstacle";
+	public const string lava = "Lava";
+	public const string pickup = "Pickup"; 
 
 
 

@@ -4,6 +4,8 @@ using System.Collections;
 public class ElementBallBehaviour : MonoBehaviour {
 	[SerializeField]
 	private float potency = 3f;
+	[SerializeField]
+	private float manaValue = 2f;
 
 	void Awake () {
 
@@ -20,5 +22,9 @@ public class ElementBallBehaviour : MonoBehaviour {
 
 	public float GetPotency () {
 		return potency;
+	}
+
+	public float GetManaValue () {
+		return manaValue;
 	}
 } 

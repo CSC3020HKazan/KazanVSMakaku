@@ -8,7 +8,7 @@ public class PlayerMana : MonoBehaviour
 
 	private Animator anim;
 	private HashIDs hash;
-	
+	private int _experience = 0;
 	private float _currentMana;
 	//private bool _isDepleted = false;
 	void Start () {
@@ -24,6 +24,8 @@ public class PlayerMana : MonoBehaviour
 
 	public void ExhaustMana (float amount) {
 		// Decrement the player's health by amount.
+		if (amount == 0)
+			return; 
 		if (amount > 0)
 			_currentMana -= amount;
 		else 
@@ -31,6 +33,8 @@ public class PlayerMana : MonoBehaviour
 	}
 
 	public void ReplenishMana (float amount) {
+		if (amount == 0)
+			return;
 		if (amount > 0 ) {
 			_currentMana += amount;
 			Mathf.Clamp (_currentMana, 0, initialMana); 
@@ -38,8 +42,21 @@ public class PlayerMana : MonoBehaviour
 			ExhaustMana (-amount); 
 	}
 
+	public void AddExperience (int amount) {	
+		if (amount > 0)
+			_experience += amount; 
+	}
+
+	public void Reset () {
+		_currentMana = initialMana;
+	}
+
 	public float GetCurrentMana () {
 		return _currentMana;
+	}
+
+	public int GetExperience () {
+		return _experience;
 	}
 
 	public float GetInitialMana () {

@@ -4,13 +4,21 @@ using System.Collections;
 public class ElementBallMovement : MonoBehaviour {
 	public float rayDistance;
 	public float defaultDestroyHeight = -15.0f;
+	public GameObject currentDetonator;
+	public float detailLevel = 0.1f;
+	public float explosionLife = 10f;
 
 	void Start () {
 		gameObject.tag = Tags.elementBall ; 
 	}	
 
 	void OnDestroy () {
-		// TODO
+		Detonator dTemp = currentDetonator.GetComponent<Detonator>();
+		GameObject exp = (GameObject) Instantiate(currentDetonator, transform.position, Quaternion.identity);
+		dTemp = exp.GetComponent<Detonator>();
+		if(dTemp != null)
+			dTemp.detail = detailLevel;
+		Destroy(exp, explosionLife);
 	}
 	
 	// Update is called once per frame

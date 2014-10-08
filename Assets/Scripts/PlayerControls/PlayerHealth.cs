@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour
 {
 	public float initialHealth = 100f;                         // How much health the player has left.
+	public int numberOfLives = 9;
 	public AudioClip deathClip;                         // The souinitialHealthnd effect of the player dying.
 	[SerializeField]
 	private ParticleSystem _healingParticleSystem;
@@ -17,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
 	private HashIDs hash;                               // Reference to the HashIDs.
 	private float _currentHealth;
 	private bool _playerDead = false;
-	
+	private bool _wasAlive = false;
 	void Start () {
 		// Setting up the references.
 		_currentHealth = initialHealth;
@@ -27,26 +28,22 @@ public class PlayerHealth : MonoBehaviour
 	void Update () {
 		// If health is less than or equal to 0...
 			// ... and if the player is not yet dead...
-		if(_currentHealth <= 0 && !_playerDead)
-			// ... call the PlayerDying function.
-			PlayerDying();
-		else if (_currentHealth < 0){
-			// Otherwise, if the player is dead, call the PlayerDead and LevelReset functions.
-			PlayerDead();
-			LevelReset();
+		if (_playerDead && _wasAlive) {
+			PlayerDying ();
 		}
+		_wasAlive = !_playerDead; 	
 	}
 	
 	void PlayerHealing () {
-
+		return;
 	}
 
 	void PlayerGettingHit () {
-
+		return;
 	}
 	
 	void PlayerDying () {
-
+		return;
 	}	
 	
 	void PlayerDead () {
@@ -60,20 +57,39 @@ public class PlayerHealth : MonoBehaviour
 	}
 
 	public void HealPlayer (float amount) {
-		if (amount < 0){
+		if (amount >= 0){
 			_currentHealth += amount;
+			_currentHealth = (_currentHealth > initialHealth)  ? initialHealth : _currentHealth; 
 			PlayerHealing ();
 		} else 
 			TakeDamage (-amount);
+		if (_playerDead)
+			_playerDead = (_currentHealth == initialHealth) ? false : _playerDead; 
 	} 
 	
+	public void HealPlayer () {
+		HealPlayer (initialHealth) ;
+	}
 	public void TakeDamage (float amount) {
 		// Decrement the player's health by amount.
-		if (amount > 0 ) {
-			_currentHealth -= amount;
-			PlayerGettingHit ();
-		} else 
-			HealPlayer (-amount) ;
+
+		if (!_playerDead) {
+			if (amount >= 0 ) {
+				_currentHealth -= amount;
+				_currentHealth = (_currentHealth <= 0)  ? 0 : _currentHealth;
+				
+				PlayerGettingHit ();
+			} else 
+				HealPlayer (-amount) ;
+		}
+		if (_currentHealth == 0 ) { 
+			_playerDead = true;
+			numberOfLives --;
+		}
+	}
+
+	public void RecordDeath () {
+		numberOfLives --;
 	}
 
 	public float GetRespawnTimeout () {
@@ -86,6 +102,10 @@ public class PlayerHealth : MonoBehaviour
 
 	public float GetInitialHealth () {
 		return initialHealth;
+	}
+
+	public int GetLives ( ) {
+		return numberOfLives;
 	}
 
 	public bool IsAlive () {

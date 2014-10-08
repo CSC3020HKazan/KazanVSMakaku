@@ -7,13 +7,15 @@ public class CameraControl : MonoBehaviour {
 	// pi/6 < theta && phi < pi/3
 	public float radius = 5;
 	public float elevation = 60;
+	public float vel = 20;
 	public float theta = 0;
 	public float thetaThreshold = 30;
 	public float elevationThreshold = 20;
-	public float smoothSnapSpeed = 0.02f;
 	public float criticalDampingConst = 0.02F;
 	public float snapCriticalDampingConst = 0.5f;
 	public float aimingRadiusFactor = 0.3f;
+	public float fallingHeight = 0.0f;
+	public float movingBackRadius = 3.0f;	
 
 	private bool _snap = false;
 	private float _thetaOffset = -90;
@@ -22,7 +24,7 @@ public class CameraControl : MonoBehaviour {
 	private CharacterController _targetController;
 	private PlayerMovement _targetMovement;
 	private Vector3 _desiredCameraPosition = Vector3.zero; //in cartesian coordinates
-	private Vector3 _previousTargetPosition = Vector3.zero, _currentTargetPosition = Vector3.zero;
+	// private Vector3 _previousTargetPosition = Vector3.zero, _currentTargetPosition = Vector3.zero;
 
 	protected virtual void InitialiseTarget  () {
 		target_ = GameObject.FindGameObjectWithTag (Tags.player);
@@ -50,23 +52,36 @@ public class CameraControl : MonoBehaviour {
 		_theta = theta + _thetaOffset;
 		_elevation = elevation;
 
-		_desiredCameraPosition = target_.transform.position +
-						 Utils.PolarToCartesian (new Vector3 (radius, _theta * Mathf.Deg2Rad, _elevation * Mathf.Deg2Rad));
+		_desiredCameraPosition = target_.transform.position + Utils.PolarToCartesian (new Vector3 (radius, _theta * Mathf.Deg2Rad, _elevation * Mathf.Deg2Rad));
+		// Initialise HUD
+		HeadsUpDisplay hud = gameObject.GetComponentInChildren<HeadsUpDisplay> ();
+		if (hud == null) {
+			Debug.Log ("HeadsUpDisplay not attached!") ;
+			return;
+
+		}
+		if (target_ != null)  {
+			PlayerHealth targetHealth = target_.GetComponent<PlayerHealth> ();
+			PlayerMana targetMana= target_.GetComponent<PlayerMana> ();
+
+			if (  targetMana == null || targetHealth == null ) 
+				return;
+			hud.SetPlayerHealthComponent (targetHealth) ;
+			hud.SetPlayerManaComponent (targetMana) ;
+
+		}
 	}
 
 	// Update is called once per frame
 	void LateUpdate () {
-		if (!target_)
+		if (!target_ )
 			return;
-
-		bool isBelowTarget = transform.position.y < target_.transform.position.y;
-		if (_targetController.velocity.magnitude > 0 || isBelowTarget )
-			SetDesiredCameraPosition (target_.transform.position, _targetMovement.IsMovingBack ());
-		else if (_targetController.velocity.magnitude == 0 && (GetCameraVerticalAxisRaw() > 0.5f || GetCameraHorizontalAxisRaw () > 0.5f ) || _snap )
+		// bool isBelowTarget = transform.position.y < target_.transform.position.y;
+		if ((GetCameraVerticalAxisRaw() > 0.5f || GetCameraHorizontalAxisRaw () > 0.5f ) || _snap )
 			SetDesiredCameraPosition (target_.transform.position, _targetMovement.IsMovingBack ());
 
-		Vector3 deltaPosition = (_snap ? snapCriticalDampingConst : criticalDampingConst) * (_desiredCameraPosition - transform.position) ;
-		transform.position +=  deltaPosition;
+		Vector3 deltaPosition = Time.deltaTime * (_snap ? snapCriticalDampingConst : criticalDampingConst) * (_desiredCameraPosition - transform.position) ;
+		if (_desiredCameraPosition != transform.position ) transform.position +=  deltaPosition;
 		transform.LookAt (target_.transform.position);
 	}
 
@@ -80,19 +95,17 @@ public class CameraControl : MonoBehaviour {
 		bool isAiming = AimControls ();
 		if (_targetMovement)
 			_targetMovement.SetAiming(isAiming);
-		 // Evaluate theta
-		float vel = 20;
 		float targetTheta = theta + _deltaTheta +  _thetaOffset + (thetaThreshold) * ((isAiming) ? 1 : thetaOffsetFactor);
 		_theta = Mathf.SmoothDampAngle (_theta, targetTheta, ref vel, 0.01f) ;
 		float targetElevation = elevation + (elevationThreshold) * ((isAiming && !isMovingBack) ? 1 : elevationOffsetFactor);
 		// Mathf.Clamp (targetElevation, 0, 90);
 		_elevation = Mathf.SmoothDampAngle (_elevation, targetElevation, ref vel, 0.01f) ;
 		float targetRadius = ((isAiming && !isMovingBack) ? ( aimingRadiusFactor) : 1) * radius;
-		targetRadius = (isMovingBack ? 2.5F : 1) * targetRadius;
+		targetRadius = (isMovingBack ? movingBackRadius : 1) * targetRadius;
 		_radius = Mathf.SmoothDamp (_radius, targetRadius, ref vel, 0.01f) ;
 
 		_desiredCameraPosition = targetPosition + Utils.PolarToCartesian (new Vector3 (_radius, _theta * Mathf.Deg2Rad, _elevation * Mathf.Deg2Rad));
-		Debug.DrawLine(targetPosition, _desiredCameraPosition);
+		//Debug.DrawLine(targetPosition, _desiredCameraPosition);
 		//Debug.Log (transform.position.ToString () + " : " + Utils.PolarToCartesian(Utils.CartesianToPolar(transform.position) )); 
 	}
 
@@ -120,26 +133,6 @@ public class CameraControl : MonoBehaviour {
 		}
 
 	}
-
-	void SetTargetRotation () {
-		if ( _targetMovement == null || _targetController == null) 
-			return;
-		Vector3 cameraToTarget = transform.position - target_.transform.position;
-		Vector3 moveDirection = new Vector3 (- cameraToTarget.x, 0, - cameraToTarget.z);
-		_targetMovement.SetDirection (moveDirection);
-	}
-
-	bool IsMovingTowardsCamera () {
-		return Vector3.Magnitude(_previousTargetPosition - transform.position) >  
-				Vector3.Magnitude(_currentTargetPosition - transform.position);
-	}
-
-	private void RecordTargetPosition () {
-		if (!target_)
-			return;
-		_previousTargetPosition = _currentTargetPosition;
-		_currentTargetPosition = target_.transform.position;
-	}	
 
 	protected virtual float GetCameraHorizontalAxisRaw () {
 		return Input.GetAxisRaw (Tags.CameraInputs.cameraHorizontal);

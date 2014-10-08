@@ -8,7 +8,7 @@ public class Player1Movement : PlayerMovement {
 		gameObject.name = Tags.playerOne;
 	}
 	
-	protected override string GetAttachedCameraTag () {
+	public override string GetAttachedCameraTag () {
 		return Tags.mainCameraPlayer1;
 	}
 

@@ -25,6 +25,9 @@ TagManager:
   - StationaryPlatform
   - MainCamera_Player1
   - MainCamera_Player2
+  - Obstacle
+  - Lava
+  - Pickup
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -36,7 +39,7 @@ TagManager:
   Builtin Layer 7: 
   User Layer 8: PlayArea
   User Layer 9: Extents
-  User Layer 10: 
+  User Layer 10: Obstacles and BackDrop
   User Layer 11: 
   User Layer 12: 
   User Layer 13: 

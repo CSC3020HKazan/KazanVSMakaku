@@ -17,8 +17,8 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: d71cd2955d6d29d4fb022692c01d0c7e, type: 3}
-          m_Scale: {x: 10, y: 10}
+          m_Texture: {fileID: 2800000, guid: 8a2af40ebd197bb4ea67f46461e8a776, type: 3}
+          m_Scale: {x: .200000003, y: .200000003}
           m_Offset: {x: 0, y: 0}
       data:
         first:
@@ -39,21 +39,21 @@ Material:
           name: _DisplacementHeightMap
         second:
           m_Texture: {fileID: 2800000, guid: 1d4263e594532c24a8f9530fd4d54e07, type: 3}
-          m_Scale: {x: 1, y: 1}
+          m_Scale: {x: .200000003, y: .200000003}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _SecondDisplacementHeightMap
         second:
           m_Texture: {fileID: 2800000, guid: 39b109479ba8e644a8858ce76a694a18, type: 3}
-          m_Scale: {x: 1, y: 1}
+          m_Scale: {x: .200000003, y: .200000003}
           m_Offset: {x: 0, y: 0}
       data:
         first:
           name: _BlendTex
         second:
-          m_Texture: {fileID: 2800000, guid: 6a1b5516bb2352b4694e9bf5536073b5, type: 3}
-          m_Scale: {x: 15, y: 15}
+          m_Texture: {fileID: 2800000, guid: be6a684a0207e4fe4825171fa774d3ec, type: 3}
+          m_Scale: {x: .200000003, y: .200000003}
           m_Offset: {x: 0, y: 0}
       data:
         first:

@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
-public class DoneWayPointGizmo : MonoBehaviour {
+public class WayPointGizmo : MonoBehaviour {
 
     void OnDrawGizmos() {
-        // Gizmos.DrawIcon(transform.position, "wayPoint.png", true);
+        Gizmos.DrawIcon(transform.position, "wayPoint.png", true);
     }
 }

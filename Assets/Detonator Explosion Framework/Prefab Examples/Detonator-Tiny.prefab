@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 2.46127987
-  color: {r: 1, g: .680796921, b: .629496396, a: .498039216}
+  color: {r: .629496396, g: 1, b: 1, a: .498039216}
   explodeOnStart: 1
   duration: 1.03674626
   detail: 1.4199996

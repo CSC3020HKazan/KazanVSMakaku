@@ -33,16 +33,17 @@ public class PlayerMovement : MonoBehaviour
 	private PlayerMana _playerMana;
 	private PlayerBehaviour _playerBehaviour;
 	private CameraControl _followingCamera;
-
 	private bool _isJumping = false;
 	private bool _hasRespawned = false;
+	private GameMaster _gameMaster = GameMaster.Instance;
+	[HideInInspector]
+	public int playerIndex = 0;
 
-	
 	protected virtual void InitialiseTag () {
 		gameObject.tag = Tags.player;
 		gameObject.name = Tags.player;
+		playerIndex = 0;
 	}
-
 	public virtual string GetAttachedCameraTag () {
 		return Tags.mainCamera;
 	}
@@ -57,14 +58,23 @@ public class PlayerMovement : MonoBehaviour
 		if (!_followingCamera)	 
 			Debug.Log ("No Camera Control script attached to this attached Camera");
 		_playerHealth = gameObject.GetComponent<PlayerHealth> ();
-		if (!_playerHealth)
+		if (!_playerHealth) {
 			Debug.Log ("No Player Health script attached");
+			gameObject.AddComponent<PlayerHealth>();
+		}
 		_playerBehaviour = gameObject.GetComponent<PlayerBehaviour> ();
-		if (!_playerBehaviour)
+		if (!_playerBehaviour) {
 			Debug.Log("No Player Behaviour script attached");
+			gameObject.AddComponent<PlayerBehaviour>();
+		}
 		_playerMana = gameObject.GetComponent<PlayerMana>  ();
-		if (!_playerMana)
+		if (!_playerMana) {
 			Debug.Log("No Player Mana script attached");
+			gameObject.AddComponent<PlayerMana>();
+		}
+		// RECORD PLAYER's GLOBAL PRESENCE
+		if (!_gameMaster.AddPlayer (gameObject, playerIndex)) 
+			Debug.Log("PLAYER NOT RECORDED! Either already exists or wrong index!") ;
 	}
 	
 	void FixedUpdate () {
@@ -72,11 +82,8 @@ public class PlayerMovement : MonoBehaviour
 	}
 
 	void Update () {
-		if (!_hasRespawned) {
-			if (transform.position.y < plummetingHeight) {
-				Respawn ();
-			}
-		}	
+		if ((_playerBehaviour.CheckForLava () || transform.position.y < plummetingHeight ) && !_hasRespawned)
+			Respawn(); 
 		MovementManagement ();
 		SetupCameraPosition ();
 	}			
@@ -95,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
 			float horizontal = GetHorizontalAxisRaw ();
 			float vertical = GetVerticalAxisRaw();
 
-			if (horizontal != 0 && vertical != 0) {
+			if (horizontal != 0 || vertical != 0 || true) {
 				_currentForwardDirection = GameObject.FindWithTag(GetAttachedCameraTag()).transform.TransformDirection(Vector3.forward);
 				_currentForwardDirection.y = 0;
 				_currentForwardDirection = _currentForwardDirection.normalized;
@@ -133,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
 		if (!_followingCamera)
 			return;
 		if (_controller.velocity.magnitude > 0)
-			_followingCamera.SetDesiredCameraPosition (transform.position, ((!_controller.isGrounded) ? false : IsMovingBack()));
+			_followingCamera.SetDesiredCameraPosition (transform.position, IsMovingBack()/*((!_controller.isGrounded || true) ? false : IsMovingBack())*/);
 	}
 
 	private void Respawn () {
@@ -174,4 +181,6 @@ public class PlayerMovement : MonoBehaviour
 	public virtual bool GetJumpInput () {
 		return  Input.GetButton (Tags.UserInputs.jump);
 	}
+
+
 }

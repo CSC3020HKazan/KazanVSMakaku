@@ -76,6 +76,8 @@ public class Lava3 : MonoBehaviour
 	
 	public void Start() 
 	{
+		gameObject.name = Tags.lava;
+		gameObject.tag = Tags.lava;
 		if(m_Water3Material)
 			renderer.sharedMaterial = m_Water3Material;
 		m_IsDirty = false;

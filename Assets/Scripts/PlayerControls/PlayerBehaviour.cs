@@ -7,7 +7,6 @@ public class PlayerBehaviour : MonoBehaviour {
 	public bool canFire = false;
 	public AudioClip collectedPickupClip;
 
-	protected int _playerIndex = 0;
 	[SerializeField]
 	private float firingForce = 2000f;
 	private List<GameObject>_platformTraversed;
@@ -18,7 +17,10 @@ public class PlayerBehaviour : MonoBehaviour {
 	private PlayerMana _playerMana;
 	private CharacterController _playerController;
 	private CheckPointManager _checkpointManager = new CheckPointManager();
-	
+	[SerializeField]
+	private float deathHeightCheck = 100f;
+
+
 	protected virtual void InitialiseTag () {
 		gameObject.tag = Tags.player;
 		gameObject.name = Tags.player;
@@ -128,23 +130,24 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	private void CheckPlatformCollision (GameObject hitObject) {
 		BasePlatform basePlatform = hitObject.GetComponent<BasePlatform> ();
+		PlayerMovement playerMovement = gameObject.GetComponent<PlayerMovement> ();
 		if(!basePlatform)
 			return;
 		// Debug.Log(_platformTraversed.Count);
 		if (_platformTraversed.Count > 0) {
 			if (_platformTraversed[_platformTraversed.Count - 1].Equals (hitObject))
 				return;
-			_platformTraversed[_platformTraversed.Count - 1].GetComponent<BasePlatform>().SetPlayerPresence(false,_playerIndex);
+			_platformTraversed[_platformTraversed.Count - 1].GetComponent<BasePlatform>().SetPlayerPresence(false, playerMovement.playerIndex);
 			Debug.Log(hitObject.ToString());
 			_platformTraversed.Add(hitObject);
 			if (_platformTraversed.Count % GameMaster.CHECKPOINT_FREQUENCY == 0) {
-				AddCheckPoint ();
+				AddCheckPoint (playerMovement);
 			}
 		} else {
 			_platformTraversed.Add(hitObject);
-			AddCheckPoint () ;
+			AddCheckPoint (playerMovement) ;
 		}
-		basePlatform.SetPlayerPresence(true, _playerIndex);
+		basePlatform.SetPlayerPresence(true,  playerMovement.playerIndex);
 	} 
 
 	private void CheckStepCollision (GameObject hitObject) {
@@ -173,9 +176,8 @@ public class PlayerBehaviour : MonoBehaviour {
 		} 
 	}
 
-	private void AddCheckPoint  () {
+	private void AddCheckPoint  (PlayerMovement movement) {
 		_checkpointManager.AddCheckPoint(new CheckPoint (transform.position, transform.rotation));
-		PlayerMovement movement = gameObject.GetComponent<PlayerMovement> ();
 		if (movement != null) {
 			HeadsUpDisplay hud = GameObject.FindGameObjectWithTag(movement.GetAttachedCameraTag()).GetComponentInChildren<HeadsUpDisplay> ();
 			if (hud != null) {
@@ -212,5 +214,15 @@ public class PlayerBehaviour : MonoBehaviour {
 			buoyant.Reset();
 		} 
 		return _checkpointManager.GetLastCheckPoint ();
+	}
+
+	public bool CheckForLava () {
+		// Checks for Lava Collision with the game object it is attached to
+		RaycastHit hit;
+		Ray dyingRay = new Ray (transform.position, Vector3.down) ;
+		if (Physics.Raycast (dyingRay, out hit, deathHeightCheck)) {
+			return (hit.collider.tag == Tags.lava);
+		}
+		return false;
 	}
 }

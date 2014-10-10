@@ -6,6 +6,7 @@ public class Player1Movement : PlayerMovement {
 	protected override void InitialiseTag () {
 		gameObject.tag = Tags.playerOne;
 		gameObject.name = Tags.playerOne;
+		playerIndex = 1;
 	}
 	
 	public override string GetAttachedCameraTag () {

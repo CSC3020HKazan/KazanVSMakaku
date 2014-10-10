@@ -72,12 +72,11 @@
      <Compile Include="Assets\Scripts\CameraControls\CameraControl.cs" />
      <Compile Include="Assets\Scripts\CameraControls\CameraControlPlayer1.cs" />
      <Compile Include="Assets\Scripts\CameraControls\CameraControlPlayer2.cs" />
+     <Compile Include="Assets\Scripts\EnemyAI\AgentAI.cs" />
+     <Compile Include="Assets\Scripts\EnemyAI\AgentSight.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\AnimatorSetup.cs" />
-     <Compile Include="Assets\Scripts\EnemyAI\EnemyAI.cs" />
-     <Compile Include="Assets\Scripts\EnemyAI\EnemyAnimation.cs" />
-     <Compile Include="Assets\Scripts\EnemyAI\EnemyDispatcher.cs" />
-     <Compile Include="Assets\Scripts\EnemyAI\EnemyShooting.cs" />
-     <Compile Include="Assets\Scripts\EnemyAI\EnemySight.cs" />
+     <Compile Include="Assets\Scripts\EnemyAI\FlockAgent.cs" />
+     <Compile Include="Assets\Scripts\EnemyAI\FlockControllerAgent.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\LastPlayerSighting.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\SimpleEnemyAI.cs" />
      <Compile Include="Assets\Scripts\EnemyAI\SimpleTotemPole.cs" />

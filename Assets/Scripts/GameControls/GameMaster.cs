@@ -1,4 +1,12 @@
-public class GameMaster {
+using System;
+using UnityEngine;
+
+public sealed class GameMaster
+{
+	public GameObject[] PLAYERS = {null, null, null};
+	public Vector3[] playerSightings;
+
+
 	public class Physics {
 		public const float GRAVITY = 15;
 	}
@@ -9,12 +17,38 @@ public class GameMaster {
 
 	}
 
-	public class PlayerStatistics {
+	private class PlayerStatistics {
 		// Total time played 
 		// enemies destroyed
-		// 
-
-	} 
+		
+	}
 	public const int CHECKPOINT_FREQUENCY = 4;
 
+	private static readonly GameMaster _instance= new GameMaster ();
+	private GameMaster() { playerSightings = new Vector3[PLAYERS.Length]; }
+	
+	public static GameMaster Instance {
+		get {
+			return _instance; 
+		}
+	}
+
+	public bool AddPlayer (GameObject gameObj, int index) {
+		if (index > 3 || index < 0)
+			return false;
+		else {
+			if (PLAYERS[index] == null) {
+				PLAYERS[index] = gameObj;	
+				return true;
+			} else 
+				return false;
+		} 
+	}
+
+	public bool IsPlayer (GameObject gameObj) {
+		foreach (GameObject go in PLAYERS)
+			if (go == gameObj)
+				return true;
+		return false; 
+	}
 }

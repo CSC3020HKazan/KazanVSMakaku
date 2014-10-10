@@ -7,7 +7,6 @@ public class Player2Behaviour : PlayerBehaviour {
 	protected override void InitialiseTag () {
 		gameObject.tag = Tags.playerTwo;
 		gameObject.name = Tags.playerTwo;
-		_playerIndex = 2;
 	}
 
 	public override string GetAttackInputTag  () {

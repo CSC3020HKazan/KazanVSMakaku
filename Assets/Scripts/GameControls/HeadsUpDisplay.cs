@@ -91,7 +91,7 @@ public class HeadsUpDisplay : MonoBehaviour {
 		GUI.Box(new Rect(150 ,40,manaLength,20), "  Mana :" +(int) (_playerMana.GetCurrentMana()) , manaStyle);
 		GUI.Box(new Rect(150 ,40,mBarMax,20),"");
 
-        GUI.Box (new Rect (Screen.width - 100,0,100,50), _informationMessage, informationStyle);
+        GUI.Box (new Rect (Screen.width / 2 + 100,Screen.height / 2 + 50,100,50), _informationMessage,informationStyle);
         GUI.Box (new Rect (Screen.width / 2 - 100,Screen.height / 2 - 50,100,50), _warningMessage,warningStyle);
         GUI.Box (new Rect ((Screen.width / 2) - 100,(Screen.height) - 50,100,50), _storyMessage, storyStyle);
 	}

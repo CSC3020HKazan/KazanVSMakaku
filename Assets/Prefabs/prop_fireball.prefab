@@ -190,7 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rayDistance: 1
   defaultDestroyHeight: -15
-  currentDetonator: {fileID: 100000, guid: 13266a9cf8da28e41bfa61b378dfabc5, type: 2}
+  currentDetonator: {fileID: 100000, guid: 22f7f7fc3b1747d45b9d8bf5ea9bfa42, type: 2}
   detailLevel: .100000001
   explosionLife: 10
 --- !u!114 &11400002

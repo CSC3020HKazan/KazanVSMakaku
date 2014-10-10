@@ -10,6 +10,7 @@ public class ElementBallMovement : MonoBehaviour {
 
 	void Start () {
 		gameObject.tag = Tags.elementBall ; 
+		gameObject.name = Tags.elementBall;
 	}	
 
 	void OnDestroy () {
@@ -18,7 +19,7 @@ public class ElementBallMovement : MonoBehaviour {
 		dTemp = exp.GetComponent<Detonator>();
 		if(dTemp != null)
 			dTemp.detail = detailLevel;
-		Destroy(exp, explosionLife);
+		// Destroy(exp, explosionLife);
 	}
 	
 	// Update is called once per frame
@@ -31,8 +32,8 @@ public class ElementBallMovement : MonoBehaviour {
 			} else if (hit.collider.tag == Tags.enemy) {
 				Destroy (gameObject);
 			}
-		} if (transform.position.y < defaultDestroyHeight) {
-			Destroy (gameObject);
+		} if (transform.position.y < defaultDestroyHeight) { // TODO Check for Lava Collision
+			Destroy (gameObject); 
 		}
 	}
 

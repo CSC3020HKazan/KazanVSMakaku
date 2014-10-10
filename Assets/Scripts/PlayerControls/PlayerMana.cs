@@ -37,7 +37,7 @@ public class PlayerMana : MonoBehaviour
 			return;
 		if (amount > 0 ) {
 			_currentMana += amount;
-			Mathf.Clamp (_currentMana, 0, initialMana); 
+			if (_currentMana > initialMana) _currentMana = initialMana; 
 		} else 
 			ExhaustMana (-amount); 
 	}

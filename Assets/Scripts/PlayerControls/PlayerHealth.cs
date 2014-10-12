@@ -5,7 +5,8 @@ public class PlayerHealth : MonoBehaviour
 {
 	public float initialHealth = 100f;                         // How much health the player has left.
 	public int numberOfLives = 9;
-	public AudioClip deathClip;                         // The souinitialHealthnd effect of the player dying.
+	public AudioClip deathClip;                        // The souinitialHealthnd effect of the player dying.
+	public GameObject deathEffect;
 	[SerializeField]
 	private ParticleSystem _healingParticleSystem;
 	[SerializeField]
@@ -43,6 +44,8 @@ public class PlayerHealth : MonoBehaviour
 	}
 	
 	void PlayerDying () {
+		Destroy (gameObject);
+		Instantiate(deathEffect, transform.position, Quaternion.identity);
 		return;
 	}	
 	

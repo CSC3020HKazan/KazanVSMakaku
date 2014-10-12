@@ -46,9 +46,10 @@ public sealed class GameMaster
 	}
 
 	public bool IsPlayer (GameObject gameObj) {
-		foreach (GameObject go in PLAYERS)
-			if (go == gameObj)
-				return true;
-		return false; 
+		if (gameObj.tag == Tags.player || gameObj.tag == Tags.playerOne || gameObj.tag == Tags.playerTwo) {
+			return true;
+		}
+		else 
+			return false; 
 	}
 }

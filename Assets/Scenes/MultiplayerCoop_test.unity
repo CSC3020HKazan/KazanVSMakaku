@@ -262,6 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turningSpeed: .100000001
+  playerTurningSpeed: .200000003
   speedDampTime: .0199999996
   jumpAngle: 45
   jumpSpeed: 8
@@ -269,12 +270,14 @@ MonoBehaviour:
   sprintSpeed: 20
   sprintJumpFactor: .5
   doubleJumpFactor: 2
-  gravity: 20
   plummetingHeight: -20
-  fireballPrefab: {fileID: 100000, guid: b814ed393fd8e694caf78f8f51c0caf8, type: 2}
+  targettedEnemyMat: {fileID: 0}
+  fieldOfViewAngle: 120
   canJump: 1
   canDoubleJump: 0
-  canFire: 1
+  aimingSpeedFactor: .300000012
+  targettedEnemy: {fileID: 0}
+  playerIndex: 0
 --- !u!23 &1195476746
 Renderer:
   m_ObjectHideFlags: 0
@@ -427,10 +430,18 @@ MonoBehaviour:
   theta: 0
   thetaThreshold: 30
   elevationThreshold: 20
-  smoothSnapSpeed: .0199999996
+  minElevation: 20
+  maxElevation: 90
+  elevationDampTime: .00999999978
+  thetaDampTime: .00999999978
+  snapThetaDampTime: .00999999978
+  radiusDampTime: .00999999978
   criticalDampingConst: .0199999996
   snapCriticalDampingConst: .5
   aimingRadiusFactor: .300000012
+  fallingHeight: 0
+  movingBackRadius: 3
+  targetViewFactor: .600000024
 --- !u!135 &1358980140
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -551,10 +562,18 @@ MonoBehaviour:
   theta: 0
   thetaThreshold: 30
   elevationThreshold: 20
-  smoothSnapSpeed: .0199999996
+  minElevation: 20
+  maxElevation: 90
+  elevationDampTime: .00999999978
+  thetaDampTime: .00999999978
+  snapThetaDampTime: .00999999978
+  radiusDampTime: .00999999978
   criticalDampingConst: .0199999996
   snapCriticalDampingConst: .5
   aimingRadiusFactor: .300000012
+  fallingHeight: 0
+  movingBackRadius: 3
+  targetViewFactor: .600000024
 --- !u!135 &1458075549
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -755,6 +774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turningSpeed: .100000001
+  playerTurningSpeed: .200000003
   speedDampTime: .0199999996
   jumpAngle: 45
   jumpSpeed: 8
@@ -762,12 +782,14 @@ MonoBehaviour:
   sprintSpeed: 20
   sprintJumpFactor: .5
   doubleJumpFactor: 2
-  gravity: 20
   plummetingHeight: -20
-  fireballPrefab: {fileID: 100000, guid: b814ed393fd8e694caf78f8f51c0caf8, type: 2}
+  targettedEnemyMat: {fileID: 0}
+  fieldOfViewAngle: 120
   canJump: 1
   canDoubleJump: 0
-  canFire: 1
+  aimingSpeedFactor: .300000012
+  targettedEnemy: {fileID: 0}
+  playerIndex: 0
 --- !u!23 &2042958774
 Renderer:
   m_ObjectHideFlags: 0

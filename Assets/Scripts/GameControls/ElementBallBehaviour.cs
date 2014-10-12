@@ -6,6 +6,9 @@ public class ElementBallBehaviour : MonoBehaviour {
 	private float potency = 3f;
 	[SerializeField]
 	private float manaValue = 2f;
+	public float coolDownTimer = 3f;
+	[HideInInspector]
+	public PlayerMana owner; // For the reward if there is a hit.
 
 	void Awake () {
 

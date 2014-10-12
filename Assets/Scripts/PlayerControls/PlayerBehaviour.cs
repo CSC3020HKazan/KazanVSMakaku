@@ -60,9 +60,6 @@ public class PlayerBehaviour : MonoBehaviour {
 	}
 
 	void OnControllerColliderHit (ControllerColliderHit hit) {
-		Rigidbody body = hit.collider.attachedRigidbody;
-		if (!body)
-			return;
 		CheckPlatformCollision (hit.gameObject);
 		CheckStepCollision(hit.gameObject);
 		if (!_playerHealth)
@@ -119,6 +116,7 @@ public class PlayerBehaviour : MonoBehaviour {
 		if (_playerMana != null ) {
 			if (canFire && !_hasFired && _playerMana.GetCurrentMana() > elementBallManaValue ) {
 				GameObject fireballClone = (GameObject) Instantiate (fireballPrefab, _fireballTransform.position, _fireballTransform.rotation);
+				fireballPrefab.GetComponent<ElementBallBehaviour> ().owner = _playerMana;
 				fireballClone.transform.LookAt(_fireballTransform.forward);
 				fireballClone.rigidbody.AddForce (_fireballTransform.forward * firingForce, ForceMode.Acceleration);
 				_hasFired = true;
@@ -167,6 +165,7 @@ public class PlayerBehaviour : MonoBehaviour {
 		ElementBallBehaviour projectileBehaviour = hitObject.GetComponent<ElementBallBehaviour> ();
 		if (!projectileBehaviour)
 			return;
+		// Debug.Log( "PlayerBehaviour::CheckProjectileCollision");
 		if (!_playerHealth) {
 			Debug.Log ("No Player Health script attached");
 			return;

@@ -96,15 +96,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 8
   elevation: 60
-  vel: 20
   theta: 0
-  thetaThreshold: 30
-  elevationThreshold: 20
-  criticalDampingConst: 2
-  snapCriticalDampingConst: 2
-  aimingRadiusFactor: .300000012
+  thetaThreshold: 1
+  elevationThreshold: .00499999989
+  minElevation: 50
+  maxElevation: 90
+  elevationDampTime: .00999999978
+  thetaDampTime: .00999999978
+  snapThetaDampTime: .00999999978
+  radiusDampTime: .00999999978
+  criticalDampingConst: .300000012
+  snapCriticalDampingConst: .00100000005
+  aimingRadiusFactor: .5
   fallingHeight: 20
-  movingBackRadius: 3
+  movingBackRadius: 1.5
+  targetViewFactor: .600000024
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -557,7 +563,7 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -6.35604714e-18, y: .992767155, z: 1.18347053e-07, w: .120055959}
   m_LocalPosition: {x: 0, y: 0, z: 54.5900002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -566,7 +572,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: .222010002, y: -.0195064545}
+  m_AnchoredPosition: {x: 6.22227669, y: 18.3809433}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22400002

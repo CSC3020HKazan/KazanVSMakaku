@@ -14,13 +14,18 @@ public class PlayerMovement : MonoBehaviour
 	public float sprintJumpFactor = 0.5f;
 	public float doubleJumpFactor = 0.5f;
 	public float plummetingHeight = -20;
-
+	public Material targettedEnemyMat;
+	public float fieldOfViewAngle = 120f;
 	public bool canJump = false;
 	public bool canDoubleJump = false;
-
+	public float aimingSpeedFactor = 0.3f; 	
+	[HideInInspector]
+	public GameObject targettedEnemy;
 	private Animator _anim;				// Reference to the animator component.
 	private HashIDs _hash; 				// Reference to the HashIDs.
 	
+	private Material _originalEnemyMat;
+
 	private bool _canMove = true;
 	private bool _hasDoubleJumped = false;
 	private bool _isAiming = false;
@@ -78,7 +83,11 @@ public class PlayerMovement : MonoBehaviour
 	}
 	
 	void FixedUpdate () {
-
+		if (targettedEnemy != null && !_isAiming) {
+			targettedEnemy.renderer.material = _originalEnemyMat;
+			targettedEnemy = null;
+			_originalEnemyMat = null;
+		}
 	}
 
 	void Update () {
@@ -88,9 +97,19 @@ public class PlayerMovement : MonoBehaviour
 		SetupCameraPosition ();
 	}			
 	
-	
-	void MovementManagement () {
+	void OnTriggerEnter (Collider other) { 
 
+	}
+
+	void OnTriggerStay (Collider other) {
+		CheckForTarget (other.gameObject);
+	}
+
+	void OnTriggerExit (Collider other) {
+
+	}
+	
+	private void MovementManagement () {
 		bool isJumping = GetJumpInput ();
 		bool isSprinting = GetSprintInput();
 		// Debug.Log (_controller.isGrounded);
@@ -102,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
 			float horizontal = GetHorizontalAxisRaw ();
 			float vertical = GetVerticalAxisRaw();
 
-			if (horizontal != 0 || vertical != 0 || true) {
+			if (horizontal != 0 || vertical != 0 ) {
 				_currentForwardDirection = GameObject.FindWithTag(GetAttachedCameraTag()).transform.TransformDirection(Vector3.forward);
 				_currentForwardDirection.y = 0;
 				_currentForwardDirection = _currentForwardDirection.normalized;
@@ -110,15 +129,20 @@ public class PlayerMovement : MonoBehaviour
 			}
 			Vector3 targetDirection = horizontal * _currentRightDirection + vertical * _currentForwardDirection;
 			targetDirection = targetDirection.normalized;
-			// Vector3 lookDirection = Vector3.right * horizontal + vertical * Vector3.forward;
 			_desiredDirection = _desiredDirection.normalized;
 
 			_desiredDirection = Vector3.RotateTowards (_desiredDirection, targetDirection, playerTurningSpeed * Time.deltaTime,  1000f);
 			if (targetDirection.magnitude > 0) { 
-				transform.rotation = Quaternion.LookRotation (_desiredDirection);
+				Vector3 lookDirection;
+				if (targettedEnemy != null) {
+					lookDirection = targettedEnemy.transform.position - transform.position;
+				} else
+					lookDirection = _desiredDirection;
+				transform.rotation = Quaternion.LookRotation (lookDirection);
+				transform.rotation = Quaternion.Euler (new Vector3 (0 , transform.rotation.eulerAngles.y, 0));
 
 			}
-			_desiredDirection *= ((isSprinting ? sprintSpeed : walkSpeed) * (_isAiming ? 0.6f : 1.0f));
+			_desiredDirection *= ((isSprinting ? sprintSpeed : walkSpeed) * (_isAiming ? aimingSpeedFactor : 1.0f));
 			if (isJumping && canJump ) {
 				_desiredDirection.y = (isSprinting) ? (1 + sprintJumpFactor )* jumpSpeed : jumpSpeed;
 				_isJumping = true;
@@ -139,8 +163,7 @@ public class PlayerMovement : MonoBehaviour
 	void SetupCameraPosition () {
 		if (!_followingCamera)
 			return;
-		if (_controller.velocity.magnitude > 0)
-			_followingCamera.SetDesiredCameraPosition (transform.position, IsMovingBack()/*((!_controller.isGrounded || true) ? false : IsMovingBack())*/);
+		_followingCamera.SetDesiredCameraPosition (_controller.bounds.max, IsMovingBack()/*((!_controller.isGrounded || true) ? false : IsMovingBack())*/, IsMovingLeftRight ());
 	}
 
 	private void Respawn () {
@@ -157,8 +180,34 @@ public class PlayerMovement : MonoBehaviour
 		_playerMana.Reset ();
 	}
 
+	private void CheckForTarget (GameObject other) { 
+		if (other.tag == Tags.enemy && IsInFieldOfView (other) && _isAiming) {
+			if (targettedEnemy != null) {
+				targettedEnemy.renderer.material = _originalEnemyMat;
+				targettedEnemy = null;
+				_originalEnemyMat = null;
+			}
+			// Debug.Log ("CheckForTarget");
+			_originalEnemyMat = other.renderer.material;
+			other.renderer.material = targettedEnemyMat 	;
+			targettedEnemy = other;
+		} 
+	} 
+
+	private bool IsInFieldOfView (GameObject other ) {
+		if (other == null)
+			return false; 
+		float angle  = Vector3.Angle (other.transform.position - transform.position, transform.forward) ;
+		// Debug.Log ("angle" + angle);
+		return (angle <= fieldOfViewAngle / 2);
+	}
+
 	public bool IsMovingBack () {
 		return GetVerticalAxisRaw () < 0;
+	}
+
+	public bool IsMovingLeftRight () {
+		return GetHorizontalAxisRaw () != 0 && GetVerticalAxisRaw () == 0;
 	}
 
 	public void SetAiming (bool newAim) {

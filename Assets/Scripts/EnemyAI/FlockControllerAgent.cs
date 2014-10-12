@@ -17,11 +17,19 @@ public class FlockControllerAgent :  AgentAI {
 
 	protected override void InitialiseObjects () { 
 		_flock = new List<GameObject> (flockSize) ;
+		gameObject.name =  "FlockControllerAgent";
 	}
 
 	protected override void PerformBehaviour () {
-		base.PerformBehaviour ();
 		ComputeCenterOfMass ();
+		if (_sight.playerSighted) {
+			foreach (GameObject follower in _flock) {
+				follower.GetComponent<FlockAgent> ().flockController  = null;
+			}
+			_flock.Clear ();
+		}
+		base.PerformBehaviour ();
+
 	}
 
 	private void ComputeCenterOfMass () {
@@ -33,6 +41,7 @@ public class FlockControllerAgent :  AgentAI {
 	}
 
 	public bool CheckForSpace () {
+		// Debug.Log ("CheckForSpace");
 		return (_flock.Count - 1 < flockSize );
 	}
 
@@ -45,10 +54,10 @@ public class FlockControllerAgent :  AgentAI {
 	}
 
 	void OnTriggerEnter ( Collider other ) {	
+		// Debug.Log ("FlockControllerAgent::OnTriggerEnter");
 		FlockAgent otherFlockAgent = other.gameObject.GetComponent<FlockAgent> ();
 		if (otherFlockAgent != null) {
 			if (this.CheckForSpace() && otherFlockAgent.flockController == null) {
-				Debug.Log ("FlockControllerAgent::OnTriggerEnter");
 				this.AddRecruit(other.gameObject);
 				otherFlockAgent.flockController = gameObject;
 				// _neighbours.Add (other.gameObject);
